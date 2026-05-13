@@ -1,3 +1,4 @@
+/* [CJD Section] Refonte couche 2 — 2026 — import thème CJD en fin de chaîne */
 @import url("styles/00-reset.css");
 @import url("styles/01-layout.css");
 @import url("styles/02-common.css");
@@ -7,3 +8,4 @@
 @import url("styles/06-tables-common.css");
 @import url("styles/07-tables.css");
 @import url("styles/10-accounting.css");
+@import url("styles/99-cjd-theme.css");

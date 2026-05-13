@@ -1,0 +1,485 @@
+/* [CJD Section] Refonte couche 2 — 2026
+ * Paheko — AGPL-3.0
+ * Thème identitaire CJD (charte 2020). Surcharges fin de cascade admin.
+ * Remarque : --gMainColor, --gSecondColor, --gBgColor, --gTextColor et --gHoverLinkColor
+ * sont utilisés sous la forme rgb(var(--g…)) ou rgba(var(--g…), α) : valeurs « R, G, B » uniquement.
+ */
+@import url("https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@800&family=Open+Sans:wght@400;600;700&display=swap");
+
+:root {
+	--gMainColor: 0, 213, 86;
+	--gSecondColor: 0, 0, 0;
+	--gBgColor: 245, 245, 245;
+	--gTextColor: 0, 0, 0;
+	--gBorderColor: #B4B4B4;
+	--gLightBorderColor: #E5E5E5;
+	--gLightBackgroundColor: #FFFFFF;
+	--gLinkColor: #00D556;
+	--gHoverLinkColor: 0, 0, 0;
+	--gBgImage: none;
+
+	--cjd-vert: #00D556;
+	--cjd-noir: #000000;
+	--cjd-bleu: #1882E3;
+	--cjd-cyan: #00CAC8;
+	--cjd-orange: #FF5220;
+	--cjd-jaune: #FFC800;
+	--cjd-gris: #B4B4B4;
+
+	--cjd-font-titre: "Saira Condensed", "Arial Narrow", sans-serif;
+	--cjd-font-corps: "Open Sans", "Segoe UI", Roboto, sans-serif;
+}
+
+html {
+	font-family: var(--cjd-font-corps);
+}
+
+body {
+	font-family: var(--cjd-font-corps);
+	background: rgb(var(--gBgColor)) var(--gBgImage) no-repeat 0 0 fixed;
+	padding-bottom: 4px;
+}
+
+h1, h2, h3, h4, legend {
+	font-family: var(--cjd-font-titre);
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: 0.02em;
+}
+
+h1.main {
+	font-family: var(--cjd-font-titre);
+	font-weight: 800;
+	text-transform: uppercase;
+	color: var(--cjd-noir);
+	font-size: 1.75rem;
+	letter-spacing: 0.04em;
+}
+
+button,
+input[type="submit"],
+input[type="button"],
+.button,
+a.button {
+	font-family: var(--cjd-font-titre);
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+}
+
+input[type="submit"].main,
+button.main,
+a.button.main,
+input.main[type="submit"] {
+	background: var(--cjd-vert) !important;
+	color: var(--cjd-noir) !important;
+	border-color: var(--cjd-vert) !important;
+}
+
+input[type="submit"].main:hover,
+button.main:hover,
+a.button.main:hover {
+	background: var(--cjd-noir) !important;
+	color: #fff !important;
+	border-color: var(--cjd-noir) !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+	outline: none;
+	border-color: var(--cjd-vert) !important;
+	box-shadow: 0 0 0 2px rgba(0, 213, 86, 0.25);
+}
+
+nav#menu {
+	background: var(--cjd-noir) var(--gBgImage) no-repeat 0 0;
+	color: #fff;
+	border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+nav#menu a {
+	color: #fff;
+}
+
+nav#menu li.current h3 a,
+nav#menu ul ul li.current a {
+	background: var(--cjd-vert);
+	color: var(--cjd-noir);
+}
+
+nav#menu li.current h3 span[data-icon]::before {
+	color: rgba(0, 0, 0, 0.45);
+}
+
+nav#menu h3 span[data-icon]::before {
+	color: rgba(255, 255, 255, 0.35);
+}
+
+nav#menu a:hover {
+	background: rgba(0, 213, 86, 0.25);
+	color: #fff;
+	text-decoration: none;
+}
+
+nav#menu figure.logo a {
+	color: #fff;
+}
+
+.cjd-branding {
+	text-align: center;
+	padding: 0.5rem 0 0.25rem;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+	margin-bottom: 0.25rem;
+}
+
+.cjd-branding a {
+	display: inline-block;
+	padding: 0.25rem;
+}
+
+.cjd-branding img {
+	display: block;
+	margin: 0 auto;
+	max-width: 140px;
+	height: auto;
+}
+
+table th,
+thead th {
+	font-family: var(--cjd-font-titre);
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	background: var(--cjd-noir) !important;
+	color: #fff !important;
+	border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+dialog#dialog,
+#dialog {
+	border: 2px solid rgba(0, 213, 86, 0.35);
+	box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+header.public {
+	background: var(--cjd-noir);
+	margin-bottom: 0;
+	border-bottom: 3px solid var(--cjd-vert);
+}
+
+header.public h1 {
+	margin: 0;
+}
+
+header.public.cjd-public-header h1 a {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 0.75rem;
+	padding: 1.25rem 1rem;
+	text-decoration: none;
+	color: #fff;
+}
+
+.cjd-public-header__tagline {
+	font-family: var(--cjd-font-titre);
+	font-weight: 800;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: clamp(1rem, 2.5vw, 1.35rem);
+	line-height: 1.2;
+	max-width: 36rem;
+	letter-spacing: 0.06em;
+}
+
+.cjd-public-header__brand img {
+	max-width: 200px;
+	height: auto;
+}
+
+.cjd-public-header__org img {
+	max-height: 56px;
+	width: auto;
+}
+
+.cjd-public-header__org-name {
+	font-family: var(--cjd-font-corps);
+	font-weight: 600;
+	font-size: 1rem;
+	text-transform: none;
+	letter-spacing: normal;
+	color: #fff;
+}
+
+footer.cjd-admin-footer {
+	position: relative;
+	z-index: 1001;
+	margin: 2rem 0 0;
+	padding: 1rem 1.25rem 1.5rem;
+	border-top: 1px solid var(--gLightBorderColor);
+	background: rgb(var(--gBgColor));
+	font-family: var(--cjd-font-corps);
+	font-size: 0.85rem;
+	color: rgb(var(--gTextColor));
+}
+
+.cjd-mentions {
+	font-weight: 600;
+	margin-bottom: 0.35rem;
+}
+
+.cjd-power {
+	color: var(--cjd-gris);
+	font-size: 0.8rem;
+}
+
+.cjd-dashboard-stats {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+	gap: 1rem;
+	margin-bottom: 1.5rem;
+}
+
+.cjd-stat {
+	background: #fff;
+	border: 1px solid var(--gLightBorderColor);
+	border-radius: 2px;
+	padding: 1rem 1.25rem;
+	text-align: center;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.cjd-stat-number {
+	font-family: var(--cjd-font-titre);
+	font-weight: 800;
+	font-size: 2.25rem;
+	line-height: 1.1;
+	color: var(--cjd-vert);
+	letter-spacing: 0.04em;
+}
+
+.cjd-stat-label {
+	font-family: var(--cjd-font-corps);
+	font-size: 0.85rem;
+	color: var(--cjd-gris);
+	margin-top: 0.35rem;
+}
+
+.cjd-login-wrapper {
+	min-height: calc(100vh - 2rem);
+	box-sizing: border-box;
+	padding: 1.5rem 1rem 2rem;
+	background: var(--cjd-noir);
+	color: #fff;
+	margin: -0.2em -1em 0 -1em;
+}
+
+main#content:has(.cjd-login-wrapper) {
+	background: var(--cjd-noir);
+}
+
+body.public main#content:has(.cjd-login-wrapper) {
+	max-width: none;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.cjd-login-wrapper .tabs {
+	margin-bottom: 1rem;
+}
+
+.cjd-login-wrapper .tabs a,
+.cjd-login-wrapper .tabs .linkbutton {
+	color: #fff;
+	border-color: rgba(255, 255, 255, 0.35);
+}
+
+.cjd-login-wrapper > .cjd-login-hero {
+	text-align: center;
+	margin-bottom: 1.5rem;
+}
+
+.cjd-login-wrapper > .cjd-login-hero img {
+	display: block;
+	margin: 0 auto 1rem;
+	max-width: 220px;
+	height: auto;
+}
+
+.cjd-login-wrapper .cjd-login-tagline {
+	font-family: var(--cjd-font-titre);
+	font-weight: 800;
+	text-transform: uppercase;
+	font-size: clamp(1.05rem, 2.5vw, 1.4rem);
+	line-height: 1.25;
+	letter-spacing: 0.06em;
+	color: #fff;
+	max-width: 32rem;
+	margin: 0 auto;
+}
+
+.cjd-login-wrapper form {
+	background: #fff;
+	color: rgb(var(--gTextColor));
+	border-radius: 2px;
+	padding: 1.5rem 1.25rem 1.25rem;
+	max-width: 28rem;
+	margin: 0 auto;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.cjd-login-wrapper form a {
+	color: var(--cjd-vert);
+}
+
+.cjd-login-wrapper form a:hover {
+	color: var(--cjd-noir);
+}
+
+.cjd-login-wrapper p.submit {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	align-items: stretch;
+}
+
+.cjd-login-wrapper p.submit .main,
+.cjd-login-wrapper p.submit input[type="submit"],
+.cjd-login-wrapper p.submit button[type="submit"] {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.cjd-login-wrapper p.help {
+	color: rgba(255, 255, 255, 0.75);
+	max-width: 28rem;
+	margin: 1rem auto 0;
+}
+
+.cjd-login-wrapper p.help a {
+	color: var(--cjd-vert);
+}
+
+.cjd-login-wrapper p.help small,
+.cjd-login-wrapper p.help small a {
+	color: rgba(255, 255, 255, 0.65);
+}
+
+.cjd-login-wrapper .block.confirm,
+.cjd-login-wrapper .block.error,
+.cjd-login-wrapper .block.alert {
+	max-width: 28rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+body::after {
+	content: "";
+	display: block;
+	height: 4px;
+	background: linear-gradient(
+		to right,
+		#00D556 0 20%,
+		#1882E3 20% 40%,
+		#00CAC8 40% 60%,
+		#FF5220 60% 80%,
+		#FFC800 80% 100%
+	);
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	pointer-events: none;
+}
+
+/* Mode sombre : neutralise l’inversion globale Paheko, palette CJD dédiée */
+html.dark {
+	filter: none !important;
+}
+
+html.dark,
+html.dark body {
+	background: #0a0a0a;
+	color: #fff;
+}
+
+html.dark body {
+	background-image: none;
+}
+
+html.dark a {
+	color: var(--cjd-vert);
+}
+
+html.dark a:hover {
+	color: #fff;
+}
+
+html.dark nav#menu {
+	filter: none !important;
+	background: #000;
+}
+
+html.dark main {
+	color: #eee;
+}
+
+html.dark main h1.main {
+	color: #fff;
+}
+
+html.dark table th,
+html.dark thead th {
+	background: var(--cjd-vert) !important;
+	color: #000 !important;
+}
+
+html.dark .cjd-stat {
+	background: #141414;
+	border-color: #333;
+	color: #eee;
+}
+
+html.dark .cjd-stat-number {
+	color: var(--cjd-vert);
+}
+
+html.dark .cjd-stat-label {
+	color: #aaa;
+}
+
+html.dark footer.cjd-admin-footer {
+	background: #0a0a0a;
+	border-top-color: #333;
+	color: #ddd;
+}
+
+html.dark .cjd-power {
+	color: #888;
+}
+
+html.dark main img,
+html.dark main video {
+	filter: none !important;
+}
+
+html.dark fieldset {
+	border-color: #444;
+}
+
+html.dark input,
+html.dark textarea,
+html.dark select {
+	background: #111;
+	color: #fff;
+	border-color: #444;
+}
+
+html.dark dialog#dialog,
+html.dark #dialog {
+	border-color: rgba(0, 213, 86, 0.5);
+}

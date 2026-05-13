@@ -1,15 +1,23 @@
+{* [CJD Section] Refonte couche 2 — 2026 *}
+{if !isset($cjd_section_name)}{assign var=cjd_section_name value="CJD Section"}{/if}
+{if !isset($cjd_section_rna)}{assign var=cjd_section_rna value=""}{/if}
+{if !isset($cjd_section_president)}{assign var=cjd_section_president value=""}{/if}
+{if !isset($cjd_section_logo_url)}{assign var=cjd_section_logo_url value=""}{/if}
+{if !isset($cjd_pillar_active)}{assign var=cjd_pillar_active value=""}{/if}
 <?php
 $layout ??= '';
 $title ??= '';
 $current ??= '';
 ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr" class="nojs{if $dialog} dialog{/if}{if $logged_user.preferences.dark_theme} dark{/if}" data-version="{$version_hash}" data-url="{$admin_url}"{if !empty($prefer_landscape)} data-prefer-landscape="1"{/if}>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr" class="nojs{if $dialog} dialog{/if}{if $logged_user.preferences.dark_theme} dark{/if}" data-version="{$version_hash}" data-url="{$admin_url}" data-cjd-section="{$cjd_section_name|escape:'html'}"{if !empty($prefer_landscape)} data-prefer-landscape="1"{/if}>
 <head>
 	<meta charset="utf-8" />
 	<meta name="v" content="{$version_hash}" />
 	<title>{$title}</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
 	<link rel="stylesheet" type="text/css" href="{$admin_uri}static/admin.css?{$version_hash}" media="all" />
 	<script type="text/javascript" src="{$admin_uri}static/scripts/global.js?{$version_hash}"></script>
 	{if isset($custom_js)}
@@ -76,6 +84,15 @@ if (ALERT_MESSAGE && !$dialog) {
 			<a href="{$admin_uri}"><img src="{$url}" alt="" /></a>
 	{/if}
 	</figure>
+	<div class="cjd-branding">
+		<a href="{$admin_uri}" title="CJD">
+			{if $cjd_section_logo_url}
+				<img src="{$cjd_section_logo_url|escape:'html'}" width="200" height="80" alt="{$cjd_section_name|escape:'html'}" />
+			{else}
+				<img src="{$admin_uri}static/logos/cjd-logo.svg?{$version_hash}" width="200" height="80" alt="CJD" />
+			{/if}
+		</a>
+	</div>
 	<ul>
 	{if $is_logged}
 	<?php
@@ -162,8 +179,20 @@ if (ALERT_MESSAGE && !$dialog) {
 </nav>
 
 {elseif $layout === 'public'}
-<header class="public">
-	<h1><a href="{$site_url}">{if $config.files.logo}<img src="{$config->fileURL('logo', '150px')}" alt="{$config.org_name}" />{else}{$config.org_name}{/if}</a></h1>
+<header class="public cjd-public-header">
+	<h1>
+		<a href="{$site_url}">
+			<span class="cjd-public-header__brand">
+				<img src="{$admin_uri}static/logos/cjd-logo-white.svg?{$version_hash}" width="200" height="80" alt="CJD" />
+				<span class="cjd-public-header__tagline">OSONS ÊTRE DIRIGEANT·E·S AUTREMENT</span>
+			</span>
+			{if $config.files.logo}
+				<span class="cjd-public-header__org"><img src="{$config->fileURL('logo', '150px')}" alt="{$config.org_name|escape:'html'}" /></span>
+			{else}
+				<span class="cjd-public-header__org-name">{$config.org_name|escape:'html'}</span>
+			{/if}
+		</a>
+	</h1>
 </header>
 {/if}
 

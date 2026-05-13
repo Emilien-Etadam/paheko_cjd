@@ -1,5 +1,25 @@
 {include file="_head.tpl" title="Bonjour %s !"|args:$logged_user->name() current="home"}
 
+{* [CJD Section] Refonte couche 2 — 2026 *}
+<section class="cjd-dashboard-stats">
+	<div class="cjd-stat">
+		<div class="cjd-stat-number">{* TODO couche 3 : variable $cjd_stats.members *}—</div>
+		<div class="cjd-stat-label">Membres actifs</div>
+	</div>
+	<div class="cjd-stat">
+		<div class="cjd-stat-number">{* TODO couche 3 : variable $cjd_stats.subscriptions *}—</div>
+		<div class="cjd-stat-label">Cotisations à jour</div>
+	</div>
+	<div class="cjd-stat">
+		<div class="cjd-stat-number">{* TODO couche 3 : variable $cjd_stats.events *}—</div>
+		<div class="cjd-stat-label">Prochains événements</div>
+	</div>
+	<div class="cjd-stat">
+		<div class="cjd-stat-number">{* TODO couche 3 : variable $cjd_stats.training_hours *}—</div>
+		<div class="cjd-stat-label">Heures de formation</div>
+	</div>
+</section>
+
 {$banner|raw}
 
 {if !$has_extensions && $session->canAccess($session::SECTION_CONFIG, $session::ACCESS_ADMIN)}

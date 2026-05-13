@@ -1,4 +1,11 @@
-{include file="_head.tpl" title="Connexion" current="login"}
+{include file="_head.tpl" title="Connexion" current="login" hide_title=true}
+
+{* [CJD Section] Refonte couche 2 — 2026 *}
+<div class="cjd-login-wrapper">
+	<div class="cjd-login-hero">
+		<img src="{$admin_uri}static/logos/cjd-logo-white.svg?{$version_hash}" width="200" height="80" alt="CJD" />
+		<p class="cjd-login-tagline">OSONS ÊTRE DIRIGEANT·E·S AUTREMENT</p>
+	</div>
 
 {if DESKTOP_CONFIG_FILE}
 <nav class="tabs">
@@ -87,5 +94,7 @@ if (window.navigator.userAgent.match(/MSIE|Trident\/|Edge\//)) {
 }
 </script>
 {/literal}
+
+</div>
 
 {include file="_foot.tpl"}

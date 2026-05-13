@@ -20,6 +20,20 @@
 </script>
 {/if}
 
+{* [CJD Section] Refonte couche 2 — 2026 *}
+{if $layout !== 'public'}
+<footer class="cjd-admin-footer">
+	<div class="cjd-mentions">
+		{$cjd_section_name}
+		{if $cjd_section_rna} — RNA {$cjd_section_rna|escape:'html'}{/if}
+		{if $cjd_section_president} — Président·e : {$cjd_section_president|escape:'html'}{/if}
+	</div>
+	<div class="cjd-power">
+		Mouvement CJD — Mettre l'économie au service de l'Homme
+	</div>
+</footer>
+{/if}
+
 <?php
 $layout ??= '';
 ?>
