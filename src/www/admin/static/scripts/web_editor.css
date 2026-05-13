@@ -21,7 +21,7 @@ nav.te .bold, nav.te .italic, nav.te .title, nav.te .link {
 
 nav.te .bold { font-weight: bold; }
 nav.te .italic { font-style: italic; }
-nav.te .link { text-decoration: underline; color: var(--gLinkColor); }
+nav.te .link { text-decoration: underline; color: rgb(var(--gLinkColor)); }
 
 nav.te .fullscreen {
     text-indent: -70em;

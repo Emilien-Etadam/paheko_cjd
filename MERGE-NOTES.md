@@ -12,6 +12,7 @@
 - `src/templates/emails/password_changed.tpl`
 - `src/templates/emails/verify_preferences.tpl`
 - `src/www/admin/static/admin.css` (commentaire + import `99-cjd-theme.css`)
+- `src/www/admin/static/scripts/web_editor.css` (`--gLinkColor` en triplet : `rgb(var(--gLinkColor))` pour les liens de l’éditeur)
 
 ## 2. Fichiers / assets créés (zéro conflit upstream)
 
@@ -42,7 +43,10 @@ Attribut HTML : `data-cjd-section` sur `<html>` (valeur = nom de section).
 
 ## 4. Comportements modifiés
 
-- **Variables CSS `--g*`** : remappées dans `99-cjd-theme.css` avec des triplets **R, G, B** pour celles utilisées via `rgb(var(--g…))` / `rgba(var(--g…), α)` (contrairement à une notation hex seule, incompatible avec le code existant).
+- **Variables CSS `--g*`** :
+  - Triplets **R, G, B** pour `--gMainColor`, `--gSecondColor`, `--gBgColor`, `--gTextColor`, `--gHoverLinkColor`, **`--gLinkColor`** (usage Paheko via `rgb(var(--g…))` / `rgba(var(--g…), α)`).
+  - Surcharge **`a { color: rgb(var(--gLinkColor)); }`** dans `99-cjd-theme.css` car `01-layout.css` utilise `color: var(--gLinkColor)` (invalide si la variable n’est qu’un triplet).
+  - **`--gBorderColor`**, **`--gLightBorderColor`**, **`--gLightBackgroundColor`** : laissées en **couleur CSS complète** (`#…`) car de nombreuses feuilles Paheko font `border-color: var(--gBorderColor)` sans `rgb()` — des triplets seuls casseraient ces règles. Valeurs alignées sur la charte (#B4B4B4, #E5E5E5, #FFFFFF).
 - **Mode sombre** : suppression de l’inversion globale `filter` sur `html.dark` ; palette sombre redéfinie manuellement (fond #0A0A0A, menu noir, liens verts, en-têtes de tableaux verts sur noir, etc.).
 - **Bandeau pattern** : barre fixe 4px en bas de viewport via `body::after` dans `99-cjd-theme.css` (toutes les pages utilisant `admin.css`).
 - **Footer admin** : bloc `footer.cjd-admin-footer` inséré dans `_foot.tpl` lorsque `$layout !== 'public'` (le footer public existant est inchangé).
@@ -54,7 +58,7 @@ Attribut HTML : `data-cjd-section` sur `<html>` (valeur = nom de section).
 
 Les e-mails en `CONTEXT_SYSTEM` sont mis en file avec un corps **texte** ; la partie HTML est générée par `htmlspecialchars` + `nl2br` sur ce texte (`Emails::queue`, branche `!$template`). **Les gabarits ne doivent donc pas contenir de HTML brut** : les partiels `_cjd_header.tpl` / `_cjd_footer.tpl` sont en **texte** (séparateurs, mentions section, rappel des codes couleur en libellé).
 
-Pour un **HTML riche** (tables Outlook, images distantes), il faudra une évolution **côté PHP** (corps HTML dédié non échappé ou multipart explicite).
+Pour un **HTML riche** (logo, bandeau couleurs, mise en page identitaire, clients Outlook), il faudra une évolution **hors gabarits seuls** : adapter `Emails::queue` / `Mail_Message` pour un corps HTML non échappé ou un envoi multipart dédié, ou un **plugin / couche 4** parallèle aux e-mails système actuels.
 
 ## 6. Tests visuels recommandés après déploiement
 

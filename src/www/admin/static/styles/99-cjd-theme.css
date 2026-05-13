@@ -1,8 +1,10 @@
 /* [CJD Section] Refonte couche 2 — 2026
  * Paheko — AGPL-3.0
  * Thème identitaire CJD (charte 2020). Surcharges fin de cascade admin.
- * Remarque : --gMainColor, --gSecondColor, --gBgColor, --gTextColor et --gHoverLinkColor
- * sont utilisés sous la forme rgb(var(--g…)) ou rgba(var(--g…), α) : valeurs « R, G, B » uniquement.
+ * Remarque : --gMainColor, --gSecondColor, --gBgColor, --gTextColor, --gHoverLinkColor et --gLinkColor
+ * sont des triplets « R, G, B » pour rgb(var(--g…)) / rgba(var(--g…), α).
+ * --gBorderColor, --gLightBorderColor, --gLightBackgroundColor : couleurs CSS complètes (#… ou rgb(…))
+ * car le cœur Paheko les consomme via var(--g…) sans enveloppe rgb().
  */
 @import url("https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@800&family=Open+Sans:wght@400;600;700&display=swap");
 
@@ -11,10 +13,11 @@
 	--gSecondColor: 0, 0, 0;
 	--gBgColor: 245, 245, 245;
 	--gTextColor: 0, 0, 0;
+	/* Équivalents charte : 180,180,180 — 229,229,229 — 255,255,255 (var() direct Paheko) */
 	--gBorderColor: #B4B4B4;
 	--gLightBorderColor: #E5E5E5;
 	--gLightBackgroundColor: #FFFFFF;
-	--gLinkColor: #00D556;
+	--gLinkColor: 0, 213, 86;
 	--gHoverLinkColor: 0, 0, 0;
 	--gBgImage: none;
 
@@ -38,6 +41,11 @@ body {
 	font-family: var(--cjd-font-corps);
 	background: rgb(var(--gBgColor)) var(--gBgImage) no-repeat 0 0 fixed;
 	padding-bottom: 4px;
+}
+
+/* Paheko 01-layout.css : a { color: var(--gLinkColor) } — incompatible avec triplet sans rgb() */
+a {
+	color: rgb(var(--gLinkColor));
 }
 
 h1, h2, h3, h4, legend {
