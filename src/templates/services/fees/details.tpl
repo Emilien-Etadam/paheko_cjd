@@ -1,5 +1,14 @@
 {include file="_head.tpl" title="Tarif : %s — Liste des membres inscrits"|args:$fee.label current="users/services"}
 
+<nav class="breadcrumbs">
+	<ul>
+		<li><a href="{$admin_uri}services/">Activités et cotisations</a></li>
+		<li><a href="{$admin_uri}services/fees/?id={$service.id}">{$service.label|escape}</a></li>
+		<li>{$fee.label|escape}</li>
+		<li>{if $type == 'active'}À jour{elseif $type == 'expired'}Inscription expirée{elseif $type == 'unpaid'}En attente de règlement{else}Tous les inscrits{/if}</li>
+	</ul>
+</nav>
+
 {include file="services/_nav.tpl" current="index" current_service=$service service_page="index" current_fee=$fee fee_page=$type}
 
 

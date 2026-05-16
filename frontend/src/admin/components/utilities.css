@@ -99,41 +99,61 @@ dd em.help {
 }
 
 nav.breadcrumbs {
-	clear: both;
-	margin: 0.5rem 0;
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 0;
+	margin: 0 0 1.25rem;
+	font-size: 0.8rem;
 	color: var(--color-text-muted);
+	border-bottom: 1px solid var(--color-border);
+	padding-bottom: 0.75rem;
 }
 
 nav.breadcrumbs.no-clear {
 	clear: none;
 }
 
-nav.breadcrumbs ul,
+nav.breadcrumbs ul {
+	display: contents;
+}
+
 nav.breadcrumbs li {
+	display: flex;
+	align-items: center;
 	list-style: none;
-	display: inline;
 	margin: 0;
 	padding: 0;
 }
 
-nav.breadcrumbs li::before {
-	content: "> ";
+nav.breadcrumbs li::after {
+	content: "/";
+	margin: 0 0.4rem;
+	opacity: 0.4;
+}
+
+nav.breadcrumbs li:last-child::after {
+	display: none;
 }
 
 nav.breadcrumbs li:first-child::before {
-	content: "";
+	display: none;
 }
 
 nav.breadcrumbs li a {
 	color: var(--color-cjd-dark);
-}
-
-nav.breadcrumbs li:last-child a {
 	font-weight: 600;
 }
 
+nav.breadcrumbs li:last-child {
+	color: var(--color-text);
+	font-weight: 600;
+	pointer-events: none;
+}
+
 nav.breadcrumbs aside {
-	float: right;
+	float: none;
+	margin-left: auto;
 }
 
 .center-block {

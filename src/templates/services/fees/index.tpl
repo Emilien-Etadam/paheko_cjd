@@ -1,5 +1,11 @@
 {include file="_head.tpl" title="%s — Tarifs"|args:$service.label current="users/services"}
 
+<nav class="breadcrumbs">
+	<ul>
+		<li><a href="{$admin_uri}services/">Activités et cotisations</a></li>
+		<li>{$service.label|escape}</li>
+	</ul>
+</nav>
 
 {include file="services/_nav.tpl" current="index" current_service=$service service_page="index"}
 
