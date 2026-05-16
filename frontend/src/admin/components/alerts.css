@@ -1,20 +1,135 @@
-/* Messages — palette alignée CJD */
-.alert.block {
-	background-color: #fffbeb;
-	border-color: #f59e0b;
+/* Messages — palette CJD */
+span.error,
+b.error {
+	color: #b91c1c;
 }
 
-.confirm.block {
-	background-color: rgb(var(--gSecondColor));
-	border-color: rgb(var(--gMainColor));
+span.confirm,
+b.confirm {
+	color: #15803d;
+}
+
+span.alert,
+b.alert {
+	color: #b45309;
+}
+
+.block p,
+.block h4,
+.block ul,
+.block h3,
+.block h2 {
+	margin-bottom: 0.6rem;
+}
+
+.block table {
+	margin: 1rem 0;
+}
+
+.block table th,
+.block table td {
+	vertical-align: top;
+	padding: 0.35rem 0.5rem;
+	border: 1px solid var(--color-border);
+}
+
+.alert.block,
+.error.block,
+.confirm.block,
+.help.block,
+.info.block {
+	border: 1px solid var(--color-border);
+	padding: 0.75rem 1rem 0.75rem 3rem;
+	margin: 0.75rem 0;
+	border-radius: var(--radius-md);
+	position: relative;
+	clear: both;
+	color: var(--color-text);
+	box-shadow: var(--shadow-sm);
+}
+
+.alert.block {
+	border-color: #f59e0b;
+	background-color: #fffbeb;
 }
 
 .error.block {
-	background-color: #fef2f2;
 	border-color: #dc2626;
+	background-color: #fef2f2;
+}
+
+.confirm.block {
+	border-color: var(--color-cjd);
+	background-color: var(--color-cjd-muted);
 }
 
 .help.block {
+	border-color: var(--color-border);
 	background-color: var(--color-surface-muted);
-	border-color: var(--gLightBorderColor);
+}
+
+.info.block {
+	border-width: 2px;
+	border-color: var(--color-cjd);
+	background-color: var(--color-surface);
+	padding: 1rem 1rem 1rem 3rem;
+}
+
+.confirm.block a.icn-btn,
+.alert.block a.icn-btn,
+.error.block a.icn-btn {
+	color: inherit;
+}
+
+.confirm.block::before,
+.alert.block::before,
+.error.block::before,
+.help.block::before {
+	font-family: "paheko", sans-serif;
+	left: 0.75rem;
+	top: 0.65rem;
+	position: absolute;
+	font-size: 1.35em;
+	line-height: 1;
+}
+
+.confirm.block::before {
+	content: "☑";
+	color: var(--color-cjd);
+}
+
+.alert.block::before {
+	content: "⚠";
+	color: #d97706;
+}
+
+.error.block::before {
+	content: "⚠";
+	color: #dc2626;
+}
+
+.help.block::before {
+	content: "❓";
+	color: var(--color-text-muted);
+}
+
+.help {
+	color: var(--color-text-muted);
+}
+
+.help a {
+	color: var(--color-cjd-dark);
+}
+
+p.help:not(.block) {
+	margin: 1rem 0;
+	font-size: 0.9rem;
+	color: var(--color-text-muted);
+}
+
+.error ul,
+.alert ul,
+.confirm ul {
+	margin-left: 1.5em;
+	list-style: disc;
 }

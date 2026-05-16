@@ -1,124 +1,32 @@
+/**
+ * Utilitaires métier (permissions, pagination, détails pliables…).
+ * Messages : components/alerts.css — fiches : components/describe.css
+ */
+
 /** Alert, confirm and error messages */
-h3.warning {
-    margin: 1em;
-    color: red;
-}
-
-span.error, b.error {
-    color: #900;
-}
-
-span.confirm, b.confirm {
-    color: #090;
-}
-
-span.alert, b.alert {
-    color: #990;
-}
-
-.block p, .block h4, .block ul, .block h3, .block h2 {
-    margin-bottom: .6rem;
-}
-
-.block table {
-    margin: 1rem 0;
-}
-
-.block table th, .block table td {
-    vertical-align: top;
-    padding: .2rem .4rem;
-    border: 1px solid var(--gBorderColor);
-}
-
-.alert.block, .error.block, .confirm.block, .help.block, .info.block {
-    border: 1px solid var(--gLightBorderColor);
-    padding: .5em;
-    margin: .5em 0;
-    border-radius: .3em;
-    padding-left: 3em;
-    position: relative;
-    clear: both;
-    color: #000;
-}
-
-.alert.block {
-    border-color: #cc0;
-    background-color: #ffc;
-}
-
-.error.block {
-    border-color: #c00;
-    background-color: #fcc;
-}
-
-.confirm.block {
-    border-color: #0c0;
-    background-color: #cfc;
-}
-
-.help.block {
-    color: rgb(var(--gTextColor));
-    border-color: var(--gLightBorderColor);
-    background-color: var(--gLightBackgroundColor);
-}
-
-.info.block {
-    color: rgb(var(--gTextColor));
-    border-color: var(--gLightBorderColor);
-    background-color: rgb(var(--gBgColor));
-    border-width: 2px;
-    padding: 1rem;
-}
-
-.confirm.block a.icn-btn, .alert.block a.icn-btn, .error.block a.icn-btn {
-    color: #000;
-}
-
-.confirm.block::before, .alert.block::before, .error.block::before, .help.block::before {
-    font-family: "paheko";
-    left: .5em;
-    top: .2em;
-    position: absolute;
-    font-size: 1.5em;
-    text-shadow: 2px 2px 5px var(--gLightBorderColor);
-}
-
-.confirm.block::before {
-    content: "☑";
-    color: green;
-}
-
-.alert.block::before {
-    content: "⚠";
-    color: #990;
-}
-
-.error.block::before {
-    content: "⚠";
-    color: red;
-}
-
-.help.block::before {
-    content: "❓";
-    color: var(--gBorderColor);
-}
-
-.help {
-    color: var(--gBorderColor);
-}
-
-.help a {
-    color: var(--gBorderColor);
-}
-
-.help a span {
-    text-decoration: underline;
-}
 
 
-p.help:not(.block) {
-    margin: 1em;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 div.help.flex {
     margin: .5em;
@@ -140,10 +48,6 @@ dd.help li {
     list-style-type: disc;
 }
 
-.error ul, .alert ul, .confirm ul {
-    margin-left: 1.5em;
-    list-style: disc;
-}
 
 .ruler {
     margin: .5em;
@@ -182,16 +86,6 @@ dd.help li {
     margin-right: -100%;
 }
 
-.num a, a.num {
-    text-decoration: none;
-    border-radius: .5rem;
-    display: inline-block;
-    text-align: center;
-    padding: 0 .3rem;
-    background: rgba(var(--gMainColor), 0.7);
-    color: rgb(var(--gBgColor));
-    white-space: pre;
-}
 
 .permissions b {
     border: 2px solid #999;
@@ -374,51 +268,13 @@ dl.list dd.desc {
     color: var(--gLightBorderColor);
 }
 
-dl.describe {
-    margin: 1rem 0;
-    display: grid;
-    align-items: start;
-    grid-template-columns: 15rem 1fr;
-}
 
-dl.describe > dt {
-    grid-column: 1;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    text-align: right;
-    color: var(--gBorderColor);
-    margin: .2rem .5rem;
-}
 
-dl.describe > dd {
-    grid-column: 2;
-    text-align: left;
-    margin: .2rem .5rem;
-}
 
-dl.describe ul {
-    margin-left: 1.5em;
-    list-style-type: disc;
-}
 
-dl.describe ul.flat {
-    margin-left: 0;
-    list-style-type: none;
-}
 
-dl.describe ul.flat li {
-    margin-bottom: .2em;
-}
 
-mark {
-    background-color: rgba(var(--gSecondColor), 0.3);
-    border-radius: .5em;
-    padding: .1rem .4rem;
-}
 
-mark.variant-a {
-    background-color: rgba(var(--gMainColor), 0.2);
-}
 
 dl.cotisation {
     background: rgba(var(--gSecondColor), 0.2);
@@ -439,31 +295,9 @@ dl.cotisation dd.disabled {
     color: var(--gBorderColor);
 }
 
-aside.describe {
-    width: 20em;
-    float: right;
-    margin: .5em;
-    background: rgba(var(--gSecondColor), 0.2);
-    border-radius: .5em;
-    border: 2px solid rgba(var(--gSecondColor), 0.5);
-    padding: .5em;
-    z-index: 200;
-    color: var(--gBorderColor);
-}
 
-aside.describe dl.describe {
-    display: block;
-}
 
-aside.describe dl.describe dt {
-    text-align: left;
-    font-weight: bold;
-    color: rgb(var(--gTextColor));
-}
 
-aside.describe dd a.icn-btn, aside.secondary a.icn-btn, aside.secondary button, aside.describe button {
-    margin-left: 0;
-}
 
 @media handheld,screen and (min-width:1199px) {
     aside.secondary {
