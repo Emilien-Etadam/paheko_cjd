@@ -11,3 +11,24 @@
 	font-weight: 600;
 	color: var(--color-cjd-dark);
 }
+
+dl.cotisation {
+	margin: 0 0 1.25rem;
+	padding: 1rem 1.25rem;
+	background: var(--color-cjd-muted);
+	border-radius: var(--radius-md);
+	border: 1px solid rgb(0 213 86 / 0.35);
+}
+
+dl.cotisation dt {
+	font-weight: 600;
+	color: var(--color-cjd-dark);
+}
+
+dl.cotisation dd {
+	margin: 0.25rem 0 0.5rem 0;
+}
+
+dl.cotisation dd.disabled {
+	color: var(--color-text-muted);
+}

@@ -55,3 +55,30 @@
 .cjd-config dl.large dd {
 	margin: 0.35rem 0 0.75rem 0;
 }
+
+section.large article {
+	margin-top: 1rem;
+	padding-top: 1rem;
+	border-top: 1px solid var(--color-border);
+}
+
+section.large article h2,
+section.large article h3,
+section.large article p {
+	margin-bottom: 0.75rem;
+}
+
+dl.list dt {
+	font-size: 1.05rem;
+	font-weight: 600;
+	margin-top: 0.75rem;
+	color: var(--color-cjd-dark);
+}
+
+dl.list dd.desc {
+	color: var(--color-text-muted);
+}
+
+.templatesList ul {
+	margin: 1rem 0 1rem 1.5rem;
+}

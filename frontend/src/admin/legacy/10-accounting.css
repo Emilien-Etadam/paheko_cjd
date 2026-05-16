@@ -5,8 +5,6 @@
 
 /** Accounting specifics */
 
-
-
 .transaction-lines td.money {
     text-align: left;
 }
@@ -23,19 +21,6 @@
     min-width: 3.5rem !important;
     width: auto;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .attachments {
     text-align: center;
@@ -105,34 +90,6 @@ input[name=code_base] {
 .transaction-details-container aside {
     margin-top: 2em;
 }
-
-table.statement td, table.statement th {
-    border: 1px solid rgba(var(--gSecondColor), 0.5);
-}
-
-table.statement tbody tr.even td, table.statement tbody tr.even th {
-    background: rgba(var(--gSecondColor), 0.1);
-}
-
-table.statement tfoot td, table.statement tfoot th {
-    background: rgba(var(--gSecondColor), 0.2);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 table.provisional > tbody > tr > td {
     padding: 0;

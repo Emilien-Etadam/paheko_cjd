@@ -359,3 +359,77 @@ a.num:hover,
 	background: var(--color-cjd);
 	color: #fff;
 }
+
+/* Tableaux de rapport (balance, bilan…) */
+table.statement {
+	width: 100%;
+}
+
+table.statement td,
+table.statement th {
+	padding: 0.35rem 0.5rem;
+	vertical-align: top;
+}
+
+table.statement thead tr {
+	font-weight: bold;
+}
+
+table.statement .money {
+	border-left: none;
+}
+
+table.statement .num {
+	border-right: none;
+}
+
+table.statement tbody th {
+	border-left: none;
+	border-right: none;
+}
+
+table.statement tfoot th,
+table.statement tfoot td {
+	padding: 0.5rem;
+}
+
+table.statement > thead th {
+	text-align: center;
+	font-size: 1.1rem;
+	font-weight: 700;
+	font-family: var(--font-display);
+	border: none;
+	background: var(--color-cjd-muted);
+}
+
+table.statement td.spacer,
+table.statement tr td.colspan,
+table.statement tr td.spacer {
+	border: none;
+	background: transparent !important;
+}
+
+table.statement tr.spacer td {
+	height: 0.75rem;
+	border: none !important;
+}
+
+td.money,
+th.money {
+	text-align: right;
+	min-width: 2em;
+}
+
+table caption {
+	display: none;
+}
+
+table.statement tbody tr.even td,
+table.statement tbody tr.even th {
+	background: var(--color-surface-muted);
+}
+
+table.statement tfoot td,
+table.statement tfoot th {
+	background: var(--color-cjd-muted);
+}

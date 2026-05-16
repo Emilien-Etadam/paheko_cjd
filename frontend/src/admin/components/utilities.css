@@ -1,0 +1,184 @@
+/* Utilitaires transverses */
+.hidden {
+	display: none !important;
+}
+
+.print-only {
+	display: none;
+}
+
+.ruler {
+	margin: 0.75rem 0;
+	text-align: center;
+	overflow: hidden;
+}
+
+.ruler-left {
+	margin: 0.75rem 0;
+	overflow: hidden;
+	display: block;
+}
+
+.ruler::before,
+.ruler::after,
+.ruler-left::after {
+	background-color: var(--color-border);
+	content: "";
+	display: inline-block;
+	height: 1px;
+	position: relative;
+	vertical-align: middle;
+	width: 50%;
+}
+
+.ruler::before {
+	right: 0.5em;
+	margin-left: -50%;
+}
+
+.ruler::after,
+.ruler-left::after {
+	left: 0.5em;
+	margin-right: -50%;
+}
+
+.ruler-left::after {
+	width: 100%;
+	margin-right: -100%;
+}
+
+div.help.flex {
+	margin: 0.5rem 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 0.75rem;
+}
+
+.help ul li {
+	list-style-type: disc;
+	margin: 0.35rem 0 0.35rem 1.5rem;
+}
+
+dd em.help {
+	margin-left: 0.5rem;
+}
+
+.pagination {
+	clear: both;
+	list-style: none;
+	padding: 0.5rem 0;
+	text-align: center;
+	margin: 0;
+}
+
+.pagination li {
+	display: inline-block;
+	margin: 0 0.3rem;
+}
+
+.pagination li.current {
+	font-size: 1.15em;
+	font-weight: 600;
+	color: var(--color-cjd-dark);
+}
+
+.pagination li a {
+	color: var(--color-cjd-dark);
+}
+
+.pagination li button {
+	color: inherit;
+	background: transparent;
+	border: none;
+	padding: 0;
+	margin: 0;
+	box-shadow: none;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+nav.breadcrumbs {
+	clear: both;
+	margin: 0.5rem 0;
+	color: var(--color-text-muted);
+}
+
+nav.breadcrumbs.no-clear {
+	clear: none;
+}
+
+nav.breadcrumbs ul,
+nav.breadcrumbs li {
+	list-style: none;
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+
+nav.breadcrumbs li::before {
+	content: "> ";
+}
+
+nav.breadcrumbs li:first-child::before {
+	content: "";
+}
+
+nav.breadcrumbs li a {
+	color: var(--color-cjd-dark);
+}
+
+nav.breadcrumbs li:last-child a {
+	font-weight: 600;
+}
+
+nav.breadcrumbs aside {
+	float: right;
+}
+
+.center-block {
+	margin: 1rem auto;
+	max-width: 42rem;
+}
+
+.center-block > p,
+.center-block > h2,
+.center-block > h3 {
+	text-align: center;
+}
+
+.center-block > pre {
+	max-width: 100%;
+	overflow: auto;
+	margin: 1rem auto;
+	background: var(--color-surface-muted);
+	padding: 0.75rem;
+	border-radius: var(--radius-md);
+	white-space: pre-wrap;
+}
+
+ins {
+	background: #dcfce7;
+	color: #14532d;
+	text-decoration: none;
+	font-weight: 600;
+}
+
+del {
+	background: #fee2e2;
+	color: #7f1d1d;
+	text-decoration-line: line-through;
+}
+
+#confirm_saved {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	padding: 0.5rem 0;
+	margin: 0;
+	text-align: center;
+	border: 0;
+	transition: opacity 0.5s ease;
+}
