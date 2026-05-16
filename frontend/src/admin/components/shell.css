@@ -156,7 +156,7 @@ main#content {
 	flex: 1;
 	margin: 0;
 	padding: 1.5rem clamp(1rem, 3vw, 2rem) 2.5rem;
-	max-width: 1440px;
+	max-width: 1140px;
 	width: 100%;
 	box-sizing: border-box;
 }

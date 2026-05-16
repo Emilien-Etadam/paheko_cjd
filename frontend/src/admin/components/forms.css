@@ -93,9 +93,9 @@
 :is(main, #dialog, html.dialog main) button.main,
 :is(main, #dialog, html.dialog main) .icn-btn.main,
 :is(main, #dialog, html.dialog main) input[type="submit"].main {
-	background: var(--color-cjd);
+	background: #000;
 	color: #fff;
-	border: 1px solid var(--color-cjd);
+	border: 1px solid #000;
 	font-family: var(--font-display);
 	font-weight: 600;
 	text-transform: uppercase;
@@ -105,8 +105,8 @@
 :is(main, #dialog, html.dialog main) button.main:hover,
 :is(main, #dialog, html.dialog main) .icn-btn.main:hover,
 :is(main, #dialog, html.dialog main) input[type="submit"].main:hover {
-	background: var(--color-cjd-hover);
-	border-color: var(--color-cjd-hover);
+	background: #1a1a1a;
+	border-color: #1a1a1a;
 }
 
 :is(main, #dialog, html.dialog main) a.icn-btn:not(.main) {

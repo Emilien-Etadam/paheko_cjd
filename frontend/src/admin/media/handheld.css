@@ -169,8 +169,9 @@ main {
 nav.tabs ul {
 	border: none;
 	padding: 0;
-	margin: .3em 0;
-	justify-content: center;
+	margin: 0;
+	justify-content: flex-start;
+	min-width: max-content;
 }
 
 nav.tabs ul li a {
