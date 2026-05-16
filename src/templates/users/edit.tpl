@@ -6,9 +6,10 @@
 
 {form_errors}
 
-<form method="post" action="{$self_url}" data-focus="fieldset.main input">
+<form method="post" action="{$self_url}" class="cjd-member-edit" data-focus="fieldset.main input">
 	<aside class="secondary">
 		<fieldset>
+			<legend>Paramètres</legend>
 			<dl>
 			{if $user.id == $logged_user.id && $session->canAccess($session::SECTION_CONFIG, $session::ACCESS_ADMIN)}
 				<p class="alert block">Pour éviter que votre association ne se retrouve sans administrateur, vous ne pouvez pas modifier votre catégorie de membre. Il faut qu'un autre administrateur le fasse pour vous.</p>
@@ -25,20 +26,21 @@
 		</fieldset>
 	</aside>
 
-	<fieldset class="main">
-		<legend>Fiche du membre</legend>
-		<dl>
-			{foreach from=$fields item="field"}
-				{edit_user_field field=$field user=$user context="admin_edit" session=$session}
-			{/foreach}
-		</dl>
-	</fieldset>
+	<div class="cjd-member-edit__form">
+		<fieldset class="main">
+			<legend>Fiche du membre</legend>
+			<dl>
+				{foreach from=$fields item="field"}
+					{edit_user_field field=$field user=$user context="admin_edit" session=$session}
+				{/foreach}
+			</dl>
+		</fieldset>
 
-	<p class="submit">
-		{csrf_field key=$csrf_key}
-		{button type="submit" name="save" label="Enregistrer" shape="right" class="main"}
-	</p>
-
+		<p class="submit">
+			{csrf_field key=$csrf_key}
+			{button type="submit" name="save" label="Enregistrer" shape="right" class="main"}
+		</p>
+	</div>
 </form>
 
 {include file="_foot.tpl"}

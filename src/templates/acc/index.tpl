@@ -1,6 +1,7 @@
 {include file="_head.tpl" title="Comptabilité" current="acc"}
 
 {if !empty($all_years)}
+<div class="cjd-toolbar">
 <form method="get" action="{$admin_url}acc/search.php" class="shortForm">
 	<fieldset>
 		<legend>Recherche rapide</legend>
