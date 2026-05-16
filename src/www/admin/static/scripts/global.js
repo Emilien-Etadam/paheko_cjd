@@ -790,6 +790,8 @@
 			}
 
 			form.addEventListener('submit', (e) => {
+				form.classList.add('submitted');
+
 				let elements = form.elements;
 
 				// Make sure hidden or disabled form elements are not required

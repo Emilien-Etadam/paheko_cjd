@@ -71,10 +71,7 @@ tbody textarea, tbody select {
 }
 
 
-input:not(:placeholder-shown):focus:invalid, textarea:not(:placeholder-shown):focus:invalid {
-    border-color: rgb(var(--gHoverLinkColor));
-    box-shadow: 0 0 5px .3rem rgba(var(--gHoverLinkColor), 0.5);
-}
+/* États invalides : forms.css (form.submitted) */
 
 /* Fake checkbox and radio buttons */
 input[type=checkbox], input[type=radio] {
@@ -88,14 +85,14 @@ input[type=checkbox] + label::before, input[type=radio] + label::before {
     height: 1em;
     text-align: center;
     transition: color .2s, box-shadow .2s ease-in-out;
-    text-shadow: 1px 1px 3px var(--gLightBorderColor);
+    text-shadow: none;
     cursor: pointer;
     font-family: "paheko";
     font-size: 1.2rem;
     font-weight: normal;
-    color: rgb(var(--gMainColor));
+    color: var(--color-cjd);
     margin-right: .5em;
-    border-radius: .25rem;
+    border-radius: var(--radius-sm);
     padding: .1rem .2rem;
 }
 
@@ -116,11 +113,18 @@ input[type=radio]:checked + label::before {
 }
 
 input:hover + label::before {
-    color: rgb(var(--gSecondColor));
+    color: var(--color-cjd-hover);
 }
 
 input:checked + label::before {
-    text-shadow: 1px 1px 5px rgba(var(--gSecondColor), 0.5);
+    color: var(--color-cjd-dark);
+    text-shadow: 0 0 0.35rem var(--color-cjd-muted);
+}
+
+input:focus-visible + label::before {
+    outline: 2px solid var(--color-cjd);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
 }
 
 #queryBuilder input[type=checkbox] {
@@ -167,8 +171,8 @@ span[data-icon] {
 }
 
 .icn-btn:hover > .icon {
-    fill: rgb(var(--gHoverLinkColor)) !important;
-    stroke: rgb(var(--gHoverLinkColor)) !important;
+    fill: var(--color-cjd) !important;
+    stroke: var(--color-cjd) !important;
 }
 
 
