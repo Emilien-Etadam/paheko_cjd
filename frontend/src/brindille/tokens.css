@@ -15,6 +15,10 @@
 	--color-text-muted: #6b7280;
 	--color-border: #e5e7eb;
 
+	--radius-sm: 0.25rem;
+	--radius-md: 0.5rem;
+	--radius-lg: 0.75rem;
+
 	/* Teintes HSL pour default.css Paheko (teinte verte CJD ≈ 145) */
 	--first-color: 145;
 	--second-color: 152;
