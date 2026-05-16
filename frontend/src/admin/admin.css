@@ -1,0 +1,26 @@
+/**
+ * Point d’entrée CSS de l’administration Paheko.
+ *
+ * Ordre des couches :
+ * 1. Tailwind (thème + utilitaires, sans preflight pour ne pas casser le legacy)
+ * 2. Styles historiques Paheko (migration progressive vers utilitaires / composants)
+ */
+
+@import "tailwindcss/theme" layer(theme);
+@import "./tokens.css";
+@import "tailwindcss/utilities" layer(utilities);
+
+/* Classes utilitaires dans les templates Smarty et scripts admin */
+@source "../../../src/templates/**/*.tpl";
+@source "../../../src/www/admin/static/scripts/**/*.js";
+
+/* Styles existants — chemins relatifs au fichier source (résolus par Vite) */
+@import "../../../src/www/admin/static/styles/00-reset.css";
+@import "../../../src/www/admin/static/styles/01-layout.css";
+@import "../../../src/www/admin/static/styles/02-common.css";
+@import "../../../src/www/admin/static/styles/03-forms.css";
+@import "../../../src/www/admin/static/styles/04-dialogs.css";
+@import "../../../src/www/admin/static/styles/05-navigation.css";
+@import "../../../src/www/admin/static/styles/06-tables-common.css";
+@import "../../../src/www/admin/static/styles/07-tables.css";
+@import "../../../src/www/admin/static/styles/10-accounting.css";

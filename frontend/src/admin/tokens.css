@@ -1,0 +1,12 @@
+/**
+ * Design tokens (charte graphique, thème clair/sombre, etc.)
+ * Compléter lors de la personnalisation CJD.
+ */
+@theme {
+	--font-sans: "Open Sans", system-ui, sans-serif;
+	--font-display: "Saira Condensed", system-ui, sans-serif;
+
+	/* Couleurs Paheko par défaut — surchargées à l’exécution via {custom_colors} */
+	--color-brand: rgb(32 120 122);
+	--color-brand-muted: rgb(133 185 186);
+}

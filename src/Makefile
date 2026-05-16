@@ -1,4 +1,4 @@
-.PHONY: dev-server release deps publish check-dependencies test-syntax tests minify phpstan www htaccess modules installer plugins doc
+.PHONY: dev-server release deps publish check-dependencies test-syntax tests minify frontend frontend-install phpstan www htaccess modules installer plugins doc
 SHELL := /bin/bash
 KD2FW_BRANCH := trunk
 MODULES_BRANCH := trunk
@@ -100,8 +100,8 @@ release: test-syntax doc minify freeze
 		cd paheko/src/include/lib && \
 		rsync --files-from=dependencies.list -r /tmp/paheko-build/kd2/src/lib/ /tmp/paheko-build/paheko/src/include/lib/
 
-	# Overwrite admin.css with united file
-	mv www/admin/static/mini.css /tmp/paheko-build/paheko/src/www/admin/static/admin.css
+	# CSS admin (Vite → dist, copié dans mini.css par make minify)
+	cp www/admin/static/mini.css /tmp/paheko-build/paheko/src/www/admin/static/dist/admin.css
 
 	# Generate .htaccess file
 	cd /tmp/paheko-build/paheko/src && make htaccess
@@ -154,10 +154,19 @@ check-dependencies:
 installer:
 	cd ../tools && php make_installer.php > install.php
 
-minify:
-	cat `ls www/admin/static/styles/[0-9]*.css` | sed 's/\.\.\///' > www/admin/static/mini.css
-	@# Minify is only gaining 500 gzipped bytes (4kB uncompressed) but making things hard to read/hack
-	@#yui-compressor --nomunge www/admin/static/mini.css -o www/admin/static/mini.css
+frontend-install:
+	cd ../frontend && npm ci
+
+frontend: frontend-install
+	cd ../frontend && npm run build
+
+minify: frontend
+	@if [ -f www/admin/static/dist/admin.css ]; then \
+		cp www/admin/static/dist/admin.css www/admin/static/mini.css; \
+	else \
+		echo "WARN: dist/admin.css absent, fallback concat legacy"; \
+		cat `ls www/admin/static/styles/[0-9]*.css` | sed 's/\.\.\///' > www/admin/static/mini.css; \
+	fi
 
 stable:
 	@echo -n "Checking branch... "; \

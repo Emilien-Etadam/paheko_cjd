@@ -12,6 +12,16 @@ Le code sur Github n'est qu'un miroir, le développement principal se passe sur 
 
 **PR/Patch :** sauf si c'est une correction de bug, le mieux est de discuter de la modification sur dev(arobase)paheko.cloud avant de proposer le patch, pour qu'il ait plus de chances d'être accepté.
 
+## Interface (frontend)
+
+L’administration utilise un build **Vite** + **Tailwind CSS v4** (`frontend/`). Après modification des styles :
+
+```bash
+cd frontend && npm install && npm run build
+```
+
+Voir `frontend/README.md` pour le détail.
+
 ## Licence
 
 GNU Affero GPL v3 (voir fichier COPYING)

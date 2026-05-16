@@ -1,3 +1,10 @@
+/**
+ * @deprecated Utiliser le build frontend : cd frontend && npm run build
+ * Produit : static/dist/admin.css (référencé dans _head.tpl)
+ *
+ * Ce fichier est conservé pour la cible make minify (release) qui génère mini.css
+ * à partir des sources legacy si le build npm n’a pas été exécuté.
+ */
 @import url("styles/00-reset.css");
 @import url("styles/01-layout.css");
 @import url("styles/02-common.css");

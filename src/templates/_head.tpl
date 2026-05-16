@@ -10,7 +10,7 @@ $current ??= '';
 	<meta name="v" content="{$version_hash}" />
 	<title>{$title}</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" type="text/css" href="{$admin_uri}static/admin.css?{$version_hash}" media="all" />
+	<link rel="stylesheet" type="text/css" href="{$admin_uri}static/dist/admin.css?{$version_hash}" media="all" />
 	<script type="text/javascript" src="{$admin_uri}static/scripts/global.js?{$version_hash}"></script>
 	{if isset($custom_js)}
 		<?php $custom_js = (array)$custom_js; ?>
