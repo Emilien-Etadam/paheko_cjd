@@ -1,0 +1,21 @@
+/* MESSAGES ALERTE ET ERREUR (par exemple : page non trouvée) */
+.error {
+    border-bottom: .2em solid #c00;
+    border-radius: .5em;
+    background: #fcc;
+    padding: .5em;
+    margin-bottom: 1em;
+    font-size: 1.2em;
+    color: #900;
+}
+
+.alert {
+    border-bottom: .2em solid #cc0;
+    border-radius: .5em;
+    background: #ffc;
+    padding: .5em;
+    margin-bottom: 1em;
+    font-size: 1.2em;
+    color: #660;
+}
+

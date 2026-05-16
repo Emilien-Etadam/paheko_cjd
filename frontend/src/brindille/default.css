@@ -1,0 +1,20 @@
+/**
+ * Bundle layout — site public Brindille (CJD)
+ */
+@import "./tokens.css";
+@import "./layout/reset.css";
+@import "./layout/layout-desktop.css";
+@import "./layout/body.css";
+@import "./layout/header.css";
+@import "./layout/navigation.css";
+@import "./layout/search.css";
+@import "./layout/footer.css";
+@import "./layout/breadcrumbs.css";
+@import "./layout/alerts.css";
+@import "./layout/article.css";
+@import "./layout/article-content.css";
+@import "./layout/documents.css";
+@import "./layout/forms.css";
+@import "./layout/booking.css";
+@import "./layout/openings.css";
+@import "./layout/handheld.css";

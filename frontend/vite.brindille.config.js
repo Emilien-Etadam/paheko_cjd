@@ -15,8 +15,8 @@ export default defineConfig({
 		cssMinify: true,
 		rollupOptions: {
 			input: {
+				default: path.resolve(__dirname, 'src/brindille/default.css'),
 				content: path.resolve(__dirname, 'src/brindille/content.css'),
-				cjd: path.resolve(__dirname, 'src/brindille/cjd.css'),
 			},
 			output: {
 				assetFileNames: '[name][extname]',

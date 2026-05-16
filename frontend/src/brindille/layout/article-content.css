@@ -1,0 +1,42 @@
+/* CONTENU DE L'ARTICLE */
+article > h4 {
+    margin-bottom: 1em;
+    color: var(--gray-text-color);
+    font-weight: normal;
+}
+
+article ul, article ol, article blockquote {
+    margin-left: 2em;
+}
+
+article ul {
+    list-style-type: disc;
+}
+
+article ol {
+    list-style-type: decimal;
+}
+
+article dl dd {
+    margin: .5em 0 .5em 2em;
+}
+
+article img {
+    max-width: 100%;
+}
+
+article figure {
+    text-align: center;
+}
+
+article figcaption {
+    font-style: italic;
+    color: #666;
+    margin-top: 2pt;
+    font-size: .8em;
+}
+
+article > h1 {
+    margin-bottom: 1rem;
+}
+

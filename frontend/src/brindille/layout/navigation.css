@@ -1,0 +1,75 @@
+/* LISTE DES CATÉGORIES RACINES */
+section.page .subcategories {
+    text-align: center;
+    margin: 2em 0;
+}
+
+.subcategories li {
+    font-size: 1.2em;
+    margin: .8em 0;
+    padding: 0;
+}
+
+.subcategories li a {
+    margin: 0;
+    padding: .2em .5em;
+    color: var(--link-color);
+    text-decoration: underline;
+    background: #ddd;
+    background: hsl(var(--first-color), 60%, 80%);
+    border-radius: .5rem;
+    display: inline-block;
+    transition: background-color .2s, color .2s;
+}
+
+nav.main .subcategories {
+    margin: 0 -1em 1em -1em;
+}
+
+nav.main .subcategories li {
+    margin: 0;
+}
+
+nav.main .subcategories li a {
+    padding: .5em 1em;
+    display: block;
+    border-radius: 0;
+    border-bottom: 2px solid hsl(var(--first-color), 50%, 85%);
+    background: none;
+}
+
+nav.main .subcategories li:first-child a {
+    border-top: 2px solid hsl(var(--first-color), 50%, 85%);
+}
+
+section.page .subcategories li a {
+    background: var(--bg-color);
+}
+
+section.page .subcategories li a:hover, nav.main .subcategories li a:hover {
+    color: var(--hover-link-color);
+    background-color: #eee;
+    background-color: hsl(var(--second-color), 50%, 90%);
+}
+
+nav.main {
+	border-radius: var(--radius-md);
+	overflow: hidden;
+}
+
+nav.main .subcategories li a {
+	border-color: var(--color-border);
+	font-weight: 600;
+}
+
+nav.main .subcategories li a:hover,
+nav.main .subcategories li a.current {
+	background: var(--color-cjd-muted);
+	color: var(--color-cjd-dark);
+}
+
+section.page .subcategories li a:hover {
+	background: var(--color-cjd-muted);
+	color: var(--color-cjd-dark);
+}
+

@@ -1,0 +1,62 @@
+/* CORPS */
+body {
+	font-size: 100.01%;
+	font-family: var(--font-sans);
+	background: var(--color-surface-muted);
+	background: linear-gradient(
+		200deg,
+		var(--color-cjd-muted) 5%,
+		var(--color-surface) 35%
+	);
+	min-height: 100vh;
+	color: var(--color-text);
+}
+
+body.bg-white {
+	background: var(--color-surface);
+	--bg-color: var(--color-surface);
+}
+
+body.bg-all_white {
+	background: #fff;
+	--bg-color: #fff;
+}
+
+body.bg-dark {
+	background: linear-gradient(-200deg, #333 10%, #000 30%, #333 70%);
+	--bg-color: hsl(var(--first-color), 50%, 10%);
+	--text-color: #fff;
+	--link-color: #99f;
+	--visited-link-color: #c9c;
+	--hover-link-color: #c99;
+	--gray-text-color: #999;
+}
+
+body.bg-dark header.main h1 a span {
+	color: var(--text-color);
+}
+
+body.bg-dark header.main h1 a:hover span {
+	color: var(--hover-link-color);
+}
+
+body.bg-white_gradient {
+	background: linear-gradient(-200deg, var(--color-cjd-muted) 5%, var(--color-surface) 30%);
+}
+
+body.bg-gray {
+	background: var(--color-surface);
+	--bg-color: var(--color-surface-muted);
+}
+
+a {
+	color: var(--link-color);
+}
+
+a:visited {
+	color: var(--visited-link-color);
+}
+
+a:hover {
+	color: var(--hover-link-color);
+}

@@ -1,0 +1,37 @@
+/** Encart module réservations */
+.booking-btn {
+    padding: 0;
+    margin: -1em;
+    margin-bottom: 1em;
+}
+
+.booking-btn a {
+    display: flex;
+    background: var(--color-cjd-dark);
+    border-radius: .5rem .5rem 0 0;
+    color: #fff;
+    font-size: 1.3em;
+    padding: .5rem;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow .25s, color .25s, background .25s;
+}
+
+.booking-btn a b {
+    font-weight: normal;
+}
+
+.booking-btn a span {
+    background: no-repeat .5rem center;
+    background-image: url('data:image/svg+xml,<svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><g stroke="%23fff" stroke-linecap="round" stroke-linejoin="round"><path d="m8 2v3" stroke-miterlimit="10" stroke-width="1.5"/><path d="m16 2v3" stroke-miterlimit="10" stroke-width="1.5"/><path d="m3.5 9.08997h17" stroke-miterlimit="10" stroke-width="1.5"/><path d="m21 8.5v8.5c0 3-1.5 5-5 5h-8c-3.5 0-5-2-5-5v-8.5c0-3 1.5-5 5-5h8c3.5 0 5 2 5 5z" stroke-miterlimit="10" stroke-width="1.5"/><g stroke-width="2"><path d="m15.6947 13.7h.009"/><path d="m15.6947 16.7h.009"/><path d="m11.9955 13.7h.009"/><path d="m11.9955 16.7h.009"/><path d="m8.29431 13.7h.00898"/><path d="m8.29431 16.7h.00898"/></g></g></svg>');
+    width: 2em;
+    height: 2em;
+    display: block;
+}
+
+.booking-btn a:hover {
+    background: var(--color-cjd-hover);
+    color: #fff;
+    box-shadow: 0px 0px 5px 2px var(--color-cjd-muted);
+}
+

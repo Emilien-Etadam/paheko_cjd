@@ -1,0 +1,71 @@
+/* GALERIE D'IMAGES EN DESSOUS DE L'ARTICLE */
+section.gallery, section.documents {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+section.gallery figure, section.documents figure {
+    max-width: 12rem;
+    margin: 0;
+    padding: 0;
+}
+
+section.gallery figure a, section.documents figure a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+section.gallery figure a img, section.documents figure a img {
+    box-shadow: 0 0 5px 1px #999;
+    border-radius: .25em;
+    max-height: 150px;
+    background: #fff;
+    margin: .5rem;
+}
+
+section.documents figure a {
+    text-decoration: none;
+    border-radius: .5em;
+    background: hsl(var(--first-color), 50%, 90%);
+}
+
+section.documents figure a figcaption {
+    background: no-repeat bottom right;
+    margin: .5rem;
+    border-radius: .5em;
+    display: block;
+    font-size: 1em;
+    font-style: normal;
+    color: #666;
+    transition: background-color .2s, color .2s, box-shadow .2s;
+}
+
+section.documents figure a:hover {
+    background-color: #eee;
+    color: #333;
+    box-shadow: 0px 0px 5px hsl(var(--first-color), 50%, 50%);
+}
+
+section.documents aside a:hover figcaption b {
+    color: darkred;
+}
+
+section.documents figcaption b {
+    display: block;
+    font-size: 1.1em;
+    text-decoration: underline;
+    color: darkblue;
+}
+
+section.documents figcaption span {
+    font-size: .8em;
+}
+

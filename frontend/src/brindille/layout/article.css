@@ -1,0 +1,49 @@
+/* AFFICHAGE D'UN ARTICLE */
+section.articles article h3, section.articles article h1 {
+    margin-bottom: .3em;
+}
+
+section.articles article::after, article.single::after {
+    content: "";
+    display: block;
+    height: 0px;
+    clear: both;
+}
+
+section.articles article h1 a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: normal;
+}
+
+section.articles article h3 a {
+    color: var(--link-color);
+    font-weight: normal;
+}
+
+section.articles article h3 a:visited {
+    color: var(--visited-link-color);
+}
+
+section.articles article h5 {
+    color: #666;
+    font-weight: normal;
+    font-size: .8em;
+    margin-bottom: .3em;
+}
+
+section.page > h1 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+section.page {
+	border-radius: var(--radius-md);
+}
+
+section.page h1,
+section.page h2 {
+	font-family: var(--font-display);
+	color: var(--color-cjd-dark);
+}
+
