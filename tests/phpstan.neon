@@ -33,4 +33,5 @@ parameters:
           path: ../src/include/migrations/*.php
 
 includes:
-	- phar://phpstan.phar/conf/bleedingEdge.neon
+	- ../vendor/phpstan/phpstan/conf/bleedingEdge.neon
+	- phpstan-baseline.neon
