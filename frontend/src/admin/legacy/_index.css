@@ -1,6 +1,6 @@
 /**
  * Styles métier Paheko (formulaires, tableaux, compta).
- * Layout et navigation : components/shell.css
+ * Layout, navigation, présentation des listes : components/
  */
 @import "./02-common.css";
 @import "./03-forms.css";

@@ -1,5 +1,5 @@
-/* Formulaires CJD */
-fieldset {
+/* Formulaires CJD — page principale et dialogues */
+:is(main, #dialog, html.dialog main) fieldset {
 	border: 1px solid var(--color-border);
 	border-radius: var(--radius-md);
 	padding: 1rem 1.25rem;
@@ -8,7 +8,7 @@ fieldset {
 	box-shadow: var(--shadow-sm);
 }
 
-fieldset legend {
+:is(main, #dialog, html.dialog main) fieldset legend {
 	font-family: var(--font-display);
 	font-weight: 600;
 	font-size: 1rem;
@@ -16,56 +16,56 @@ fieldset legend {
 	padding: 0 0.35rem;
 }
 
-fieldset dl {
+:is(main, #dialog, html.dialog main) fieldset dl {
 	display: grid;
 	grid-template-columns: minmax(8rem, 12rem) 1fr;
 	gap: 0.35rem 1rem;
 	align-items: baseline;
 }
 
-fieldset dl dt {
+:is(main, #dialog, html.dialog main) fieldset dl dt {
 	margin: 0;
 }
 
-fieldset dl dt label {
+:is(main, #dialog, html.dialog main) fieldset dl dt label {
 	font-weight: 600;
 	color: var(--color-text);
 }
 
-fieldset dl dd {
+:is(main, #dialog, html.dialog main) fieldset dl dd {
 	margin: 0;
 	padding: 0;
 	min-width: 0;
 }
 
-fieldset dl dd .help,
-fieldset dl dd.help {
+:is(main, #dialog, html.dialog main) fieldset dl dd .help,
+:is(main, #dialog, html.dialog main) fieldset dl dd.help {
 	grid-column: 2;
 	font-size: 0.875rem;
 	color: var(--color-text-muted);
 }
 
-input[type="text"],
-input[type="number"],
-input[type="color"],
-input[type="date"],
-input[type="datetime-local"],
-input[type="datetime"],
-input[type="time"],
-input[type="week"],
-input[type="year"],
-input[type="email"],
-input[type="file"],
-input[type="url"],
-input[type="month"],
-input[type="password"],
-input[type="range"],
-input[type="search"],
-input[type="tel"],
-textarea,
-select,
-.input-list,
-.file-selector {
+:is(main, #dialog, html.dialog main) input[type="text"],
+:is(main, #dialog, html.dialog main) input[type="number"],
+:is(main, #dialog, html.dialog main) input[type="color"],
+:is(main, #dialog, html.dialog main) input[type="date"],
+:is(main, #dialog, html.dialog main) input[type="datetime-local"],
+:is(main, #dialog, html.dialog main) input[type="datetime"],
+:is(main, #dialog, html.dialog main) input[type="time"],
+:is(main, #dialog, html.dialog main) input[type="week"],
+:is(main, #dialog, html.dialog main) input[type="year"],
+:is(main, #dialog, html.dialog main) input[type="email"],
+:is(main, #dialog, html.dialog main) input[type="file"],
+:is(main, #dialog, html.dialog main) input[type="url"],
+:is(main, #dialog, html.dialog main) input[type="month"],
+:is(main, #dialog, html.dialog main) input[type="password"],
+:is(main, #dialog, html.dialog main) input[type="range"],
+:is(main, #dialog, html.dialog main) input[type="search"],
+:is(main, #dialog, html.dialog main) input[type="tel"],
+:is(main, #dialog, html.dialog main) textarea,
+:is(main, #dialog, html.dialog main) select,
+:is(main, #dialog, html.dialog main) .input-list,
+:is(main, #dialog, html.dialog main) .file-selector {
 	border: 1px solid var(--color-border);
 	border-radius: var(--radius-sm);
 	padding: 0.45rem 0.65rem;
@@ -75,24 +75,24 @@ select,
 	transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
-input:focus,
-textarea:focus,
-select:focus {
+:is(main, #dialog, html.dialog main) input:focus,
+:is(main, #dialog, html.dialog main) textarea:focus,
+:is(main, #dialog, html.dialog main) select:focus {
 	border-color: var(--color-cjd);
 	box-shadow: 0 0 0 3px rgb(0 213 86 / 0.2);
 	outline: none;
 }
 
-a.icn-btn,
-button,
-input[type="submit"],
-input[type="button"] {
+:is(main, #dialog, html.dialog main) a.icn-btn,
+:is(main, #dialog, html.dialog main) button,
+:is(main, #dialog, html.dialog main) input[type="submit"],
+:is(main, #dialog, html.dialog main) input[type="button"] {
 	border-radius: var(--radius-sm);
 }
 
-button.main,
-.icn-btn.main,
-input[type="submit"].main {
+:is(main, #dialog, html.dialog main) button.main,
+:is(main, #dialog, html.dialog main) .icn-btn.main,
+:is(main, #dialog, html.dialog main) input[type="submit"].main {
 	background: var(--color-cjd);
 	color: #fff;
 	border: 1px solid var(--color-cjd);
@@ -102,26 +102,26 @@ input[type="submit"].main {
 	letter-spacing: 0.04em;
 }
 
-button.main:hover,
-.icn-btn.main:hover,
-input[type="submit"].main:hover {
+:is(main, #dialog, html.dialog main) button.main:hover,
+:is(main, #dialog, html.dialog main) .icn-btn.main:hover,
+:is(main, #dialog, html.dialog main) input[type="submit"].main:hover {
 	background: var(--color-cjd-hover);
 	border-color: var(--color-cjd-hover);
 }
 
-a.icn-btn:not(.main) {
+:is(main, #dialog, html.dialog main) a.icn-btn:not(.main) {
 	background: var(--color-surface-muted);
 	border: 1px solid var(--color-border);
 	color: var(--color-text);
 }
 
-a.icn-btn:not(.main):hover {
+:is(main, #dialog, html.dialog main) a.icn-btn:not(.main):hover {
 	background: var(--color-cjd-muted);
 	border-color: var(--color-cjd);
 	color: var(--color-cjd-dark);
 }
 
-p.submit {
+:is(main, #dialog, html.dialog main) p.submit {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 0.5rem;

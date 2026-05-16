@@ -1,5 +1,5 @@
-/* Tableaux et listes */
-main table.list {
+/* Tableaux et listes — page principale et dialogues */
+:is(main, #dialog, html.dialog main) table.list {
 	width: 100%;
 	margin: 1rem 0 1.5rem;
 	border-collapse: separate;
@@ -11,8 +11,8 @@ main table.list {
 	background: var(--color-surface);
 }
 
-main table.list thead th,
-main table.list thead td {
+:is(main, #dialog, html.dialog main) table.list thead th,
+:is(main, #dialog, html.dialog main) table.list thead td {
 	background: var(--color-cjd-muted);
 	color: var(--color-cjd-dark);
 	font-family: var(--font-display);
@@ -27,42 +27,47 @@ main table.list thead td {
 	z-index: 2;
 }
 
-main table.list tbody td,
-main table.list tbody th {
+:is(main, #dialog, html.dialog main) table.list tbody td,
+:is(main, #dialog, html.dialog main) table.list tbody th {
 	padding: 0.55rem 0.75rem;
 	border-bottom: 1px solid var(--color-border);
 	vertical-align: middle;
 }
 
-main table.list tbody tr:last-child td,
-main table.list tbody tr:last-child th {
+:is(main, #dialog, html.dialog main) table.list tbody tr:last-child td,
+:is(main, #dialog, html.dialog main) table.list tbody tr:last-child th {
 	border-bottom: none;
 }
 
-main table.list tbody tr:nth-child(even) {
+:is(main, #dialog, html.dialog main) table.list tbody tr:nth-child(even) {
 	background: var(--color-surface-muted);
 }
 
-main table.list tbody tr:hover {
+:is(main, #dialog, html.dialog main) table.list tbody tr:hover {
 	background: rgb(0 213 86 / 0.08);
 }
 
-main table.list tbody tr.checked {
+:is(main, #dialog, html.dialog main) table.list tbody tr.clickable:hover,
+:is(main, #dialog, html.dialog main) table.list tbody tr.clickable:nth-child(even):hover {
+	cursor: pointer;
+}
+
+:is(main, #dialog, html.dialog main) table.list tbody tr.checked {
 	background: rgb(0 213 86 / 0.15);
 }
 
-main table.list tbody tr.focused {
+:is(main, #dialog, html.dialog main) table.list tbody tr.focused {
 	background: rgb(0 213 86 / 0.2);
 	outline: 2px solid var(--color-cjd);
 	outline-offset: -2px;
 }
 
-main table.list td.actions {
+:is(main, #dialog, html.dialog main) table.list td.actions {
 	white-space: nowrap;
 	text-align: right;
 }
 
-main table.list td.actions .icn-btn {
+:is(main, #dialog, html.dialog main) table.list td.actions .icn-btn {
 	margin-left: 0.25rem;
 }
 

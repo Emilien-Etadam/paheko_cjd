@@ -1,444 +1,407 @@
-table.list {
-    margin-bottom: 1em;
-    width: 100%;
-}
+/**
+ * Tableaux — règles métier et variantes.
+ * Présentation de base : components/tables.css
+ */
 
 table.list.auto {
-    width: auto;
+	width: auto;
 }
 
 table.list.center {
-    margin: 1em auto;
+	margin: 1em auto;
 }
 
 table.list caption {
-    display: table-caption;
-    text-align: center;
-    font-size: 1.2em;
+	display: table-caption;
+	text-align: center;
+	font-size: 1.2em;
 }
 
 table.list tbody td.desc {
-    font-size: .9em;
-    color: var(--gBorderColor);
+	font-size: 0.9em;
+	color: var(--color-text-muted);
 }
 
 table.list table {
-    margin: 0;
+	margin: 0;
 }
 
 table.list th {
-    text-align: left;
-    font-weight: bold;
-}
-
-table.list thead th, table.list thead td {
-    background-color: rgb(var(--gBgColor));
-    background-image: linear-gradient(rgba(var(--gSecondColor), 0.5), rgba(var(--gSecondColor), 0.5));
-    color: rgb(var(--gTextColor));
-    position: sticky;
-    top: -2px;
+	text-align: left;
+	font-weight: bold;
 }
 
 table.list tfoot tr {
-    background: rgba(var(--gSecondColor), 0.2);
-}
-
-table.list th, table.list td {
-    padding: 0.2em 0.5em;
-}
-
-table.list tr {
-    border: 1px solid rgba(var(--gSecondColor), 0.5);
-    transition: background .2s
-}
-
-table.list tr:nth-child(even), table.multi tbody:nth-child(even) {
-    background: rgba(var(--gSecondColor), 0.2);
+	background: var(--color-cjd-muted);
 }
 
 table.multi tr {
-    background: inherit !important;
+	background: inherit !important;
 }
-
-table.list tbody tr.checked {
-    color: #633;
-    background: rgba(255, 255, 200, 0.2);
-}
-
-table.list tbody tr.clickable:hover, table.list tbody tr.clickable:nth-child(even):hover {
-    cursor: pointer;
-    color: #633;
-    background: #ffc;
-}
-
-table.list tbody tr.clickable:hover button, table.list tbody tr.focused button {
-    color: rgb(var(--gHoverLinkColor));
-}
-
-table.list tbody tr.focused {
-    color: rgb(100, 100, 50);
-    background: rgb(255, 255, 200);
-    box-shadow: 0 0 5px .2rem #990;
-}
-
 
 table.list tbody tr.highlight {
-    box-shadow: 0px 0px 5px 5px rgba(var(--gSecondColor), 1);
+	box-shadow: 0 0 5px 5px rgb(0 213 86 / 0.35);
 }
 
 table.list .error {
-    color: red;
-    font-weight: bold;
+	color: #dc2626;
+	font-weight: bold;
 }
 
 table.list .alert {
-    color: darkred;
-    font-weight: bold;
+	color: #b45309;
+	font-weight: bold;
 }
 
 table.list .confirm {
-    color: darkgreen;
+	color: #15803d;
 }
 
-table.list .num, table.list .check {
-    text-align: center;
+table.list .num,
+table.list .check {
+	text-align: center;
 }
 
 table.list .check {
-    width: 1%;
+	width: 1%;
 }
 
 table.search th {
-    background: rgba(var(--gSecondColor), 0.5);
+	background: var(--color-cjd-muted);
 }
 
-table.list tr.disabled, table.list td.disabled, table.list th.disabled,
-table.list tr.disabled th a, table.list th.disabled a {
-    color: var(--gBorderColor);
+table.list tr.disabled,
+table.list td.disabled,
+table.list th.disabled,
+table.list tr.disabled th a,
+table.list th.disabled a {
+	color: var(--color-text-muted);
+	opacity: 0.65;
 }
 
-table.list tr.crossed th, table.list tr.crossed td, table.list .crossed a {
-    text-decoration: line-through;
+table.list tr.crossed th,
+table.list tr.crossed td,
+table.list .crossed a {
+	text-decoration: line-through;
 }
 
 table.list tr:nth-child(even).disabled {
-    background: rgba(var(--gSecondColor), 0.1);
+	background: var(--color-surface-muted);
 }
 
 .userOrder .cur {
-    background-image: linear-gradient(rgba(var(--gMainColor), .5), rgba(var(--gMainColor), .5));
+	background: rgb(0 213 86 / 0.25);
 }
 
 .userOrder {
-    height: fit-content;
+	height: fit-content;
 }
 
-.userOrder tr, .userOrder td, .userOrder th {
-    height: 100%;
+.userOrder tr,
+.userOrder td,
+.userOrder th {
+	height: 100%;
 }
 
 table.list thead.userOrder th {
-    font-weight: normal;
+	font-weight: normal;
 }
 
-.userOrder a, .userOrder button {
-    text-decoration: none;
-    display: inline-flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    box-shadow: none;
-    margin: 0;
-    width: calc(100% - .6rem);
-    height: calc(100% - .6rem);
-    color: inherit;
-    padding: .3rem;
-    text-align: left;
-    border-radius: .5em;
-    border: none;
-    background: transparent;
+.userOrder a,
+.userOrder button {
+	text-decoration: none;
+	display: inline-flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	box-shadow: none;
+	margin: 0;
+	width: calc(100% - 0.6rem);
+	height: calc(100% - 0.6rem);
+	color: inherit;
+	padding: 0.3rem;
+	text-align: left;
+	border-radius: var(--radius-md, 0.5em);
+	border: none;
+	background: transparent;
 }
 
 .userOrder .icon-header {
-    text-align: center;
+	text-align: center;
 }
 
-.userOrder .icon-header a, .userOrder .icon-header button {
-    width: 1.5rem;
-    flex-direction: column;
-    justify-content: center;
+.userOrder .icon-header a,
+.userOrder .icon-header button {
+	width: 1.5rem;
+	flex-direction: column;
+	justify-content: center;
 }
 
-.userOrder a:hover, .userOrder button:hover {
-    background: rgba(var(--gBgColor), 0.5);
+.userOrder a:hover,
+.userOrder button:hover {
+	background: var(--color-cjd-muted);
 }
 
-table.list .userOrder td, table.list .userOrder th {
-    padding: .2rem;
-    min-height: 2rem;
+table.list .userOrder td,
+table.list .userOrder th {
+	padding: 0.2rem;
+	min-height: 2rem;
 }
 
 table.list .userOrder .check {
-    padding-left: .5em;
+	padding-left: 0.5em;
 }
 
 .userOrder [data-icon]::before {
-    display: inline-block;
-    color: rgb(var(--gMainColor));
-    font-size: 1.5em;
-    text-shadow: none !important;
-    line-height: .2em;
-    width: 1em;
-    text-align: center;
-    vertical-align: middle;
-    font-weight: normal;
+	display: inline-block;
+	color: var(--color-cjd);
+	font-size: 1.5em;
+	text-shadow: none !important;
+	line-height: 0.2em;
+	width: 1em;
+	text-align: center;
+	vertical-align: middle;
+	font-weight: normal;
 }
 
 thead .cur [data-icon]::before {
-    color: rgb(var(--gBgColor));
-}
-
-table.list .actions {
-    text-align: right;
+	color: var(--color-cjd-dark);
 }
 
 table.list .single-action {
-    text-align: center;
+	text-align: center;
 }
 
 table.list .separator {
-    border-left: 2px solid #999;
+	border-left: 2px solid var(--color-border);
 }
 
 table.reconcile .icon {
-    text-align: center;
+	text-align: center;
 }
 
 table.reconcile .icon span {
-    font-size: 2em;
-    line-height: 1rem;
+	font-size: 2em;
+	line-height: 1rem;
 }
 
 table.reconcile .icon span.ok {
-    color: darkgreen;
+	color: #15803d;
 }
 
 table.reconcile .icon span.missing {
-    color: darkred;
+	color: #dc2626;
 }
 
-table.reconcile thead tr:nth-child(1) th, table.reconcile thead tr:nth-child(1) td {
-    text-align: center;
-    background: rgba(var(--gSecondColor), 0.2);
+table.reconcile thead tr:nth-child(1) th,
+table.reconcile thead tr:nth-child(1) td {
+	text-align: center;
+	background: var(--color-cjd-muted);
 }
 
-/* Files list */
+/* Liste de fichiers */
 table.list.files .date {
-    text-align: left;
-    color: var(--gBorderColor);
-    font-size: .9em;
+	text-align: left;
+	color: var(--color-text-muted);
+	font-size: 0.9em;
 }
 
 table.list .size {
-    text-align: right;
-    font-variant-numeric: tabular-nums;
-    font-feature-settings: "tnum";
+	text-align: right;
+	font-variant-numeric: tabular-nums;
+	font-feature-settings: "tnum";
 }
 
 table.list.files .size {
-    font-size: .9em;
-    color: var(--gBorderColor);
+	font-size: 0.9em;
+	color: var(--color-text-muted);
 }
 
 table.list.files th {
-    font-weight: normal;
+	font-weight: normal;
 }
 
 table.list.files th a {
-    display: block;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    max-width: 40em;
+	display: block;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	max-width: 40em;
 }
 
 table.list.files .folder th {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 table.list .icon {
-    width: 4em;
-    text-align: center;
+	width: 4em;
+	text-align: center;
 }
 
 table.list .icon span::before {
-    width: 1.5em;
-    color: rgba(var(--gMainColor), 0.5);
-    text-shadow: none;
-    transition: color .2s;
+	width: 1.5em;
+	color: var(--color-cjd);
+	opacity: 0.5;
+	text-shadow: none;
+	transition: color 0.2s;
 }
 
 table.list td.icon svg {
-    max-width: 48px;
-    max-height: 48px;
+	max-width: 48px;
+	max-height: 48px;
 }
 
 table.list .folder .icon span::before {
-    color: rgba(var(--gMainColor), 0.9);
+	opacity: 0.9;
 }
 
 table.files.gallery {
-    display: block;
-    clear: both;
+	display: block;
+	clear: both;
 }
 
 table.files.gallery thead {
-    display: none;
+	display: none;
 }
 
 table.files.gallery tfoot {
-    display: block;
-    margin: 1em 0;
+	display: block;
+	margin: 1em 0;
 }
 
 table.files.gallery tbody {
-    display: grid;
-    margin: .5em 0;
-    grid-template-columns: repeat(auto-fit, minmax(15em, .3fr));
-    grid-gap: .5em;
-    justify-content: start;
+	display: grid;
+	margin: 0.5em 0;
+	grid-template-columns: repeat(auto-fit, minmax(15em, 0.3fr));
+	grid-gap: 0.5em;
+	justify-content: start;
 }
 
 table.files.gallery tbody tr {
-    display: grid;
-    grid-gap: .2em;
-    grid-template-columns: .3fr .7fr;
-    text-align: center;
-    padding: .3em 0;
-    min-width: 15em;
+	display: grid;
+	grid-gap: 0.2em;
+	grid-template-columns: 0.3fr 0.7fr;
+	text-align: center;
+	padding: 0.3em 0;
+	min-width: 15em;
 }
 
 table.files.gallery tbody tr td {
-    padding: 0 .3em;
-    height: auto;
+	padding: 0 0.3em;
+	height: auto;
 }
 
 table.files.gallery tbody tr:nth-child(even) {
-    background: unset;
+	background: unset;
 }
 
 table.files.gallery .preview {
-    height: 150px;
+	height: 150px;
 }
 
 table.files.gallery .preview img {
-    max-height: 150px;
-    max-width: 150px;
+	max-height: 150px;
+	max-width: 150px;
 }
 
 table.files.gallery .icon a:hover span::before {
-    color: rgba(var(--gMainColor), 1);
+	opacity: 1;
 }
 
 table.files.gallery tbody .check {
-    position: absolute;
+	position: absolute;
 }
 
-table.files.gallery .icon, table.files.gallery .preview {
-    width: auto;
-    grid-column: span 2;
-    font-size: 4em;
-    line-height: .6em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 150px;
+table.files.gallery .icon,
+table.files.gallery .preview {
+	width: auto;
+	grid-column: span 2;
+	font-size: 4em;
+	line-height: 0.6em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 150px;
 }
 
 table.files.gallery th {
-    grid-column: span 2;
-    text-align: center;
-    font-size: .9em;
-    text-overflow: ellipsis;
+	grid-column: span 2;
+	text-align: center;
+	font-size: 0.9em;
+	text-overflow: ellipsis;
 }
 
-table.files.gallery .size, table.files.gallery .date {
-    display: none;
+table.files.gallery .size,
+table.files.gallery .date {
+	display: none;
 }
 
 table.files.gallery tbody .actions {
-    font-size: .9em;
-    grid-column: span 2;
-    text-align: center;
+	font-size: 0.9em;
+	grid-column: span 2;
+	text-align: center;
 }
 
 table.files.gallery tbody .actions a {
-    margin: .1em;
+	margin: 0.1em;
 }
 
 table.files.gallery tbody .actions > a::before {
-    padding: 0;
+	padding: 0;
 }
 
 table.files.gallery tbody .actions > a span {
-    text-indent: -70em;
-    overflow: hidden;
-    display: none;
+	text-indent: -70em;
+	overflow: hidden;
+	display: none;
 }
 
 table.drag tbody tr:nth-child(1) .up,
 table.drag tbody tr:last-child .down {
-    visibility: hidden;
+	visibility: hidden;
 }
 
-/* We need a container here or the cursor won't change because of pointer-events: none */
 table .draggable {
-    cursor: move;
+	cursor: move;
 }
 
-/** Draggable table rows */
 table .draggable button {
-    user-select: none;
-    position: relative;
-    pointer-events: none;
+	user-select: none;
+	position: relative;
+	pointer-events: none;
 }
 
-/* Get around Firefox bug https://bugzilla.mozilla.org/show_bug.cgi?id=568313
-   Because Mozilla prefers to pay their CEO millions of dollars instead of fixing Firefox bugs. */
 table .draggable button::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    cursor: move;
+	content: "";
+	position: absolute;
+	inset: 0;
+	cursor: move;
 }
 
 table.dragging tr.placeholder {
-    box-shadow: 0 10px 0 rgba(var(--gHoverLinkColor), 0.5);
+	box-shadow: 0 10px 0 rgb(0 213 86 / 0.4);
 }
 
 table tr.dragging {
-    background: rgba(var(--gHoverLinkColor), 0.1);
-    box-shadow: 0 0 5px 5px rgba(var(--gHoverLinkColor), 0.3) !important;
+	background: rgb(0 213 86 / 0.1);
+	box-shadow: 0 0 5px 5px rgb(0 213 86 / 0.25) !important;
 }
 
 table.dragging tr td * {
-    pointer-events: none;
+	pointer-events: none;
 }
 
 table.dragging tbody td {
-    opacity: 0;
+	opacity: 0;
 }
 
 table.schema caption {
-    background: rgba(var(--gSecondColor), 0.2);
+	background: var(--color-cjd-muted);
 }
 
 table.list th a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 table.list tr.no-border {
-    border: none;
+	border: none;
 }
