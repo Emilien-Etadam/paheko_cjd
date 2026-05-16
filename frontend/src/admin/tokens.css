@@ -10,10 +10,10 @@
 	--color-cjd: #00d556;
 	--color-cjd-hover: #00b84a;
 	--color-cjd-muted: #e8f8ee;
-	--color-cjd-dark: #008f45;
+	--color-cjd-dark: #00d556;
 	--color-surface: #ffffff;
-	--color-surface-muted: #f4f4f5;
-	--color-text: #1a1a1a;
+	--color-surface-muted: #f7f7f7;
+	--color-text: #000000;
 	--color-text-muted: #6b7280;
 	--color-border: #e5e7eb;
 	--color-danger: #dc2626;
@@ -30,11 +30,11 @@
 /* Compatibilité CSS métier Paheko */
 :root {
 	--gBgColor: 255, 255, 255;
-	--gTextColor: 26, 26, 26;
+	--gTextColor: 0, 0, 0;
 	--gBorderColor: #9ca3af;
 	--gLightBorderColor: #e5e7eb;
-	--gLightBackgroundColor: 244, 244, 245;
-	--gLinkColor: #008f45;
+	--gLightBackgroundColor: 247, 247, 247;
+	--gLinkColor: #00d556;
 	--gHoverLinkColor: 0, 184, 74;
 	--gMainColor: 0, 213, 86;
 	--gSecondColor: 232, 248, 238;

@@ -12,7 +12,7 @@ nav.tabs li a {
 nav.tabs .current a {
 	background: var(--color-cjd);
 	border-bottom-color: var(--color-cjd);
-	color: #fff;
+	color: #000;
 }
 
 nav.tabs li a:hover {
