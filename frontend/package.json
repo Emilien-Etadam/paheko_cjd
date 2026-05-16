@@ -7,11 +7,13 @@
 	},
 	"scripts": {
 		"dev": "vite build --watch",
-		"build": "vite build",
+		"build": "npm run build:admin && npm run build:brindille",
 		"preview": "vite preview",
 		"lint": "npm run lint:js && npm run lint:css",
 		"lint:js": "eslint .",
-		"lint:css": "stylelint \"src/admin/**/*.css\""
+		"lint:css": "stylelint \"src/admin/**/*.css\" \"src/brindille/**/*.css\"",
+		"build:admin": "vite build",
+		"build:brindille": "vite build --config vite.brindille.config.js"
 	},
 	"devDependencies": {
 		"@tailwindcss/vite": "^4.1.8",

@@ -6,6 +6,7 @@ export default {
 		'../src/www/admin/static/dist/**',
 		'src/admin/legacy/**',
 		'src/admin/media/print.css',
+		'src/brindille/content-paheko.css',
 	],
 	rules: {
 		'at-rule-no-unknown': [
