@@ -1193,4 +1193,84 @@
 			detail: {direction, distance_x, distance_y}
 		}));
 	});
+
+	g.showConfirmDialog = function (message, onConfirm) {
+		const overlay = document.createElement('div');
+		overlay.className = 'cjd-confirm-overlay';
+		const box = document.createElement('div');
+		box.className = 'cjd-confirm';
+
+		const text = document.createElement('p');
+		text.textContent = message;
+		box.appendChild(text);
+
+		const actions = document.createElement('div');
+		actions.className = 'cjd-confirm__actions';
+
+		const cancelBtn = document.createElement('button');
+		cancelBtn.type = 'button';
+		cancelBtn.className = 'icn-btn';
+		cancelBtn.dataset.cancel = '';
+		cancelBtn.textContent = 'Annuler';
+
+		const okBtn = document.createElement('button');
+		okBtn.type = 'button';
+		okBtn.className = 'icn-btn main';
+		okBtn.dataset.ok = '';
+		okBtn.textContent = 'Confirmer';
+
+		actions.appendChild(cancelBtn);
+		actions.appendChild(okBtn);
+		box.appendChild(actions);
+		overlay.appendChild(box);
+		document.body.appendChild(overlay);
+
+		const close = () => {
+			overlay.remove();
+			document.removeEventListener('keydown', onKey);
+		};
+
+		cancelBtn.addEventListener('click', close);
+		okBtn.addEventListener('click', () => {
+			close();
+			onConfirm();
+		});
+		overlay.addEventListener('click', (e) => {
+			if (e.target === overlay) {
+				close();
+			}
+		});
+
+		const onKey = (e) => {
+			if (e.key === 'Escape') {
+				close();
+			}
+		};
+		document.addEventListener('keydown', onKey);
+		okBtn.focus();
+	};
+
+	g.onload(() => {
+		document.addEventListener('click', function (e) {
+			const trigger = e.target.closest('[data-confirm]');
+			if (!trigger) {
+				return;
+			}
+
+			e.preventDefault();
+
+			const message = trigger.dataset.confirm || 'Confirmer cette action ?';
+			const href = trigger.href || null;
+			const form = trigger.closest('form');
+
+			g.showConfirmDialog(message, () => {
+				if (href) {
+					window.location = href;
+				}
+				else if (form) {
+					form.submit();
+				}
+			});
+		}, false);
+	});
 })();

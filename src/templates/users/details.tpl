@@ -125,9 +125,9 @@
 			{/if}
 			{if $can_login}
 				<dd>
-					<form method="post" action="" onsubmit="return confirm(&quot;Cela va vous déconnecter et vous reconnecter comme si vous étiez ce membre. Continuer ?&quot);">
+					<form method="post" action="">
 						{csrf_field key=$csrf_key}
-						{button name="login_as" type="submit" shape="login" label="Se connecter à sa place"}
+						{button name="login_as" type="submit" shape="login" label="Se connecter à sa place" data-confirm="Cela va vous déconnecter et vous reconnecter comme si vous étiez ce membre. Continuer ?"}
 					</form>
 				</dd>
 			{/if}

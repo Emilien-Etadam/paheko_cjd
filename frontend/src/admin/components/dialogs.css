@@ -193,3 +193,40 @@ html.dialog main {
     transition: all 0.5s ease;
     z-index: 2;
 }
+
+.cjd-confirm-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgb(0 0 0 / 0.5);
+    z-index: 2000;
+    display: grid;
+    place-items: center;
+    animation: fade-in 0.15s ease;
+}
+
+.cjd-confirm {
+    background: var(--color-surface);
+    border: 2px solid var(--color-cjd);
+    padding: 2rem;
+    max-width: 28rem;
+    width: calc(100% - 2rem);
+    box-shadow: var(--shadow-md);
+}
+
+.cjd-confirm p {
+    margin: 0 0 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.cjd-confirm__actions {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: flex-end;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

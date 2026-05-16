@@ -68,7 +68,7 @@
 		Efface toutes les données, sauf votre compte de membre. Utile pour revenir à l'état initial après une période d'essai.
 	</dd>
 	<dd>
-		{linkbutton shape="delete" href="reset.php" label="Remise à zéro"}
+		{linkbutton shape="delete" href="reset.php" label="Remise à zéro" data-confirm="Êtes-vous sûr de vouloir effacer toutes les données de l'association ?"}
 	</dd>
 	{/if}
 </dl>

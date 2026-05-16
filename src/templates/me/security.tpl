@@ -20,7 +20,7 @@
 	<dd>
 		{if $user.otp_secret}
 			{tag color="darkgreen" label="Activée"}
-			{linkbutton href="security_otp.php" label="Désactiver" shape="delete"}
+			{linkbutton href="security_otp.php" label="Désactiver" shape="delete" data-confirm="Êtes-vous sûr de vouloir désactiver la double authentification ?"}
 		{else}
 			{tag color="darkred" label="Désactivée"}
 			{linkbutton href="security_otp.php" label="Activer" shape="check"}

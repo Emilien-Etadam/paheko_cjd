@@ -35,7 +35,7 @@
 						{linkbutton shape="history" label="Liste des rappels envoyés" href="!services/reminders/details.php?id=%d&list=sent"|args:$reminder.id}
 						{linkbutton shape="mail" label="Liste des rappels à envoyer" href="!services/reminders/details.php?id=%d&list=pending"|args:$reminder.id}<br />
 						{linkbutton shape="edit" label="Modifier" href="!services/reminders/edit.php?id=%d"|args:$reminder.id}
-						{linkbutton shape="delete" label="Supprimer" href="!services/reminders/delete.php?id=%d"|args:$reminder.id}
+						{linkbutton shape="delete" label="Supprimer" href="!services/reminders/delete.php?id=%d"|args:$reminder.id data-confirm="Êtes-vous sûr de vouloir supprimer ce rappel ?"}
 					</td>
 				</tr>
 			{/foreach}

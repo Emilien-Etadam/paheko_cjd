@@ -22,7 +22,7 @@
 						{linkbutton shape="users" label="Liste des inscrits" href="!services/details.php?id=%d"|args:$row.id}
 						{if $session->canAccess($session::SECTION_USERS, $session::ACCESS_ADMIN)}
 							{linkbutton shape="edit" label="Modifier" href="!services/edit.php?id=%d"|args:$row.id}
-							{linkbutton shape="delete" label="Supprimer" href="!services/delete.php?id=%d"|args:$row.id}
+							{linkbutton shape="delete" label="Supprimer" href="!services/delete.php?id=%d"|args:$row.id data-confirm="Êtes-vous sûr de vouloir supprimer l'activité « %s » ?"|args:$row.label}
 						{/if}
 					</td>
 				</tr>

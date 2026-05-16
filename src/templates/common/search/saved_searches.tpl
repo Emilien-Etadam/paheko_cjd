@@ -54,7 +54,7 @@
 			{if $search->exists()}
 				{button type="submit" name="save" label="Enregistrer" shape="right" class="main"}
 				{button type="submit" name="duplicate" label="Dupliquer" shape="plus"}
-				{linkbutton href="?delete=%d"|args:$search.id shape="delete" label="Supprimer"}
+				{linkbutton href="?delete=%d"|args:$search.id shape="delete" label="Supprimer" data-confirm="Êtes-vous sûr de vouloir supprimer la recherche enregistrée « %s » ?"|args:$search.label}
 			{else}
 				{button type="submit" name="save" label="Enregistrer cette nouvelle recherche" shape="right" class="main"}
 			{/if}

@@ -30,7 +30,7 @@
 						{linkbutton shape="users" label="Liste des inscrits" href="!services/fees/details.php?id=%d"|args:$row.id}
 						{if $session->canAccess($session::SECTION_USERS, $session::ACCESS_ADMIN)}
 							{linkbutton shape="edit" label="Modifier" href="!services/fees/edit.php?id=%d"|args:$row.id}
-							{linkbutton shape="delete" label="Supprimer" href="!services/fees/delete.php?id=%d"|args:$row.id}
+							{linkbutton shape="delete" label="Supprimer" href="!services/fees/delete.php?id=%d"|args:$row.id data-confirm="Êtes-vous sûr de vouloir supprimer ce tarif ?"}
 						{/if}
 					</td>
 				</tr>

@@ -73,7 +73,7 @@
 				{/if}
 				<br />
 				{linkbutton shape="edit" label="Modifier" href="edit.php?id=%d"|args:$row.id}
-				{linkbutton shape="delete" label="Supprimer" href="delete.php?id=%d"|args:$row.id}
+				{linkbutton shape="delete" label="Supprimer" href="delete.php?id=%d"|args:$row.id data-confirm="Êtes-vous sûr de vouloir supprimer cette inscription ?"}
 			{/if}
 
 			</td>
