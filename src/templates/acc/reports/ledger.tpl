@@ -1,6 +1,8 @@
 {if !empty($criterias.projects_only)}
 	{include file="_head.tpl" title="Grand livre analytique" current="acc/years" prefer_landscape=true}
 	{include file="acc/reports/_header.tpl" current="analytical_ledger" title="Grand livre analytique" allow_filter=true}
+
+<div class="cjd-card cjd-acc-report">
 {else}
 	{include file="_head.tpl" title="%sGrand livre"|args:$title current="acc/years" prefer_landscape=true}
 	{include file="acc/reports/_header.tpl" current="ledger" title="Grand livre" allow_filter=true}
@@ -158,5 +160,7 @@ document.querySelector('#close_details').onclick = () => {
 {/literal}
 
 <p class="help">Toutes les écritures sont libellées en {$config.currency}.</p>
+
+</div>
 
 {include file="_foot.tpl"}

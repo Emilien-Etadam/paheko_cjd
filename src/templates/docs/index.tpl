@@ -4,6 +4,8 @@ $upload_here = $context_specific_root ? null : $dir->path;
 ?>
 {include file="_head.tpl" title=$title current="docs" hide_title=true upload_here=$upload_here}
 
+<div class="cjd-docs">
+
 <nav class="tabs">
 	{if $session->canAccess($session::SECTION_CONFIG, $session::ACCESS_ADMIN)}
 		{size_meter
@@ -276,5 +278,7 @@ $upload_here = $context_specific_root ? null : $dir->path;
 	</p>
 </div>
 {/if}
+
+</div>
 
 {include file="_foot.tpl"}

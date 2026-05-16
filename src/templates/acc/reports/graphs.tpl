@@ -2,6 +2,8 @@
 
 {include file="acc/reports/_header.tpl" current="graphs" title="Graphiques" allow_filter=false}
 
+<div class="cjd-card cjd-acc-report">
+
 {if $nb_transactions < 3}
 	<p class="alert block">Il n'y a pas encore suffisamment d'écritures dans cet exercice pour pouvoir afficher les statistiques.</p>
 {else}
@@ -20,5 +22,7 @@
 		En raison des arrondis, la somme des pourcentages peut ne pas être égale à 100%.
 	</p>
 {/if}
+
+</div>
 
 {include file="_foot.tpl"}

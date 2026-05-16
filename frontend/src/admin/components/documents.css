@@ -1,0 +1,95 @@
+/* Documents */
+.cjd-docs nav.breadcrumbs {
+	margin: 0 0 1rem;
+	padding: 0.65rem 1rem;
+	background: var(--color-surface-muted);
+	border-radius: var(--radius-md);
+	border: 1px solid var(--color-border);
+}
+
+.cjd-docs nav.breadcrumbs ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.35rem;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	align-items: center;
+}
+
+.cjd-docs nav.breadcrumbs li a {
+	padding: 0.2rem 0.5rem;
+	border-radius: var(--radius-sm);
+	text-decoration: none;
+	color: var(--color-cjd-dark);
+	font-weight: 500;
+}
+
+.cjd-docs nav.breadcrumbs li a:hover {
+	background: var(--color-cjd-muted);
+}
+
+.cjd-docs nav.tabs h2 {
+	font-family: var(--font-display);
+	font-size: 1.25rem;
+	color: var(--color-cjd-dark);
+	margin: 0.5rem 0 0;
+}
+
+.cjd-docs .files-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+	gap: 1rem;
+	margin: 1rem 0;
+}
+
+.cjd-docs .files-list figure {
+	margin: 0;
+}
+
+.cjd-docs .files-list figure .thumb a {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 7rem;
+	padding: 0.75rem;
+	background: var(--color-surface);
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-md);
+	box-shadow: var(--shadow-sm);
+	text-decoration: none;
+	transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cjd-docs .files-list figure .thumb a:hover {
+	border-color: var(--color-cjd);
+	box-shadow: var(--shadow-md);
+}
+
+.cjd-docs .files-list figure a span::before {
+	color: var(--color-cjd);
+	font-size: 3rem;
+}
+
+.cjd-docs .files-list figure figcaption {
+	margin-top: 0.35rem;
+	font-size: 0.75rem;
+	color: var(--color-text-muted);
+	word-break: break-word;
+}
+
+.cjd-docs table.files {
+	margin-top: 1rem;
+}
+
+.cjd-docs .help.flex {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	align-items: center;
+	margin-top: 1.5rem;
+	padding: 1rem;
+	background: var(--color-cjd-muted);
+	border-radius: var(--radius-md);
+}

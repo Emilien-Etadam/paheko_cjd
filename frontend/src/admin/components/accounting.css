@@ -1,4 +1,4 @@
-/* Comptabilité — accueil et rapports */
+/* Comptabilité */
 section.year-infos {
 	margin: 0 0 2rem;
 	padding: 1.25rem 1.5rem;
@@ -23,4 +23,127 @@ section.year-infos .graphs {
 
 main form.shortForm fieldset {
 	margin-bottom: 0;
+}
+
+/* Bandeau exercice */
+nav.acc-year {
+	background: var(--color-cjd-muted);
+	border: 1px solid rgb(0 213 86 / 0.35);
+	border-radius: var(--radius-md);
+	padding: 0.65rem 1rem;
+	margin-bottom: 1.25rem;
+	box-shadow: var(--shadow-sm);
+}
+
+nav.acc-year h3,
+nav.acc-year h4 {
+	font-family: var(--font-display);
+	color: var(--color-cjd-dark);
+	margin: 0;
+}
+
+nav.acc-year h4 {
+	font-size: 0.8rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	color: var(--color-text-muted);
+}
+
+/* Saisie d'écriture */
+form.cjd-acc-form .radio-btn {
+	display: block;
+	margin-bottom: 0.5rem;
+}
+
+form.cjd-acc-form .radio-btn label {
+	display: block;
+	cursor: pointer;
+}
+
+form.cjd-acc-form .radio-btn input + label::before {
+	display: none;
+}
+
+form.cjd-acc-form .radio-btn div {
+	display: block;
+	border: 2px solid var(--color-border);
+	border-radius: var(--radius-md);
+	padding: 0.75rem 1rem;
+	background: var(--color-surface-muted);
+	transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+form.cjd-acc-form .radio-btn div h3 {
+	margin: 0 0 0.25rem;
+	font-family: var(--font-display);
+	font-size: 1rem;
+	color: var(--color-cjd-dark);
+}
+
+form.cjd-acc-form .radio-btn input:checked + label div {
+	border-color: var(--color-cjd);
+	background: var(--color-cjd-muted);
+	box-shadow: inset 0 0 0 1px var(--color-cjd);
+}
+
+form.cjd-acc-form fieldset.hidden {
+	display: none;
+}
+
+/* Journal / liste d'écritures */
+.cjd-acc-journal {
+	margin-top: 1rem;
+	overflow-x: auto;
+}
+
+nav.actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.35rem;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+
+/* Montants compta */
+main td.money,
+main th.money {
+	font-variant-numeric: tabular-nums;
+	white-space: nowrap;
+}
+
+main td.num a,
+a.num {
+	font-family: ui-monospace, monospace;
+	font-weight: 600;
+	color: var(--color-cjd-dark);
+}
+
+/* Rapports — hiérarchie des comptes */
+tr.account-level-1 th {
+	font-family: var(--font-display);
+	color: var(--color-cjd-dark);
+}
+
+.cjd-acc-details section.transaction-details-container {
+	margin-top: 0;
+}
+
+.cjd-acc-details dl.describe dt {
+	font-weight: 600;
+	color: var(--color-text-muted);
+}
+
+.cjd-acc-details dl.describe dd h2 {
+	font-family: var(--font-display);
+	color: var(--color-cjd-dark);
+}
+
+.cjd-acc-report {
+	margin-top: 1rem;
+	overflow-x: auto;
+}
+
+main table.list.statement {
+	margin-top: 1rem;
 }

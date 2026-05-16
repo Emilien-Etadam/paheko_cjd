@@ -60,6 +60,7 @@
 </div>
 {/if}
 
+<div class="cjd-card cjd-acc-details">
 <section class="transaction-details-container">
 	<article>
 		<dl class="describe">
@@ -256,6 +257,7 @@
 	</aside>
 
 </section>
+</div>
 
 {literal}
 <script type="text/javascript">

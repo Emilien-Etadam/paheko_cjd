@@ -4,7 +4,7 @@ $is_new = empty($_POST) && !isset($transaction->type) && !$transaction->exists()
 $is_quick = count(array_intersect_key($_GET, array_flip(['a', 'l', 'd', 't', 'account']))) > 0;
 
 ?>
-<form method="post" action="{$self_url}" data-focus="{if $is_new || $is_quick}1{else}#f_date{/if}">
+<form method="post" action="{$self_url}" class="cjd-acc-form" data-focus="{if $is_new || $is_quick}1{else}#f_date{/if}">
 	{form_errors}
 
 	<fieldset>

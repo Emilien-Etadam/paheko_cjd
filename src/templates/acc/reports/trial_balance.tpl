@@ -2,6 +2,8 @@
 
 {include file="acc/reports/_header.tpl" current="trial_balance" title="Balance générale" allow_filter=true}
 
+<div class="cjd-card cjd-acc-report">
+
 <table class="list statement autofilter">
 	<thead>
 		<tr>
@@ -40,5 +42,7 @@
 </table>
 
 <p class="help">Toutes les écritures sont libellées en {$config.currency}. Les lignes grisées correspondent aux comptes soldés.</p>
+
+</div>
 
 {include file="_foot.tpl"}

@@ -11,6 +11,10 @@
 
 {include file="common/search/advanced.tpl" legend="Rechercher des écritures…"}
 
+{if $list !== null || isset($count)}
+<div class="cjd-card cjd-acc-journal">
+{/if}
+
 {if $list !== null}
 	<p class="help">{$list->count()} résultats trouvés pour cette recherche.</p>
 
@@ -181,6 +185,10 @@
 
 	<p class="alert block">Aucun résultat trouvé pour cette recherche.</p>
 
+{/if}
+
+{if $list !== null || isset($count)}
+</div>
 {/if}
 
 </form>

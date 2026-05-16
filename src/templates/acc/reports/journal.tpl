@@ -2,8 +2,12 @@
 
 {include file="acc/reports/_header.tpl" current="journal" title="Journal général" allow_filter=true}
 
+<div class="cjd-card cjd-acc-report">
+
 {include file="acc/reports/_journal.tpl"}
 
 <p class="help">Toutes les écritures sont libellées en {$config.currency}.</p>
+
+</div>
 
 {include file="_foot.tpl"}
