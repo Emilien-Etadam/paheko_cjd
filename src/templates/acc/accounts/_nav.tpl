@@ -12,9 +12,9 @@
 		{/if}
 	</aside>
 	<ul>
-		<li{if $current === 'index'} class="current"{/if}><a href="{$admin_url}acc/accounts/">Comptes favoris</a></li>
-		<li{if $current === 'all'} class="current"{/if}><a href="{$admin_url}acc/accounts/all.php?year={$current_year.id}">Tous les comptes</a></li>
-		<li{if $current === 'users'} class="current"{/if}><a href="{$admin_url}acc/accounts/users.php">Comptes de membres</a></li>
+		<li{if $current === 'index'} class="current"{/if}><a href="{$admin_url}acc/accounts/"{if $current === 'index'} aria-current="page"{/if}>Comptes favoris</a></li>
+		<li{if $current === 'all'} class="current"{/if}><a href="{$admin_url}acc/accounts/all.php?year={$current_year.id}"{if $current === 'all'} aria-current="page"{/if}>Tous les comptes</a></li>
+		<li{if $current === 'users'} class="current"{/if}><a href="{$admin_url}acc/accounts/users.php"{if $current === 'users'} aria-current="page"{/if}>Comptes de membres</a></li>
 		<li><a href="{$admin_url}acc/reports/statement.php?year={$current_year.id}"><em>Compte de résultat</em></a></li>
 		<li><a href="{$admin_url}acc/reports/balance_sheet.php?year={$current_year.id}"><em>Bilan</em></a></li>
 	</ul>
