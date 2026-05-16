@@ -17,7 +17,7 @@
 	<ul>
 		<li><a href="{$admin_url}acc/years/">Exercices</a></li>
 		<li><a href="{$admin_url}acc/projects/">Projets <em>(compta analytique)</em></a></li>
-		<li class="current"><a href="{$admin_url}acc/charts/">Plans comptables</a></li>
+		<li class="current"><a href="{$admin_url}acc/charts/" aria-current="page">Plans comptables</a></li>
 	</ul>
 	{if $current !== 'new' && !$chart.archived && $session->canAccess($session::SECTION_ACCOUNTING, $session::ACCESS_ADMIN)}
 		<aside>{linkbutton href="!acc/charts/accounts/new.php?id=%d&%s"|args:$chart.id:$types_arg label="Ajouter un compte" shape="plus" target="_dialog=manage"}</aside>
@@ -27,8 +27,8 @@
 {/if}
 
 	{if $chart.country}
-		<li{if $current == 'favorites'} class="current"{/if}>{link href="!acc/charts/accounts/?id=%d&%s"|args:$chart.id:$types_arg label="Comptes usuels"}</li>
+		<li{if $current == 'favorites'} class="current"{/if}>{if $current == 'favorites'}{link href="!acc/charts/accounts/?id=%d&%s"|args:$chart.id:$types_arg label="Comptes usuels" aria-current="page"}{else}{link href="!acc/charts/accounts/?id=%d&%s"|args:$chart.id:$types_arg label="Comptes usuels"}{/if}</li>
 	{/if}
-		<li{if $current == 'all'} class="current"{/if}>{link href="!acc/charts/accounts/all.php?id=%d&%s"|args:$chart.id:$types_arg label="Tous les comptes"}</li>
+		<li{if $current == 'all'} class="current"{/if}>{if $current == 'all'}{link href="!acc/charts/accounts/all.php?id=%d&%s"|args:$chart.id:$types_arg label="Tous les comptes" aria-current="page"}{else}{link href="!acc/charts/accounts/all.php?id=%d&%s"|args:$chart.id:$types_arg label="Tous les comptes"}{/if}</li>
 	</ul>
 </nav>

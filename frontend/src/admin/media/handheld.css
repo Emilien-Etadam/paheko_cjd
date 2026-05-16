@@ -170,7 +170,7 @@ nav.tabs ul {
 	border: none;
 	padding: 0;
 	margin: .3em 0;
-	justify-content: center;
+	justify-content: flex-start;
 }
 
 nav.tabs ul li a {
