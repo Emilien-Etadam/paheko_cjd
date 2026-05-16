@@ -9,10 +9,10 @@
 	</aside>
 
 	<ul>
-		<li{if $current == 'index'} class="current"{/if}><a href="{$admin_url}services/">Activités et cotisations</a></li>
+		<li{if $current == 'index'} class="current"{/if}><a href="{$admin_url}services/" {if $current == 'index'}aria-current="page"{/if}>Activités et cotisations</a></li>
 		{if !DISABLE_EMAIL && $session->canAccess($session::SECTION_USERS, $session::ACCESS_ADMIN)}
-			<li{if $current == 'import'} class="current"{/if}><a href="{$admin_url}services/import.php">Import</a></li>
-			<li{if $current == 'reminders'} class="current"{/if}><a href="{$admin_url}services/reminders/">Gestion des rappels automatiques</a></li>
+			<li{if $current == 'import'} class="current"{/if}><a href="{$admin_url}services/import.php" {if $current == 'import'}aria-current="page"{/if}>Import</a></li>
+			<li{if $current == 'reminders'} class="current"{/if}><a href="{$admin_url}services/reminders/" {if $current == 'reminders'}aria-current="page"{/if}>Gestion des rappels automatiques</a></li>
 		{/if}
 	</ul>
 
@@ -48,11 +48,11 @@
 		<li class="title">
 			{$current_service->long_label()}
 		</li>
-		<li{if $service_page == 'index'} class="current"{/if}><a href="{$admin_url}services/fees/?id={$current_service.id}"><strong>Tarifs</strong></a></li>
-		<li{if $service_page == 'all'} class="current"{/if}><a href="{$admin_url}services/details.php?id={$current_service.id}">Tous les inscrits</a></li>
-		<li{if $service_page == 'active'} class="current"{/if}><a href="{$admin_url}services/details.php?id={$current_service.id}&amp;type=active">À jour</a></li>
-		<li{if $service_page == 'expired'} class="current"{/if}><a href="{$admin_url}services/details.php?id={$current_service.id}&amp;type=expired">Inscription expirée</a></li>
-		<li{if $service_page == 'unpaid'} class="current"{/if}><a href="{$admin_url}services/details.php?id={$current_service.id}&amp;type=unpaid">En attente de règlement</a></li>
+		<li{if $service_page == 'index'} class="current"{/if}><a href="{$admin_url}services/fees/?id={$current_service.id}" {if $service_page == 'index'}aria-current="page"{/if}><strong>Tarifs</strong></a></li>
+		<li{if $service_page == 'all'} class="current"{/if}><a href="{$admin_url}services/details.php?id={$current_service.id}" {if $service_page == 'all'}aria-current="page"{/if}>Tous les inscrits</a></li>
+		<li{if $service_page == 'active'} class="current"{/if}><a href="{$admin_url}services/details.php?id={$current_service.id}&amp;type=active" {if $service_page == 'active'}aria-current="page"{/if}>À jour</a></li>
+		<li{if $service_page == 'expired'} class="current"{/if}><a href="{$admin_url}services/details.php?id={$current_service.id}&amp;type=expired" {if $service_page == 'expired'}aria-current="page"{/if}>Inscription expirée</a></li>
+		<li{if $service_page == 'unpaid'} class="current"{/if}><a href="{$admin_url}services/details.php?id={$current_service.id}&amp;type=unpaid" {if $service_page == 'unpaid'}aria-current="page"{/if}>En attente de règlement</a></li>
 	</ul>
 	{/if}
 
@@ -72,10 +72,10 @@
 			{$current_fee.label}
 			{if $current_fee.amount} — {$current_fee.amount|money_currency|raw}{/if}
 		</li>
-		<li{if $fee_page == 'all'} class="current"{/if}><a href="{$admin_url}services/fees/details.php?id={$current_fee.id}">Tous les inscrits</a></li>
-		<li{if $fee_page == 'active'} class="current"{/if}><a href="{$admin_url}services/fees/details.php?id={$current_fee.id}&amp;type=active">À jour</a></li>
-		<li{if $fee_page == 'expired'} class="current"{/if}><a href="{$admin_url}services/fees/details.php?id={$current_fee.id}&amp;type=expired">Inscription expirée</a></li>
-		<li{if $fee_page == 'unpaid'} class="current"{/if}><a href="{$admin_url}services/fees/details.php?id={$current_fee.id}&amp;type=unpaid">En attente de règlement</a></li>
+		<li{if $fee_page == 'all'} class="current"{/if}><a href="{$admin_url}services/fees/details.php?id={$current_fee.id}" {if $fee_page == 'all'}aria-current="page"{/if}>Tous les inscrits</a></li>
+		<li{if $fee_page == 'active'} class="current"{/if}><a href="{$admin_url}services/fees/details.php?id={$current_fee.id}&amp;type=active" {if $fee_page == 'active'}aria-current="page"{/if}>À jour</a></li>
+		<li{if $fee_page == 'expired'} class="current"{/if}><a href="{$admin_url}services/fees/details.php?id={$current_fee.id}&amp;type=expired" {if $fee_page == 'expired'}aria-current="page"{/if}>Inscription expirée</a></li>
+		<li{if $fee_page == 'unpaid'} class="current"{/if}><a href="{$admin_url}services/fees/details.php?id={$current_fee.id}&amp;type=unpaid" {if $fee_page == 'unpaid'}aria-current="page"{/if}>En attente de règlement</a></li>
 	</ul>
 	{/if}
 
