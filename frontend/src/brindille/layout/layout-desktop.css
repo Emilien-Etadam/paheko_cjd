@@ -148,7 +148,7 @@
     }
 
     .layout-1col nav.main .subcategories li a {
-        background: hsl(var(--first-color), 50%, 95%);
+        background: var(--color-cjd-muted-light);
         border-radius: .5rem;
     }
 

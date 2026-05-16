@@ -1,28 +1,9 @@
 /**
- * Tokens CJD — site public Brindille (identité fixe).
+ * Tokens site public — tokens CJD partagés + alias layout Brindille.
  */
+@import "../shared/cjd-tokens.css";
+
 :root {
-	--font-sans: "Open Sans", system-ui, sans-serif;
-	--font-display: "Saira Condensed", system-ui, sans-serif;
-
-	--color-cjd: #00d556;
-	--color-cjd-hover: #00b84a;
-	--color-cjd-muted: #e8f8ee;
-	--color-cjd-dark: #008f45;
-	--color-surface: #ffffff;
-	--color-surface-muted: #f4f4f5;
-	--color-text: #1a1a1a;
-	--color-text-muted: #6b7280;
-	--color-border: #e5e7eb;
-
-	--radius-sm: 0.25rem;
-	--radius-md: 0.5rem;
-	--radius-lg: 0.75rem;
-
-	/* Teintes HSL pour default.css Paheko (teinte verte CJD ≈ 145) */
-	--first-color: 145;
-	--second-color: 152;
-
 	--link-color: var(--color-cjd-dark);
 	--visited-link-color: #006b38;
 	--hover-link-color: var(--color-cjd-hover);

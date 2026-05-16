@@ -17,6 +17,7 @@ export default defineConfig({
 			input: {
 				default: path.resolve(__dirname, 'src/brindille/default.css'),
 				content: path.resolve(__dirname, 'src/brindille/content.css'),
+				print: path.resolve(__dirname, 'src/brindille/print.css'),
 			},
 			output: {
 				assetFileNames: '[name][extname]',

@@ -34,7 +34,7 @@ section.gallery figure a img, section.documents figure a img {
 section.documents figure a {
     text-decoration: none;
     border-radius: .5em;
-    background: hsl(var(--first-color), 50%, 90%);
+    background: var(--color-cjd-muted);
 }
 
 section.documents figure a figcaption {
@@ -51,7 +51,7 @@ section.documents figure a figcaption {
 section.documents figure a:hover {
     background-color: #eee;
     color: #333;
-    box-shadow: 0px 0px 5px hsl(var(--first-color), 50%, 50%);
+    box-shadow: 0 0 5px color-mix(in srgb, var(--color-cjd) 50%, transparent);
 }
 
 section.documents aside a:hover figcaption b {

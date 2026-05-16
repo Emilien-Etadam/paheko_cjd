@@ -16,7 +16,7 @@ section.page .subcategories {
     color: var(--link-color);
     text-decoration: underline;
     background: #ddd;
-    background: hsl(var(--first-color), 60%, 80%);
+    background: var(--color-cjd-tag);
     border-radius: .5rem;
     display: inline-block;
     transition: background-color .2s, color .2s;
@@ -34,12 +34,12 @@ nav.main .subcategories li a {
     padding: .5em 1em;
     display: block;
     border-radius: 0;
-    border-bottom: 2px solid hsl(var(--first-color), 50%, 85%);
+    border-bottom: 2px solid var(--color-cjd-soft);
     background: none;
 }
 
 nav.main .subcategories li:first-child a {
-    border-top: 2px solid hsl(var(--first-color), 50%, 85%);
+    border-top: 2px solid var(--color-cjd-soft);
 }
 
 section.page .subcategories li a {
@@ -49,7 +49,7 @@ section.page .subcategories li a {
 section.page .subcategories li a:hover, nav.main .subcategories li a:hover {
     color: var(--hover-link-color);
     background-color: #eee;
-    background-color: hsl(var(--second-color), 50%, 90%);
+    background-color: var(--color-cjd-muted);
 }
 
 nav.main {

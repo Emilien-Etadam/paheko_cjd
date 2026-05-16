@@ -27,6 +27,7 @@ install-cjd-web:
 	cp -f build/cjd-web/_head.html src/modules/web/_head.html
 	cp -f build/cjd-web/content.css src/modules/web/content.css
 	cp -f build/cjd-web/default.css src/modules/web/default.css
+	cp -f build/cjd-web/print.css src/modules/web/print.css
 	@rm -f src/modules/web/cjd.css
 	@echo "Thème CJD Brindille installé dans src/modules/web/"
 
