@@ -69,7 +69,10 @@
 		a.innerText = 'Supprimer';
 		a.dataset.icon = '✘';
 		a.type = 'button';
-		a.onclick = function() { if (confirm('Supprimer ce fichier ?')) this.parentNode.submit(); };
+		a.onclick = function() {
+			g.showConfirmDialog('Supprimer ce fichier ?', () => this.parentNode.submit());
+			return false;
+		};
 
 		var items = document.body.getElementsByTagName('form');
 

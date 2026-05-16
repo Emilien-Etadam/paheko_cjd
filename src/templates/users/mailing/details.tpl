@@ -24,7 +24,7 @@
 				{/if}
 				<p>
 					{linkbutton shape="edit" label="Modifier" href="write.php?id=%d"|args:$mailing.id}<br />
-					{linkbutton shape="delete" label="Supprimer" href="delete.php?id=%d"|args:$mailing.id}
+					{linkbutton shape="delete" label="Supprimer" href="delete.php?id=%d"|args:$mailing.id data-confirm="Êtes-vous sûr de vouloir supprimer le message « %s » ?"|args:$mailing.subject}
 				</p>
 			{/if}
 			<p>{linkbutton shape="users" label="Voir la liste des destinataires" href="recipients.php?id=%d"|args:$mailing.id}</p>
