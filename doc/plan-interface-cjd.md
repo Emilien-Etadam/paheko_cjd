@@ -1,8 +1,7 @@
 # Plan — Interface CJD (fork paheko_cjd)
 
 **Dernière mise à jour :** 16 mai 2026  
-**Branche de travail actuelle :** `cursor/brindille-cjd-site-958a`  
-**Avance sur `master` :** ~24 commits
+**Branche principale :** `master` (fusion complète le 16 mai 2026)
 
 ## Objectif
 
@@ -20,7 +19,7 @@ Interface **Paheko CJD fixe** : vert `#00D556`, Open Sans / Saira Condensed, san
 | **Admin — bundle** | ✅ Fait | ~62 Ko minifié (gzip ~13 Ko), utilities Tailwind retirées |
 | **CI / qualité** | ✅ Fait | GitHub Actions, PHPStan, ESLint, Stylelint, `make ci` |
 | **Site public Brindille** | ✅ Fait | `default.css`, `content.css`, `print.css`, tokens partagés |
-| **Fusion `master`** | ⏳ À faire | 4 PR draft empilées |
+| **Fusion `master`** | ✅ Fait | Poussé sur `origin/master` |
 | **Préprod / prod** | ⏳ À faire | Déploiement + smoke test |
 | **Tests manuels complets** | ⏳ À faire | Voir checklist ci-dessous |
 
@@ -45,9 +44,7 @@ graph LR
 | [#4](https://github.com/Emilien-Etadam/paheko_cjd/pull/4) | `cursor/add-lint-ci-958a` | CI GitHub, PHPStan, ESLint, Stylelint |
 | [#5](https://github.com/Emilien-Etadam/paheko_cjd/pull/5) | `cursor/brindille-cjd-site-958a` | Site public Brindille (layout + print + tokens partagés) |
 
-**Recommandation :** fusionner dans cet ordre, ou regrouper #2–#5 en une seule PR vers `master` après validation locale.
-
-Toutes les PR sont encore en **draft**.
+**Statut :** les branches `cursor/*` ont été intégrées dans `master` par fast-forward. Les PR #2–#5 peuvent être fermées.
 
 ---
 
