@@ -94,9 +94,13 @@
 
 	{$list->getHTMLPagination()|raw}
 {else}
-	<p class="block alert">
-		Aucun membre trouvé.
-	</p>
+	<div class="empty-state" data-icon="👥">
+		<strong>Aucun membre</strong>
+		<p>Commencez par ajouter votre premier membre.</p>
+		{if $session->canAccess($session::SECTION_USERS, $session::ACCESS_WRITE)}
+			{linkbutton href="!users/new.php" label="Ajouter un membre" shape="user" class="main"}
+		{/if}
+	</div>
 {/if}
 
 </form>
