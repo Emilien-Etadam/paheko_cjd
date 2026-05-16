@@ -79,10 +79,13 @@
 
 
 {foreachelse}
-	<p class="block alert">
-		Il n'y a aucun exercice ouvert en cours.<br />
-		{linkbutton label="Ouvrir un nouvel exercice" shape="plus" href="!acc/years/new.php"}
-	</p>
+	<div class="empty-state" data-icon="📅">
+		<strong>Aucun exercice</strong>
+		<p>Commencez par ouvrir votre premier exercice comptable.</p>
+		{if $session->canAccess($session::SECTION_ACCOUNTING, $session::ACCESS_ADMIN)}
+			{linkbutton label="Ouvrir un nouvel exercice" shape="plus" href="!acc/years/new.php" class="main"}
+		{/if}
+	</div>
 {/foreach}
 
 {include file="_foot.tpl"}

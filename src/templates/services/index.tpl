@@ -32,11 +32,19 @@
 
 	{$list->getHTMLPagination()|raw}
 {else}
-	<p class="block alert">Il n'y a aucune activité enregistrée.</p>
+	<div class="empty-state" data-icon="𝍢">
+		<strong>Aucune activité</strong>
+		<p>Commencez par ajouter votre première activité ou cotisation.</p>
+		{if $session->canAccess($session::SECTION_USERS, $session::ACCESS_ADMIN)}
+			{linkbutton href="#add-activity" label="Ajouter une activité" shape="plus" class="main"}
+		{/if}
+	</div>
 {/if}
 
 {if empty($show_archived_services) && $session->canAccess($session::SECTION_USERS, $session::ACCESS_ADMIN)}
-	{include file="services/_service_form.tpl" legend="Ajouter une activité" service=null period=0}
+	<div id="add-activity">
+		{include file="services/_service_form.tpl" legend="Ajouter une activité" service=null period=0}
+	</div>
 {/if}
 
 </div>
