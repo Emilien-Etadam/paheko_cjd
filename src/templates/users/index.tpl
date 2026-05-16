@@ -16,22 +16,25 @@
 	<p class="block confirm">Les membres sélectionnés ont bien été changés de catégorie.</p>
 {/if}
 
-{if !empty($categories_list)}
-	<fieldset class="shortFormRight">
-		<legend>Filtrer par catégorie</legend>
-		{dropdown value=$current_cat options=$categories_list title="Sélectionner une catégorie de membres"}
-	</fieldset>
-{/if}
+<div class="cjd-toolbar">
+	<form method="get" action="search.php" class="shortFormLeft" data-focus="1">
+		<fieldset>
+			<legend>Rechercher un membre</legend>
+			{input type="text" name="qt" placeholder="Nom, numéro, ou adresse e-mail"}
+			{input type="hidden" name="id_category" default=$current_cat}
+			{button type="submit" name="" title="Chercher" shape="search"}
+		</fieldset>
+	</form>
 
-<form method="get" action="search.php" class="shortFormLeft" data-focus="1">
-	<fieldset>
-		<legend>Rechercher un membre</legend>
-		{input type="text" name="qt" placeholder="Nom, numéro, ou adresse e-mail"}
-		{input type="hidden" name="id_category" default=$current_cat}
-		{button type="submit" name="" title="Chercher" shape="search"}
-	</fieldset>
-</form>
+	{if !empty($categories_list)}
+		<fieldset class="shortFormRight">
+			<legend>Filtrer par catégorie</legend>
+			{dropdown value=$current_cat options=$categories_list title="Sélectionner une catégorie de membres"}
+		</fieldset>
+	{/if}
+</div>
 
+<div class="cjd-card">
 <form method="post" action="action.php" class="users-list" target="_dialog">
 
 {if $list->count()}
@@ -97,5 +100,6 @@
 {/if}
 
 </form>
+</div>
 
 {include file="_foot.tpl"}

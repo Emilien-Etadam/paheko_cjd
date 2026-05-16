@@ -27,45 +27,39 @@
 	{/if}
 </nav>
 
-<aside class="describe">
-	<h3>{$config.org_name}</h3>
-	{if !empty($config.org_address)}
-	<p>
-		{$config.org_address|escape|nl2br}
-	</p>
-	{/if}
-	{if !empty($config.org_phone)}
-	<p>
-		Tél. : <a href="tel:{$config.org_phone}">{$config.org_phone}</a>
-	</p>
-	{/if}
-	{if !empty($config.org_email)}
-	<p>
-		E-Mail : <a href="mailto:{$config.org_email}">{$config.org_email}</a>
-	</p>
-	{/if}
-	{if $site_url}
-	<p>
-		Web : <a href="{$site_url}" target="_blank">{$site_url}</a>
-	</p>
-	{/if}
-</aside>
+<div class="cjd-dashboard">
+	<aside class="cjd-dashboard__org describe">
+		<h3>{$config.org_name}</h3>
+		{if !empty($config.org_address)}
+		<p>{$config.org_address|escape|nl2br}</p>
+		{/if}
+		{if !empty($config.org_phone)}
+		<p>Tél. : <a href="tel:{$config.org_phone}">{$config.org_phone}</a></p>
+		{/if}
+		{if !empty($config.org_email)}
+		<p>E-Mail : <a href="mailto:{$config.org_email}">{$config.org_email}</a></p>
+		{/if}
+		{if $site_url}
+		<p>Web : <a href="{$site_url}" target="_blank">{$site_url}</a></p>
+		{/if}
+	</aside>
 
-{if !empty($buttons)}
-	<nav class="home">
-		<ul>
-		{foreach from=$buttons item="button"}
-			<li>{$button|raw}</li>
-		{/foreach}
-		</ul>
-	</nav>
-{/if}
+	{if !empty($buttons)}
+		<nav class="home cjd-dashboard__actions">
+			<ul>
+			{foreach from=$buttons item="button"}
+				<li>{$button|raw}</li>
+			{/foreach}
+			</ul>
+		</nav>
+	{/if}
 
-{if $homepage}
-	<article class="web-content home-text">
-		{$homepage|raw}
-	</article>
-{/if}
+	{if $homepage}
+		<article class="web-content home-text cjd-dashboard__content">
+			{$homepage|raw}
+		</article>
+	{/if}
+</div>
 
 <script type="text/javascript" src="{$admin_url}static/scripts/homescreen.js" defer="defer"></script>
 

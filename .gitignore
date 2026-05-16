@@ -1,1 +1,7 @@
 frontend/node_modules/
+src/config.local.php
+src/data/*
+!src/data/index.html
+src/include/lib/KD2/
+src/debug_sql.sqlite
+src/modules/
