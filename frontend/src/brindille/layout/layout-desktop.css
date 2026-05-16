@@ -1,0 +1,164 @@
+/* Modifications du style pour les grands écrans */
+@media screen and (min-width: 981px) {
+    /* DISPOSITION GÉNÉRALE DE LA PAGE */
+    main {
+        max-width: 950px;
+        margin: 0 auto;
+        display: grid;
+    }
+
+    .layout-1col main {
+        grid-gap: 1em;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "nav"
+            "content"
+    }
+
+    .layout-2col main {
+        grid-gap: 1em;
+        grid-template-columns: 1.4fr 0.6fr;
+        grid-template-areas:
+            "header header"
+            "content nav"
+    }
+
+    .layout-wide main {
+        max-width: 1100px;
+        grid-gap: 1em;
+        grid-template-columns: 18em 1fr;
+        grid-template-rows: auto 1fr;
+        grid-template-areas:
+            "header content"
+            "nav content";
+        align-items: flex-start;
+        padding: 0 1em;
+    }
+
+    .layout-wide header.main {
+        grid-area: header;
+        display: flex;
+        grid-gap: 1em;
+        flex-direction: column;
+    }
+
+    .layout-wide section.page {
+        background: var(--bg-color);
+        border-radius: 0 0 .5em .5em;
+        padding: 1em;
+    }
+
+    .layout-1col section.page {
+        background: var(--bg-color);
+        border-radius: .5em;
+        padding: 1em;
+    }
+
+    header.main h1 a img {
+        max-height: 300px;
+    }
+
+    .layout-2col header.main, .layout-1col header.main {
+        grid-area: header;
+        display: grid;
+        grid-gap: 1em;
+        grid-template-columns: 1.4fr 0.6fr;
+    }
+
+    nav.main { grid-area: nav; }
+    section.page { grid-area: content; }
+
+    header.main h1, header.main .contacts, nav.main {
+        background: var(--bg-color);
+        padding: 1em;
+        border-radius: .5em
+    }
+
+    .layout-2col header.main .contacts {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    header.main h1 {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        padding: 0;
+    }
+
+    .layout-wide header.main h1, .layout-1col header.main h1 {
+        font-size: 1.2em;
+    }
+
+    .layout-2col section.page article {
+        margin-bottom: 1em;
+        padding: 1em;
+        background: var(--bg-color);
+        clear: both;
+        border-radius: .5em;
+    }
+
+    .layout-wide .breadcrumbs {
+        margin: 1em 0;
+        text-align: left;
+    }
+
+    .layout-wide section.articles article, .layout-1col section.articles article {
+        margin: 1em 0;
+        padding-bottom: 1em;
+        border-bottom: 2px solid var(--gray-text-color);
+    }
+
+    .layout-wide section.page > h1 {
+        text-align: left;
+    }
+
+    .layout-1col nav.main {
+        padding: 0;
+        background: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .layout-1col nav.main .booking-btn {
+        margin: 0;
+    }
+
+    .layout-1col .search-widget p {
+        max-width: 20em;
+        margin: .5rem;
+    }
+
+    .layout-1col nav.main .booking-btn a {
+        border-radius: .5em;
+        padding: .2rem .5rem;
+    }
+
+    .layout-1col nav.main .subcategories {
+        margin: .5rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: .5rem;
+    }
+
+    .layout-1col nav.main .subcategories li a, .layout-1col nav.main .subcategories li:first-child a {
+        border: none;
+    }
+
+    .layout-1col nav.main .subcategories li a {
+        background: var(--color-cjd-muted-light);
+        border-radius: .5rem;
+    }
+
+    .layout-1col nav.main .subcategories li a:hover {
+        background: var(--bg-color);
+    }
+
+    .layout-1col nav.main .opening-hours {
+        display: none;
+    }
+}
+
+

@@ -1,0 +1,36 @@
+/**
+ * Styles impression — site public Brindille (CJD).
+ */
+@import "../shared/cjd-tokens.css";
+
+body {
+	font-family: var(--font-sans);
+}
+
+header.main,
+footer.main,
+nav.main,
+header.nav,
+.breadcrumbs {
+	display: none;
+}
+
+article.single > h1 {
+	font-size: 1.7em;
+	font-family: var(--font-display);
+	color: var(--color-cjd-dark);
+}
+
+article.single > h4 {
+	color: var(--color-text-muted);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-display);
+	color: var(--color-cjd-dark);
+}

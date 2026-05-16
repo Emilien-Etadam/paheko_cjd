@@ -1,0 +1,13 @@
+/**
+ * Tokens site public — tokens CJD partagés + alias layout Brindille.
+ */
+@import "../shared/cjd-tokens.css";
+
+:root {
+	--link-color: var(--color-cjd-dark);
+	--visited-link-color: #006b38;
+	--hover-link-color: var(--color-cjd-hover);
+	--gray-text-color: var(--color-text-muted);
+	--bg-color: var(--color-surface);
+	--text-color: var(--color-text);
+}

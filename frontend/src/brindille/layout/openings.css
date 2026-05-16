@@ -1,0 +1,70 @@
+/** Encart module horaires d'ouverture */
+.opening-next h3 {
+    text-align: center;
+    font-size: 1.3em;
+}
+
+section.page article.opening-next {
+    background: var(--bg-color);
+    background: var(--color-cjd-panel);
+    border-radius: .3em;
+    color: #fff;
+    box-shadow: 0px 0px 5px #000;
+    margin-bottom: .5em;
+    padding: .5rem;
+}
+
+section.page article.opening-hours, article.opening-hours {
+    display: flex;
+    justify-content: space-between;
+    background: none;
+    padding: 0;
+    gap: .5rem;
+}
+
+article.opening-hours table th, article.opening-hours table td {
+    padding: .2rem .4rem;
+}
+
+article.opening-hours table {
+    width: 100%;
+}
+
+section.page article.opening-hours table {
+    text-align: left;
+    white-space: nowrap;
+}
+
+article.opening-hours .list {
+    background: var(--color-cjd-panel-light);
+    padding: .5rem;
+    border-radius: .5em;
+    color: #000;
+}
+
+article.opening-hours em {
+    display: block;
+}
+
+article.opening-hours ul {
+    margin-left: 1.5rem;
+}
+
+article.opening-hours h4 {
+    color: #666;
+}
+
+nav.main article.opening-hours {
+    flex-wrap: wrap;
+    font-size: .9em;
+}
+
+nav.main article.opening-hours div {
+    width: 100%;
+    text-align: left;
+}
+
+nav.main article.opening-hours h4 {
+    text-align: left;
+}
+

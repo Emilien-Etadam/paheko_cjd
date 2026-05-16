@@ -1,0 +1,136 @@
+/* Modifications du style pour les petits écrans */
+@media handheld, screen and (max-width: 980px) {
+    body {
+        padding: 0;
+    }
+
+    main, header.main {
+        display: block;
+    }
+
+    header.main h1 a, header.main .contacts {
+        border-radius: 0;
+        margin: .2em 0;
+        padding: 0;
+    }
+
+    header.main {
+        background: var(--bg-color);
+        padding: 1em;
+    }
+
+
+    header.main .contacts * {
+        text-align: center;
+        font-size: .8em;
+    }
+
+    header.main h1 a img {
+        max-height: 200px;
+        max-width: 100%;
+    }
+
+    .search-widget p {
+        display: block;
+        text-align: center;
+    }
+
+    .search-widget input {
+        font-size: 1em;
+    }
+
+    nav.main ul, .subcategories {
+        text-align: center;
+    }
+
+    nav.main ul li, .subcategories li {
+        font-size: 1.2em;
+        display: inline-block;
+        margin: .3em;
+    }
+    nav.main ul li a, .subcategories li a {
+        background: var(--bg-color);
+    }
+
+    .breadcrumbs {
+        display: none;
+    }
+
+    nav.main {
+        font-size: 1em;
+        background: none;
+    }
+
+    section.page article {
+        border-radius: 0;
+    }
+
+    section.page h1 { font-size: 1.5em; }
+    section.page h2 { font-size: 1.3em; }
+    section.page h3 { font-size: 1.2em; }
+    section.page h4 { font-size: 1em; }
+    section.page h5 { font-size: .9em; }
+    section.page h6 { font-size: .8em; }
+
+    footer.main {
+        font-size: .8em;
+    }
+
+    .booking-btn {
+        margin: 0;
+    }
+
+    .booking-btn a {
+        border-radius: 0;
+    }
+
+    .search-widget {
+        margin: .5em;
+    }
+
+    nav.main .subcategories {
+        margin: 1em 0;
+    }
+
+    nav.main .subcategories li a {
+        border: none !important;
+        background: rgba(255, 255, 255, 0.7);
+        margin: .2em;
+        border-radius: .5em;
+    }
+
+    .search-widget input {
+        width: 80%;
+    }
+
+    nav.main .opening-hours {
+        display: none;
+    }
+
+    section.page article.opening-next {
+        border-radius: 0;
+    }
+
+    section.page article.opening-hours, article.opening-hours {
+        flex-direction: column;
+        margin: .8em 0;
+    }
+
+    .articles article, article.single {
+        margin: .5rem 0;
+        background: var(--bg-color);
+        padding: .5em;
+    }
+}
+
+@media screen and (max-width: 980px) {
+	header.main h1 a {
+		border-bottom: 3px solid var(--color-cjd);
+	}
+
+	nav.main .subcategories li a.current {
+		background: var(--color-cjd);
+		color: #fff;
+	}
+}
+

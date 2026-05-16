@@ -1,0 +1,29 @@
+/* CHEMIN VERS L'ARTICLE (BREADCRUMBS), affiche les catégories parentes */
+.breadcrumbs {
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.breadcrumbs ul {
+    margin: 0;
+}
+
+.breadcrumbs ul li {
+    display: inline-block;
+}
+
+.breadcrumbs ul li::before {
+    content: "»";
+    color: var(--gray-text-color);
+    margin: .5em;
+}
+
+.breadcrumbs ul li:nth-child(1)::before {
+    display: none;
+}
+
+.breadcrumbs a {
+    color: var(--gray-text-color);
+}
+
+

@@ -1,0 +1,111 @@
+/* FORMULAIRES */
+fieldset {
+    border: 2px solid var(--gray-text-color);
+    border-radius: .5em;
+    padding: 1em;
+    margin: 1em;
+}
+
+fieldset legend {
+    padding: 0 1em;
+    color: var(--gray-text-color);
+}
+
+fieldset input, fieldset textarea, fieldset select, fieldset button {
+    padding: .5rem;
+    border: 1px solid var(--gray-text-color);
+    border-radius: .3rem;
+    font-size: 1em;
+    font-family: inherit;
+}
+
+fieldset input[type=submit], fieldset button {
+    background: var(--color-cjd);
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0px 0px 5px 1px var(--gray-text-color);
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+fieldset input[type=submit]:hover, fieldset button:hover {
+    background: var(--color-cjd-hover);
+    color: #fff;
+    box-shadow: none;
+}
+
+input:focus, textarea:focus, select:focus, button:focus {
+    outline: none;
+    box-shadow: 0px 0px 5px 2px orange;
+}
+
+fieldset dt b {
+    font-size: 0.7em;
+    font-weight: normal;
+    vertical-align: super;
+    color: var(--hover-link-color);
+}
+
+fieldset dt label {
+    font-weight: bold;
+}
+
+fieldset dd {
+    margin: .5em 1em;
+}
+
+fieldset dd input[type=text], fieldset dd input[type=email], fieldset dd textarea {
+    width: calc(100% - 2em);
+}
+
+form .captcha label {
+    display: block;
+}
+
+form p.submit {
+    margin: 1em;
+    margin-top: 2em;
+}
+
+nav.admin {
+    text-align: right;
+    position: fixed;
+    right: .5rem;
+    top: .5rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+nav.admin a {
+    font-family: var(--font-sans);
+    border: 1px solid var(--color-border);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background: #fff;
+    color: #666;
+    border-radius: 1em;
+    padding: .2em .8em;
+    position: relative;
+    box-shadow: 0px 0px 5px #ccc;
+    border: none;
+    margin: .3em;
+}
+
+nav.admin.login {
+    position: absolute;
+}
+
+nav.admin a:hover span {
+    text-decoration: underline;
+}
+
+nav.admin a:hover {
+    color: var(--color-cjd-dark);
+    box-shadow: 0 0 0 2px var(--color-cjd-muted);
+}
+
+
