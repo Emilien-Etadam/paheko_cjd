@@ -27,6 +27,33 @@
 	{/if}
 </nav>
 
+{if $is_logged && $session->canAccess($session::SECTION_USERS, $session::ACCESS_READ)}
+{* Démo : retirer les assign ci-dessous quand le PHP passera users_count, services_ok_count, services_late_count *}
+{if !isset($users_count)}{assign var='users_count' value=128}{/if}
+{if !isset($services_ok_count)}{assign var='services_ok_count' value=95}{/if}
+{if !isset($services_late_count)}{assign var='services_late_count' value=12}{/if}
+<div class="cjd-kpis">
+	{if isset($users_count)}
+	<div class="cjd-kpi">
+		<strong>{$users_count}</strong>
+		<span>Membres</span>
+	</div>
+	{/if}
+	{if isset($services_ok_count)}
+	<div class="cjd-kpi cjd-kpi--ok">
+		<strong>{$services_ok_count}</strong>
+		<span>Cotisations à jour</span>
+	</div>
+	{/if}
+	{if isset($services_late_count) && $services_late_count > 0}
+	<div class="cjd-kpi cjd-kpi--warn">
+		<strong>{$services_late_count}</strong>
+		<span>En retard</span>
+	</div>
+	{/if}
+</div>
+{/if}
+
 <div class="cjd-dashboard">
 	<aside class="cjd-dashboard__org describe">
 		<h3>{$config.org_name}</h3>
