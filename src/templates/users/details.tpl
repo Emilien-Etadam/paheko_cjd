@@ -1,5 +1,12 @@
 {include file="_head.tpl" title="%s (%s)"|args:$user->name():$category.name current="users"}
 
+<nav class="breadcrumbs">
+	<ul>
+		<li><a href="{$admin_uri}users/">Membres</a></li>
+		<li>{$user->name()|escape}</li>
+	</ul>
+</nav>
+
 {include file="users/_nav_user.tpl" id=$user.id current="details"}
 
 {form_errors}

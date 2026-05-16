@@ -1,5 +1,11 @@
 {include file="_head.tpl" title="Écriture n°%d"|args:$transaction.id current="acc" prefer_landscape=true}
 
+<nav class="breadcrumbs">
+	<ul>
+		<li><a href="{$admin_uri}acc/">Comptabilité</a></li>
+		<li>Écriture n°{$transaction.id}</li>
+	</ul>
+</nav>
 
 {if isset($_GET['created'])}
 	<p class="block confirm">

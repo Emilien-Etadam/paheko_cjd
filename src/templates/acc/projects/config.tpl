@@ -1,5 +1,13 @@
 {include file="_head.tpl" title="Projets - configuration" current="acc/years"}
 
+<nav class="breadcrumbs">
+	<ul>
+		<li><a href="{$admin_uri}acc/">Comptabilité</a></li>
+		<li><a href="{$admin_uri}acc/projects/">Projets</a></li>
+		<li>Configuration</li>
+	</ul>
+</nav>
+
 {include file="./_nav.tpl" current="config" order_code=null}
 
 

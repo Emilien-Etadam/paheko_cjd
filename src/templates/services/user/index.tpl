@@ -1,5 +1,13 @@
 {include file="_head.tpl" title="%s — Inscriptions aux activités et cotisations"|args:$user_name current="users/services"}
 
+<nav class="breadcrumbs">
+	<ul>
+		<li><a href="{$admin_uri}users/">Membres</a></li>
+		<li><a href="{$admin_uri}users/details.php?id={$user_id}">{$user_name|escape}</a></li>
+		<li>Inscriptions aux activités</li>
+	</ul>
+</nav>
+
 {include file="users/_nav_user.tpl" id=$user_id current="services"}
 
 
