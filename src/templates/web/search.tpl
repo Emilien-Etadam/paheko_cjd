@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Rechercher dans le site web" current="web"}
 
+
+<div class="cjd-web">
 <form method="post" action="{$self_url}">
 	<fieldset>
 		<legend>Rechercher une page ou catégorie</legend>
@@ -24,5 +26,7 @@
 	{/foreach}
 	</section>
 {/if}
+
+</div>
 
 {include file="_foot.tpl"}

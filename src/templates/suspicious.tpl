@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Vérification de votre connexion" current=null layout="public" hide_title=true}
 
+
+<div class="cjd-card">
 <div class="alert block">
 	<h3>Votre adresse IP a été identifiée comme suspecte.</h3>
 	<p>Merci d'attendre quelques secondes…</p>
@@ -17,5 +19,7 @@ window.setTimeout(() => {
 }, 1000);
 {/literal}
 </script>
+
+</div>
 
 {include file="_foot.tpl"}

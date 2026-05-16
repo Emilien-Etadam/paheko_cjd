@@ -2,6 +2,8 @@
 
 {include file="services/_nav.tpl" current="index"}
 
+
+<div class="cjd-card cjd-services">
 {include file="common/delete_form.tpl"
 	legend="Supprimer ce tarif ?"
 	confirm_label=$confirm_label
@@ -9,5 +11,7 @@
 	warning="Êtes-vous sûr de vouloir supprimer le tarif « %s » ?"|args:$fee.label
 	error="Attention, cela supprimera également les inscriptions des membres à ce tarif !"
 	info="Les écritures comptables liées à l'historique des membres ayant réglé ce tarif ne seront pas supprimées, et la comptabilité demeurera inchangée."}
+
+</div>
 
 {include file="_foot.tpl"}

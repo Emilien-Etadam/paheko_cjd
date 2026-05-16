@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Verrouiller un exercice" current="config"}
 
+
+<div class="cjd-card">
 {form_errors}
 
 <form method="post" action="">
@@ -14,5 +16,7 @@
 		{button type="submit" name="lock" label="Verrouiller cet exercice" shape="lock" class="main"}
 	</p>
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

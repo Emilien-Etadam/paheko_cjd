@@ -1,6 +1,8 @@
 {include file="_head.tpl" title="Changement de mot de passe"}
 
 
+
+<div class="cjd-card">
 {form_errors}
 
 <form method="post" action="{$self_url}">
@@ -18,5 +20,7 @@
 
 </form>
 
+
+</div>
 
 {include file="_foot.tpl"}

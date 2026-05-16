@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Accès document" current=null layout="public"}
 
+
+<div class="cjd-card">
 {if $has_password}
 <p class="block error">
 	Le mot de passe fourni ne correspond pas.<br />Merci de vérifier la saisie.
@@ -19,5 +21,7 @@
 		</p>
 	</fieldset>
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

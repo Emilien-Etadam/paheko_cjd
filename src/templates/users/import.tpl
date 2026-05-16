@@ -2,6 +2,8 @@
 
 {include file="users/_nav.tpl" current="import"}
 
+
+<div class="cjd-card">
 {form_errors}
 
 {if $_GET.msg == 'OK'}
@@ -124,5 +126,7 @@
 
 
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Déplacer des fichiers vers une écriture" current="docs"}
 
+
+<div class="cjd-card cjd-docs">
 {form_errors}
 
 <form method="post" action="{$self_url}" data-focus="1">
@@ -22,5 +24,7 @@
 	<input type="hidden" name="action" value="{$_POST.action}" />
 
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

@@ -11,6 +11,8 @@
 
 	{include file="common/dynamic_list_head.tpl"}
 
+
+<div class="cjd-web">
 		{foreach from=$list->iterate() item="p"}
 			<tr>
 				<th scope="row">{link label=$p.title href="./?id=%d"|args:$p.id}</th>
@@ -32,5 +34,7 @@
 {else}
 	<p class="help">Il n'y a aucune page dans le site.</p>
 {/if}
+
+</div>
 
 {include file="_foot.tpl"}

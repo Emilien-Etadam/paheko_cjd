@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Destinataires du message collectif : %s"|args:$mailing.subject current="users/mailing"}
 
+
+<div class="cjd-card cjd-mailing">
 <nav class="tabs">
 	<aside>
 		{linkbutton shape="plus" label="Nouveau message" href="new.php" target="_dialog"}
@@ -58,5 +60,7 @@
 	{csrf_field key=$csrf_key}
 	{$list->getHTMLPagination()|raw}
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

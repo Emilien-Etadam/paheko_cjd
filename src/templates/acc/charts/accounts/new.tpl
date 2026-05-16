@@ -2,6 +2,8 @@
 
 {include file="acc/charts/accounts/_nav.tpl" current="new"}
 
+
+<div class="cjd-card">
 {form_errors}
 
 {if !isset($account->type)}
@@ -143,5 +145,7 @@
 </form>
 
 {/if}
+
+</div>
 
 {include file="_foot.tpl"}

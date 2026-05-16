@@ -3,6 +3,8 @@
 {if !$dialog}
 	{if $target == 'users'}
 		{include file="users/_nav.tpl" current="saved_searches"}
+
+<div class="cjd-card">
 	{else}
 		<nav class="tabs">
 			<ul>
@@ -90,5 +92,7 @@
 
 	{$list->getHTMLPagination()|raw}
 {/if}
+
+</div>
 
 {include file="_foot.tpl"}

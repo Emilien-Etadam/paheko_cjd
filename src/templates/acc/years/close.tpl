@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Clôturer un exercice" current="acc/years"}
 
+
+<div class="cjd-card">
 {form_errors}
 
 <form method="post" action="{$self_url}">
@@ -30,5 +32,7 @@
 	</p>
 
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

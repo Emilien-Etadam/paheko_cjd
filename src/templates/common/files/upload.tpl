@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Envoi de fichier"}
 
+
+<div class="cjd-card">
 {form_errors}
 
 <form method="post" action="{$self_url}" enctype="multipart/form-data" data-focus="1">
@@ -14,5 +16,7 @@
 		</p>
 	</fieldset>
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

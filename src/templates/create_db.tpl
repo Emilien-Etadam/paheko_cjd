@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Créer une base de données" current=""}
 
+
+<div class="cjd-card">
 {form_errors}
 
 <form method="post" action="">
@@ -14,5 +16,7 @@
 			{button type="submit" name="create" label="Créer" shape="right" class="main"}
 		</p>
 	</fieldset>
+
+</div>
 
 {include file="_foot.tpl"}

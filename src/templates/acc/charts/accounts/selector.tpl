@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Sélectionner un compte"}
 
+
+<div class="cjd-card">
 <div class="selector">
 
 	<nav class="tabs">
@@ -101,5 +103,7 @@
 </div>
 
 <script type="text/javascript" src="{$admin_url}static/scripts/selector.js?{$version_hash}"></script>
+
+</div>
 
 {include file="_foot.tpl"}

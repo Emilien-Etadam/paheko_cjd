@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Sélectionner une ou des écritures"}
 
+
+<div class="cjd-card">
 <form method="post" action="{$self_url}">
 	<h2 class="ruler">
 		{input type="text" placeholder="Numéro ou libellé d'écriture" value="{$query}" name="q"}
@@ -77,5 +79,7 @@ rows.forEach((e) => {
 });
 </script>
 {/literal}
+
+</div>
 
 {include file="_foot.tpl"}

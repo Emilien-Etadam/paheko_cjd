@@ -86,6 +86,4 @@
 {/if}
 </div>
 
-</div>
-
 {include file="_foot.tpl"}

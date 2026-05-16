@@ -3,6 +3,8 @@ use Paheko\Entities\Accounting\Account;
 ?>
 {include file="_head.tpl" title="Mes activités & cotisations" current="me/services"}
 
+
+<div class="cjd-card">
 <dl class="cotisation">
 	<dt>Mes activités et cotisations</dt>
 	{foreach from=$services item="service"}
@@ -78,5 +80,7 @@ use Paheko\Entities\Accounting\Account;
 {/if}
 
 {$snippets|raw}
+
+</div>
 
 {include file="_foot.tpl"}

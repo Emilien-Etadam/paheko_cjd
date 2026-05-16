@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Changer d'exercice" current="acc/years"}
 
+
+<div class="cjd-card">
 {if $_GET.msg === 'CLOSED'}
 	<div class="alert block">
 	{if $current_year->isClosed()}
@@ -30,5 +32,7 @@
 	{csrf_field key=$csrf_key}
 	<input type="hidden" name="from" value="{$from}" />
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

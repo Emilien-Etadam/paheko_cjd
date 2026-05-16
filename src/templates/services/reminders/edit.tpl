@@ -2,6 +2,10 @@
 
 {include file="services/_nav.tpl" current="reminders"}
 
+
+<div class="cjd-card cjd-services">
 {include file="services/reminders/_form.tpl" legend="Modifier un rappel automatique" default_subject=null default_body=null}
+
+</div>
 
 {include file="_foot.tpl"}

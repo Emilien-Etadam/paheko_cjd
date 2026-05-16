@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Écritures liées à une inscription" current="acc/accounts"}
 
+
+<div class="cjd-card">
 <nav class="tabs">
 	{linkbutton href="!users/details.php?id=%d"|args:$user_id label="Retour à la fiche membre" shape="user"}
 	{linkbutton href="!services/user/payment.php?id=%d"|args:$service_user_id label="Nouveau règlement" shape="plus" target="_dialog"}
@@ -34,5 +36,7 @@
 		</tbody>
 	</table>
 {/if}
+
+</div>
 
 {include file="_foot.tpl"}

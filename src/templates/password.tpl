@@ -1,5 +1,7 @@
 {include file="_head.tpl" title=$title}
 
+
+<div class="cjd-card">
 {if $sent}
 	<p class="block confirm">
 		{if $new}
@@ -40,5 +42,7 @@
 
 	</form>
 {/if}
+
+</div>
 
 {include file="_foot.tpl"}

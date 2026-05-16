@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Réouvrir un exercice clôturé" current="config"}
 
+
+<div class="cjd-card">
 {form_errors}
 
 <form method="post" action="">
@@ -12,5 +14,7 @@
 		{button type="submit" name="unlock" label="Déverrouiller cet exercice" shape="unlock" class="main"}
 	</p>
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

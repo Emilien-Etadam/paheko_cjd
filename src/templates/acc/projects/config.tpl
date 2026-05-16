@@ -2,6 +2,8 @@
 
 {include file="./_nav.tpl" current="config" order_code=null}
 
+
+<div class="cjd-card">
 {if $_GET.msg == 'SAVED'}
 	<p class="block confirm">
 		La configuration a été enregistrée.
@@ -28,5 +30,7 @@
 	{button type="submit" name="save_config" label="Enregistrer" shape="right" class="main"}
 </p>
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

@@ -2,6 +2,8 @@
 
 {include file="services/_nav.tpl" current="index" current_service=$service service_page="index" current_fee=$fee fee_page=$type}
 
+
+<div class="cjd-card cjd-services">
 <?php
 $can_action = $session->canAccess($session::SECTION_USERS, $session::ACCESS_ADMIN);
 ?>
@@ -64,5 +66,7 @@ $can_action = $session->canAccess($session::SECTION_USERS, $session::ACCESS_ADMI
 	Les lignes indiquant <em title="Aucune écriture n'est liée à cette inscription">—</em> comme montant payé signifient qu'aucune écriture comptable n'a été associée à cette inscription. De ce fait, le montant restant à payer ne peut être calculé.
 </p>
 
+
+</div>
 
 {include file="_foot.tpl"}

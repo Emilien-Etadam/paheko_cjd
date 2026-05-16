@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Plan du site" current="web"}
 
+
+<div class="cjd-web">
 <nav class="tabs">
 	{linkbutton shape="left" href="./" label="Retour à la gestion du site"}
 </nav>

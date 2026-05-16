@@ -7,6 +7,8 @@ use Paheko\Entities\Accounting\Account;
 
 {include file="acc/accounts/_nav.tpl" current="all"}
 
+
+<div class="cjd-card">
 {if !empty($balance)}
 <table class="list">
 	<thead>
@@ -46,5 +48,7 @@ use Paheko\Entities\Accounting\Account;
 	Les lignes grisées correspondent aux comptes soldés (le solde est à zéro).<br />
 	Pour voir la liste complète des comptes, même ceux qui n'ont pas été utilisés, se référer au <a href="{$admin_url}acc/charts/accounts/all.php?id={$current_year.id_chart}">plan comptable</a>.
 </p>
+
+</div>
 
 {include file="_foot.tpl"}

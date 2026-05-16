@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Message collectif : %s"|args:$mailing.subject current="users/mailing"}
 
+
+<div class="cjd-card cjd-mailing">
 {form_errors}
 
 <form method="post" action="">
@@ -21,5 +23,7 @@
 		<p class="submit">{button class="main" type="submit" name="send" label="Envoyer" shape="right"}</p>
 	</fieldset>
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

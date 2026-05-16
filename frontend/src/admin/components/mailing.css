@@ -1,0 +1,9 @@
+/* Messages collectifs */
+.cjd-mailing nav.tabs {
+	margin-bottom: 1.25rem;
+}
+
+.cjd-mailing .list tbody th[scope="row"] a {
+	font-weight: 600;
+	color: var(--color-cjd-dark);
+}

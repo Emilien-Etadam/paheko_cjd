@@ -3,6 +3,8 @@
 
 {include file="acc/_year_select.tpl"}
 
+
+<div class="cjd-card">
 <nav class="tabs">
 	<aside>
 	{if $session->canAccess($session::SECTION_ACCOUNTING, $session::ACCESS_ADMIN)}
@@ -111,5 +113,7 @@
 
 	{$list->getHTMLPagination()|raw}
 {/if}
+
+</div>
 
 {include file="_foot.tpl"}

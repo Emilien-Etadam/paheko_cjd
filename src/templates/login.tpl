@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Connexion" current="login"}
 
+
+<div class="cjd-card">
 {if DESKTOP_CONFIG_FILE}
 <nav class="tabs">
 	{linkbutton shape="reset" label="Ouvrir une autre base de données" href="!open_db.php"}
@@ -87,5 +89,7 @@ if (window.navigator.userAgent.match(/MSIE|Trident\/|Edge\//)) {
 }
 </script>
 {/literal}
+
+</div>
 
 {include file="_foot.tpl"}

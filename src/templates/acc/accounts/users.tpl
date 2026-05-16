@@ -4,6 +4,8 @@
 
 {include file="acc/accounts/_nav.tpl" current="users"}
 
+
+<div class="cjd-card">
 <p class="actions">
 	{if $all}
 		{linkbutton shape="eye-off" label="Seulement les membres qui ont eu une dette ou une créance" href="?all=0"}
@@ -57,5 +59,7 @@
 	Créance = le membre doit de l'argent à l'association
 </p>
 
+
+</div>
 
 {include file="_foot.tpl"}

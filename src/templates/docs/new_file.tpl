@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Créer un fichier texte"}
 
+
+<div class="cjd-card cjd-docs">
 {form_errors}
 
 <form method="post" action="{$self_url}" data-focus="1">
@@ -34,5 +36,7 @@ f.addEventListener('submit', () => {
 });
 {/literal}
 </script>
+
+</div>
 
 {include file="_foot.tpl"}

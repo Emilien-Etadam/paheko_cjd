@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Connexion — double facteur" current="login"}
 
+
+<div class="cjd-card">
 {form_errors}
 
 <form method="post" action="{$self_url}" data-focus="1">
@@ -18,5 +20,7 @@
 	</p>
 
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

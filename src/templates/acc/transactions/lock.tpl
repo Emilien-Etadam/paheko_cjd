@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Verrouiller une écriture" current="acc"}
 
+
+<div class="cjd-card">
 <form method="post" action="{$self_url}" data-focus="1">
 	{form_errors}
 
@@ -20,5 +22,7 @@
 
 </form>
 
+
+</div>
 
 {include file="_foot.tpl"}

@@ -10,6 +10,8 @@
 	</ul>
 </nav>
 
+
+<div class="cjd-card cjd-mailing">
 {if $_GET.msg == 'DELETE'}
 	<p class="confirm block">Le message a bien été supprimé.</p>
 {/if}
@@ -41,5 +43,7 @@
 	{$list->getHTMLPagination()|raw}
 {/if}
 
+
+</div>
 
 {include file="_foot.tpl"}

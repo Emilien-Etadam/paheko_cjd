@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Supprimer un fichier" current=null}
 
+
+<div class="cjd-card">
 {if $trash}
 	{if $file.type == $file::TYPE_DIRECTORY}
 		{include file="common/delete_form.tpl"
@@ -33,5 +35,7 @@
 		}
 	{/if}
 {/if}
+
+</div>
 
 {include file="_foot.tpl"}

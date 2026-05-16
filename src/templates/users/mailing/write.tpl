@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Message collectif" current="users/mailing" hide_title=true}
 
+
+<div class="cjd-card cjd-mailing">
 {form_errors}
 
 <form method="post" action="{$self_url}">
@@ -45,5 +47,7 @@ g.toggle('.sender_custom', false);
 {/if}
 </script>
 
+
+</div>
 
 {include file="_foot.tpl"}

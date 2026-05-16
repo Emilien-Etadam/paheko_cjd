@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Renommer" current=null}
 
+
+<div class="cjd-card">
 {form_errors}
 
 <form method="post" action="{$self_url}">
@@ -25,5 +27,7 @@ t.selectionStart = 0;
 t.selectionEnd = t.value.lastIndexOf('.');
 {/literal}
 </script>
+
+</div>
 
 {include file="_foot.tpl"}

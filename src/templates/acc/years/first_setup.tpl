@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Démarrer la comptabilité" current="acc"}
 
+
+<div class="cjd-card">
 {form_errors}
 
 <form method="{$method}" action="{$self_url_no_qs}" data-focus="1">
@@ -152,5 +154,7 @@
 </form>
 
 <script type="text/javascript" src="{$admin_url}static/scripts/accounting_setup.js"></script>
+
+</div>
 
 {include file="_foot.tpl"}

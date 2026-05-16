@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Message collectif : %s"|args:$mailing.subject current="users/mailing"}
 
+
+<div class="cjd-card cjd-mailing">
 <nav class="tabs">
 	<ul>
 		<li><a href="./">Messages collectifs</a></li>
@@ -86,5 +88,7 @@ tabs.forEach(li => {
 });
 {/literal}
 </script>
+
+</div>
 
 {include file="_foot.tpl"}

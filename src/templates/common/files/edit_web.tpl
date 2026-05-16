@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Édition de fichier" custom_js=['web_editor.js']}
 
+
+<div class="cjd-card">
 <form method="post" action="{$self_url}" data-focus="textarea">
 
 	<p class="textEditor">
@@ -12,5 +14,7 @@
 	</p>
 
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

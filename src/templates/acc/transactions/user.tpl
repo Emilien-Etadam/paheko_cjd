@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Écritures liées à %s"|args:$transaction_user->name() current="acc/accounts"}
 
+
+<div class="cjd-card">
 <nav class="tabs">
 	<aside>{exportmenu right=true table=true}</aside>
 </nav>
@@ -68,5 +70,7 @@
 <p class="actions">
 	{linkbutton shape="menu" href="!acc/reports/ledger.php?year=%d&user=%d"|args:$year:$transaction_user.id label="Grand livre de ce membre"}
 </p>
+
+</div>
 
 {include file="_foot.tpl"}

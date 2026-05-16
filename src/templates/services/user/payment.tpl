@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Enregistrer un règlement" current="users/services"}
 
+
+<div class="cjd-card cjd-services">
 {form_errors}
 
 <form method="post" action="{$self_url}" data-focus="1">
@@ -29,5 +31,7 @@
 	</p>
 
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

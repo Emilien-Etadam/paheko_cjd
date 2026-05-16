@@ -2,6 +2,8 @@
 
 {include file="./_nav.tpl" current="security"}
 
+
+<div class="cjd-card">
 {if $ok}
 <p class="block confirm">
 	Changements enregistrés.
@@ -66,5 +68,7 @@
 	<dd>Permet de voir les tentatives de connexion, les modifications de mot de passe, etc.</dd>
 	<dd>{linkbutton href="!users/log.php" label="Voir mon journal de connexion" shape="menu"}</dd>
 </dl>
+
+</div>
 
 {include file="_foot.tpl"}

@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Modifier un exercice" current="acc/years"}
 
+
+<div class="cjd-card">
 {form_errors}
 
 <form method="post" action="{$self_url}" data-focus="1">
@@ -24,5 +26,7 @@
 	</p>
 
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Historique" current="docs"}
 
+
+<div class="cjd-card">
 <h2 class="ruler">{$file.name} — Historique</h2>
 
 {form_errors}
@@ -91,5 +93,7 @@
 		</div>
 	</details>
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

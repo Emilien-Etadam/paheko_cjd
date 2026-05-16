@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Action collective sur les membres" current="membres"}
 
+
+<div class="cjd-card">
 {form_errors}
 
 {if $action == 'delete'}
@@ -44,5 +46,7 @@
 
 	</form>
 {/if}
+
+</div>
 
 {include file="_foot.tpl"}

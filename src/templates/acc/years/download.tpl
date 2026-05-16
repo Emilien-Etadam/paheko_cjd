@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Télécharger un exercice" current="acc/years"}
 
+
+<div class="cjd-card">
 {form_errors}
 
 <form method="post" action="{$self_url}" data-disable-progress="1">
@@ -45,5 +47,7 @@ g.script('scripts/zip.js', () => {
 
 
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

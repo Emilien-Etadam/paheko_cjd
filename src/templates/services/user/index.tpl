@@ -2,6 +2,8 @@
 
 {include file="users/_nav_user.tpl" id=$user_id current="services"}
 
+
+<div class="cjd-card cjd-services">
 {form_errors}
 
 {if !$only}
@@ -87,5 +89,7 @@
 
 {$list->getHTMLPagination()|raw}
 
+
+</div>
 
 {include file="_foot.tpl"}

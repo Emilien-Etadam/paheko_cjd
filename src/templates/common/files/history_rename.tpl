@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Nommer une version" current=null}
 
+
+<div class="cjd-card">
 {form_errors}
 
 <form method="post" action="{$self_url}" data-focus="1">
@@ -16,5 +18,7 @@
 		</p>
 	</fieldset>
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

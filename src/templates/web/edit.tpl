@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Édition : %s"|args:$page.title current="web" hide_title=true}
 
+
+<div class="cjd-web-admin">
 {form_errors}
 
 {if $show_diff}
@@ -63,5 +65,7 @@
 	</p>
 
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Ouvrir une base de données" current=""}
 
+
+<div class="cjd-card">
 {form_errors}
 
 <p style="border: 2px solid #666; border-radius: .5em; background: #fff; padding: .5em">
@@ -52,5 +54,7 @@ nav.files .path {
 		{/foreach}
 	</ul>
 </nav>
+
+</div>
 
 {include file="_foot.tpl"}

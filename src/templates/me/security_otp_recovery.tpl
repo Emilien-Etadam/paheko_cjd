@@ -2,6 +2,8 @@
 
 {include file="./_nav.tpl" current="security"}
 
+
+<div class="cjd-card">
 {form_errors}
 
 <p class="help">
@@ -38,5 +40,7 @@
 		{include file="./_security_confirm_password.tpl" name="verify" help="Entrez votre mot de passe actuel pour voir les codes."}
 	</form>
 {/if}
+
+</div>
 
 {include file="_foot.tpl"}

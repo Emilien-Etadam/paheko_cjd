@@ -1,5 +1,7 @@
 {include file="_head.tpl" title=$file.name current=null layout="raw" hide_title=true}
 
+
+<div class="cjd-card">
 <style type="text/css">
 {literal}
 

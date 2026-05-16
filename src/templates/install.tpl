@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Démarrer avec Paheko" menu=false}
 
+
+<div class="cjd-card">
 {if DESKTOP_CONFIG_FILE}
 <p class="actions">
 	{linkbutton shape="reset" label="Ouvrir une base de données existante" href="!open_db.php"}
@@ -41,5 +43,7 @@
 
 </form>
 
+
+</div>
 
 {include file="_foot.tpl"}

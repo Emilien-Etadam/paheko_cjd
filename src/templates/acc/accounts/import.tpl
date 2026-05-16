@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Importer dans %s — %s"|args:$account.code:$account.label current="acc/accounts"}
 
+
+<div class="cjd-card">
 <nav class="acc-year">
 	<h4>Exercice sélectionné&nbsp;:</h4>
 	<h3>{$year.label} — {$year.start_date|date_short} au {$year.end_date|date_short}</h3>
@@ -146,5 +148,7 @@
 
 {/if}
 
+
+</div>
 
 {include file="_foot.tpl"}

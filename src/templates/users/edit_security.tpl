@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="%s — Options de connexion"|args:$user->name() current="users"}
 
+
+<div class="cjd-card">
 {form_errors}
 
 <form method="post" action="{$self_url}" data-focus="1">
@@ -34,5 +36,7 @@
 	</div>
 	{/if}
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

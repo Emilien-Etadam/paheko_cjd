@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Balance d'ouverture" current="acc/years"}
 
+
+<div class="cjd-card">
 {form_errors}
 
 {if !empty($_GET.from) && empty($_POST)}
@@ -148,5 +150,7 @@
 
 </form>
 
+
+</div>
 
 {include file="_foot.tpl"}

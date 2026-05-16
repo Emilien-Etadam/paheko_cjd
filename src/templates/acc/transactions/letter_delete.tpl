@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Supprimer un lettrage" current="acc"}
 
+
+<div class="cjd-card">
 <form method="post" action="" data-focus="1">
 	<fieldset>
 		<legend>Supprimer un lettrage</legend>
@@ -15,5 +17,7 @@
 		</p>
 	</fieldset>
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

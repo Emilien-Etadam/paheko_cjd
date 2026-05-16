@@ -2,6 +2,8 @@
 
 {include file="acc/charts/accounts/_nav.tpl" current="favorites"}
 
+
+<div class="cjd-card">
 <form method="post" action="all.php?id={$chart.id}">
 
 	<p class="actions quick-search">
@@ -56,5 +58,7 @@
 <script type="text/javascript" src="{$admin_url}static/scripts/accounts_list.js"></script>
 
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

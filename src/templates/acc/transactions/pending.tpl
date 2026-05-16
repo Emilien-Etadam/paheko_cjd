@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Dettes et créances non réglées sur les autres exercices" current="acc/simple"}
 
+
+<div class="cjd-card">
 <nav class="tabs">
 	<aside>
 		{exportmenu}
@@ -41,5 +43,7 @@
 
 	{$list->getHTMLPagination()|raw}
 {/if}
+
+</div>
 
 {include file="_foot.tpl"}

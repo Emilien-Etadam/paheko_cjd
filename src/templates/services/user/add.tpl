@@ -2,6 +2,8 @@
 
 {include file="services/_nav.tpl" current="save" fee=null service=null}
 
+
+<div class="cjd-card cjd-services">
 {form_errors}
 
 <form method="post" action="subscribe.php" data-focus="button">
@@ -58,5 +60,7 @@ $('#f_choice_3').onchange = selectChoice;
 selectChoice();
 {/literal}
 </script>
+
+</div>
 
 {include file="_foot.tpl"}

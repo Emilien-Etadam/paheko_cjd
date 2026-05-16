@@ -2,6 +2,8 @@
 
 {include file="acc/_year_select.tpl"}
 
+
+<div class="cjd-card">
 {if $has_transactions_from_other_years}
 <p class="actions">
 	{if !$only_this_year}
@@ -109,5 +111,7 @@
 	</script>
 	{/literal}
 {/if}
+
+</div>
 
 {include file="_foot.tpl"}

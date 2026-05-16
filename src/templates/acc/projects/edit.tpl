@@ -2,6 +2,8 @@
 
 {include file="./_nav.tpl" current=null}
 
+
+<div class="cjd-card">
 {form_errors}
 
 <form method="post" action="" data-focus="1">
@@ -21,5 +23,7 @@
 		{button type="submit" name="save" label="Enregistrer" shape="right" class="main"}
 	</p>
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

@@ -1,5 +1,7 @@
 {include file="_head.tpl" title=$title current="web"}
 
+
+<div class="cjd-web-admin">
 {form_errors}
 
 <form method="post" action="{$self_url}" data-focus="1">
@@ -18,5 +20,7 @@
 
 </form>
 
+
+</div>
 
 {include file="_foot.tpl"}

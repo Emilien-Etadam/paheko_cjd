@@ -2,6 +2,8 @@
 
 {if $session->canAccess($session::SECTION_ACCOUNTING, $session::ACCESS_ADMIN)}
 	{include file="./_nav.tpl" current="charts"}
+
+<div class="cjd-card">
 {/if}
 
 {form_errors}
@@ -114,5 +116,7 @@
 	{/literal}
 	</script>
 {/if}
+
+</div>
 
 {include file="_foot.tpl"}

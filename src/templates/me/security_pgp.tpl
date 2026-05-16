@@ -2,6 +2,8 @@
 
 {include file="./_nav.tpl" current="security"}
 
+
+<div class="cjd-card">
 {form_errors}
 
 <form method="post" action="{$self_url}" data-focus="1">
@@ -25,5 +27,7 @@
 {/if}
 
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

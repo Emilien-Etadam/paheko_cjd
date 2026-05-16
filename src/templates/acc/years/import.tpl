@@ -3,6 +3,8 @@ use Paheko\Accounting\Export;
 ?>
 {include file="_head.tpl" title="Importer des écritures" current="acc/years"}
 
+
+<div class="cjd-card">
 <nav class="acc-year">
 	<h4>Exercice sélectionné&nbsp;:</h4>
 	<h3>{$year.label} — {$year.start_date|date_short} au {$year.end_date|date_short}</h3>
@@ -186,5 +188,7 @@ use Paheko\Accounting\Export;
 
 {/if}
 
+
+</div>
 
 {include file="_foot.tpl"}

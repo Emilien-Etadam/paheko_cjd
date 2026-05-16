@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Contacter un membre" current="membres"}
 
+
+<div class="cjd-card">
 {form_errors}
 
 <form method="post" action="{$self_url}">
@@ -29,5 +31,7 @@
 	</p>
 </form>
 
+
+</div>
 
 {include file="_foot.tpl"}

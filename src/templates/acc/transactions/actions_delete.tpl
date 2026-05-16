@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Supprimer %d écritures"|args:$count current="acc"}
 
+
+<div class="cjd-card">
 {include file="common/delete_form.tpl"
 	legend="Supprimer ces écritures ?"
 	warning="Êtes-vous sûr de vouloir supprimer %d écritures ?"|args:$count
@@ -7,5 +9,7 @@
 	csrf_key=$csrf_key
 	extra=$extra
 }
+
+</div>
 
 {include file="_foot.tpl"}

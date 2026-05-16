@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Prévisionnel — %s"|args:$year.label current="acc/years"}
 
+
+<div class="cjd-card">
 <nav class="tabs">
 	{if !$edit}
 	<aside>
@@ -143,5 +145,7 @@ document.querySelectorAll('table.provisional > tbody > tr > td[data-column]').fo
 {/literal}
 </script>
 {/if}
+
+</div>
 
 {include file="_foot.tpl"}

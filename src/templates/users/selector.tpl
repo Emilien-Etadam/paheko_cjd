@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Rechercher un membre"}
 
+
+<div class="cjd-card">
 <form method="post" action="{$self_url}">
 	<h2 class="ruler">
 		<input type="text" placeholder="Recherche rapide de membre" value="{$query}" name="q" />
@@ -62,5 +64,7 @@ rows.forEach((e) => {
 document.querySelector('input').focus();
 </script>
 {/literal}
+
+</div>
 
 {include file="_foot.tpl"}

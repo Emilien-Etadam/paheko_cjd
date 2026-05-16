@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="%s — Tarifs liés"|args:$year.label current="acc/years"}
 
+
+<div class="cjd-card">
 {form_errors}
 
 <div class="help block">
@@ -51,5 +53,7 @@
 	{/if}
 {/if}
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

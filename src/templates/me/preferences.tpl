@@ -2,6 +2,8 @@
 
 {include file="./_nav.tpl" current="preferences"}
 
+
+<div class="cjd-card">
 {if $ok !== null}
 <p class="confirm block">
 	Les modifications ont bien été enregistrées.
@@ -32,5 +34,7 @@
 	</p>
 
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

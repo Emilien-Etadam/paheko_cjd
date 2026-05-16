@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Modifier un plan comptable" current="acc/years"}
 
+
+<div class="cjd-card">
 {form_errors}
 
 <form method="post" action="{$self_url}" data-focus="1">
@@ -19,5 +21,7 @@
 		</p>
 	</fieldset>
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

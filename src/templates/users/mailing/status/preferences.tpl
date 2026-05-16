@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Préférences de réception de messages" current="users/mailing"}
 
+
+<div class="cjd-card cjd-mailing">
 <form method="post" action="{$self_url}">
 	<fieldset>
 		<legend>Préférences de l'adresse {$address}</legend>
@@ -21,5 +23,7 @@
 		</p>
 	</fieldset>
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Accès par une application tiers" layout="public"}
 
+
+<div class="cjd-card">
 {if $app_token == 'ok'}
 	<p class="block confirm">L'application a bien été autorisée.</p>
 	<div class="progressing block"></div>
@@ -30,5 +32,7 @@
 		</fieldset>
 	</form>
 {/if}
+
+</div>
 
 {include file="_foot.tpl"}

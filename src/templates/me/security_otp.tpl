@@ -3,6 +3,8 @@
 {else}
 	{include file="_head.tpl" title="Double authentification" current="me"}
 	{include file="./_nav.tpl" current="security"}
+
+<div class="cjd-card">
 {/if}
 
 
@@ -48,5 +50,7 @@
 	{include file="./_security_confirm_password.tpl" warning="Confirmez la désactivation de la double authentification" name="disable"}
 {/if}
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

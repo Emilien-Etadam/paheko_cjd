@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Export d'exercice" current="acc/years"}
 
+
+<div class="cjd-card">
 {form_errors}
 
 <form method="get" action="{$self_url}" data-disable-progress="1">
@@ -39,5 +41,7 @@ selectFormat();
 
 
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

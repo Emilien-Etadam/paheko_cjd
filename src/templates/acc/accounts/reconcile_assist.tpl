@@ -2,6 +2,8 @@
 
 {include file="acc/_year_select.tpl"}
 
+
+<div class="cjd-card">
 <nav class="tabs">
 	<ul>
 		<li><a href="{$admin_url}acc/accounts/reconcile.php?id={$account.id}">Rapprochement manuel</a></li>
@@ -176,5 +178,7 @@
 		</p>
 	</form>
 {/if}
+
+</div>
 
 {include file="_foot.tpl"}

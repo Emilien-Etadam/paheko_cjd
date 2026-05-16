@@ -1,5 +1,7 @@
 {include file="_head.tpl" title=$address current="users/mailing"}
 
+
+<div class="cjd-card cjd-mailing">
 <dl class="describe">
 	<dt>Adresse e-mail</dt>
 	<dd>{$address}</dd>
@@ -48,5 +50,7 @@
 		{/if}
 	</dd>
 </dl>
+
+</div>
 
 {include file="_foot.tpl"}

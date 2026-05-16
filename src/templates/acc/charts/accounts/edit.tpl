@@ -2,6 +2,8 @@
 
 {include file="acc/charts/accounts/_nav.tpl" current="new"}
 
+
+<div class="cjd-card">
 {form_errors}
 
 <form method="post" action="{$self_url}" data-focus="1">
@@ -24,5 +26,7 @@
 	</p>
 
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Vérification d'adresse" current="users/mailing"}
 
+
+<div class="cjd-card cjd-mailing">
 <form method="post" action="{$self_url}">
 	<fieldset>
 		<legend>Demander la vérification de l'adresse</legend>
@@ -24,5 +26,7 @@
 		</p>
 	</fieldset>
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

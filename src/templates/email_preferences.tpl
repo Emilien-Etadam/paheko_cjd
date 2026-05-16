@@ -1,6 +1,8 @@
 {use Paheko\Email\Emails}
 {include file="_head.tpl" title="Préférences de réception de messages" layout="public" hide_title=true}
 
+
+<div class="cjd-card">
 {if isset($_GET['saved'])}
 	<p class="block confirm">
 		Vos préférences ont bien été enregistrées.
@@ -81,5 +83,7 @@
 
 	</form>
 {/if}
+
+</div>
 
 {include file="_foot.tpl"}

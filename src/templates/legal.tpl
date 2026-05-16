@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Mentions légales" layout="public" custom_css="/content.css"}
 
+
+<div class="cjd-card">
 <div class="web-content">
 	<p>
 		{linkbutton shape="left" href=$www_url label="Retour au site"}

@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Nouveau message collectif" current="users/mailing"}
 
+
+<div class="cjd-card cjd-mailing">
 {form_errors}
 
 <form method="post" action="" data-focus=1>
@@ -61,5 +63,7 @@
 	</p>
 {/if}
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

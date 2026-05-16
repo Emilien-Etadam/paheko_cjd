@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Données du destinataire" current="users/mailing"}
 
+
+<div class="cjd-card cjd-mailing">
 <p class="help">Vous pouvez copier la variable (colonne de gauche) dans le corps du message&nbsp;:
 	elle sera remplacée dans le message par le contenu (colonne à droite) spécifique à chaque destinataire.</p>
 
@@ -19,5 +21,7 @@
 		{/foreach}
 	</tbody>
 </table>
+
+</div>
 
 {include file="_foot.tpl"}

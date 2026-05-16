@@ -2,6 +2,8 @@
 
 {include file="acc/charts/accounts/_nav.tpl" current="all"}
 
+
+<div class="cjd-card">
 <form method="post" action="{$self_url}" data-focus="1">
 
 	<p class="actions quick-search">
@@ -59,5 +61,7 @@
 {/if}
 
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

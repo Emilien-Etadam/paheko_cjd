@@ -2,6 +2,8 @@
 
 {include file="acc/_year_select.tpl"}
 
+
+<div class="cjd-card">
 <nav class="tabs">
 	<aside>
 		{exportmenu table=true}
@@ -199,5 +201,7 @@ function recalculateTable()
 }
 {/literal}
 </script>
+
+</div>
 
 {include file="_foot.tpl"}

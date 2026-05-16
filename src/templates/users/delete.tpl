@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Supprimer un membre" current="users"}
 
+
+<div class="cjd-card">
 {include file="common/delete_form.tpl"
 	legend="Supprimer ce membre ?"
 	warning=$warning
@@ -7,5 +9,7 @@
 	info="Alternativement, il est aussi possible de déplacer le membre dans une catégorie « Anciens membres », plutôt que de le supprimer complètement."
 	csrf_key=$csrf_key
 }
+
+</div>
 
 {include file="_foot.tpl"}

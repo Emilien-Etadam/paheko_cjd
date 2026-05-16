@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Statut des envois" current="users/mailing"}
 
+
+<div class="cjd-card cjd-mailing">
 <nav class="tabs">
 	{if isset($list)}
 	<aside>
@@ -86,5 +88,7 @@
 	{/if}
 
 {/if}
+
+</div>
 
 {include file="_foot.tpl"}

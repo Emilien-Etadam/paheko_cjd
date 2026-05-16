@@ -2,6 +2,8 @@
 
 {include file="users/_nav_user.tpl" id=$user_id current="reminders"}
 
+
+<div class="cjd-card cjd-services">
 {if $list->count()}
 
 	{include file="common/dynamic_list_head.tpl"}
@@ -28,5 +30,7 @@
 	<p class="alert block">Aucun rappel n'a été envoyé à ce membre.</p>
 
 {/if}
+
+</div>
 
 {include file="_foot.tpl"}

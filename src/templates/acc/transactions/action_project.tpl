@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Ajouter/supprimer des écritures à un projet" current="acc/accounts"}
 
+
+<div class="cjd-card">
 {form_errors}
 
 <form method="post" action="{$self_url}">
@@ -32,5 +34,7 @@
 	</p>
 
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

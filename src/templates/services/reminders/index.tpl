@@ -2,6 +2,8 @@
 
 {include file="services/_nav.tpl" current="reminders"}
 
+
+<div class="cjd-card cjd-services">
 <p class="help">
 	Les rappels automatiques sont envoyés aux membres disposant d'une adresse e-mail selon le délai défini.<br />
 	Il est possible de définir plusieurs rappels pour une même activité.<br />
@@ -42,5 +44,7 @@
 
 	{$list->getHTMLPagination()|raw}
 {/if}
+
+</div>
 
 {include file="_foot.tpl"}

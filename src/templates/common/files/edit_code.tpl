@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Édition de fichier" custom_js="code_editor.js"}
 
+
+<div class="cjd-card">
 {form_errors}
 
 <form method="post" action="{$self_url}" class="editor">
@@ -20,5 +22,7 @@
 const lang = {if $file}{$file->getHighlightLanguage()|json_encode|raw}{else}'html'{/if};
 createCodeEditor(lang, '#f_content');
 </script>
+
+</div>
 
 {include file="_foot.tpl"}

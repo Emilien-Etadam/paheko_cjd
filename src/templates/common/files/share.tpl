@@ -2,6 +2,8 @@
 
 {include file="./_share_nav.tpl" current="share"}
 
+
+<div class="cjd-card">
 {form_errors}
 
 <form method="post" action="{$self_url}" data-focus="1">
@@ -38,5 +40,7 @@
 	{/if}
 	</fieldset>
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

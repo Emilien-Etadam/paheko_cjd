@@ -2,6 +2,8 @@
 
 {include file="services/_nav.tpl" current="reminders"}
 
+
+<div class="cjd-card cjd-services">
 <nav class="tabs">
 	<ul class="sub">
 		<li class="title">{$reminder.subject}</li>
@@ -63,5 +65,7 @@
 
 {$list->getHTMLPagination()|raw}
 
+
+</div>
 
 {include file="_foot.tpl"}

@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Télécharger des fichiers" current="acc/docs"}
 
+
+<div class="cjd-card cjd-docs">
 {form_errors}
 
 <form method="post" action="{$self_url}">
@@ -33,5 +35,7 @@
 <script type="text/javascript">
 document.forms[0].onsubmit = () => window.parent.g.closeDialog();
 </script>
+
+</div>
 
 {include file="_foot.tpl"}
