@@ -4,8 +4,7 @@
  * Couches (ordre) :
  * 1. Tailwind — thème + utilitaires
  * 2. Base — polices
- * 3. Legacy — styles métier (en cours de migration vers components/)
- * 4. Thème sombre
+ * 3. Composants métier
  */
 
 @import "tailwindcss/theme" layer(theme);
@@ -17,5 +16,4 @@
 
 @import "./base/fonts.css";
 
-@import "./legacy/_index.css";
 @import "./components/index.css";

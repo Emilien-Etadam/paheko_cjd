@@ -1,7 +1,5 @@
-/**
- * Tableaux — règles métier et variantes.
- * Présentation de base : components/tables.css
- */
+/* Variantes tableaux : galerie, userOrder, drag, fichiers, rapprochement */
+
 
 table.list.auto {
 	width: auto;

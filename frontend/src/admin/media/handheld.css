@@ -1,3 +1,5 @@
+@import "../components/handheld.css";
+
 body {
 	background-position: -180px 0px;
 	background-attachment: scroll;
@@ -404,4 +406,4 @@ table.files.gallery tbody {
 		right: 0;
 		width: 95%;
 	}
-}@import "../components/handheld.css";
+}
