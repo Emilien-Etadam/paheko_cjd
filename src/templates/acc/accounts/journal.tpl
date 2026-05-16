@@ -55,7 +55,7 @@
 			{linkbutton href="!acc/transactions/new.php?acc=%s"|args:$account.code label="Saisie" shape="plus"}
 		{/if}
 		{linkmenu shape="filter" label="Filtrer…"}
-			<form method="get" action="" class="actions">
+			<form method="get" action="" class="actions" data-no-loading-state="1">
 			<fieldset>
 				<dl>
 					{input type="date" name="start" source=$filter default=$year.start_date label="Depuis le"}

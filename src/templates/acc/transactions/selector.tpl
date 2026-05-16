@@ -2,7 +2,7 @@
 
 
 <div class="cjd-card">
-<form method="post" action="{$self_url}">
+<form method="post" action="{$self_url}" data-no-loading-state="1">
 	<h2 class="ruler">
 		{input type="text" placeholder="Numéro ou libellé d'écriture" value="{$query}" name="q"}
 		{input type="select" name="id_year" default_empty="— Tous les exercices —" options=$years}

@@ -4,7 +4,7 @@
 <div class="cjd-web">
 <nav class="tabs">
 	<aside>
-		<form method="post" action="search.php" target="_dialog" data-disable-progress="1">
+		<form method="post" action="search.php" target="_dialog" data-disable-progress="1" data-no-loading-state="1">
 			{input type="text" name="q" size=25 placeholder="Rechercher dans le site" title="Rechercher dans le site"}
 			{button shape="search" type="submit" title="Rechercher"}
 		</form>

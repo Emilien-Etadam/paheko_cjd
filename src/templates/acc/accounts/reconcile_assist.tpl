@@ -61,7 +61,7 @@
 		</fieldset>
 	</form>
 
-	<form method="get" action="">
+	<form method="get" action="" data-no-loading-state="1">
 		<fieldset>
 			<legend>Période de rapprochement</legend>
 			<dl>

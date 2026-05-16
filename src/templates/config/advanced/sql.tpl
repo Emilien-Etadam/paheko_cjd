@@ -25,7 +25,7 @@
 {form_errors}
 
 {if isset($query)}
-	<form method="post" action="{$self_url}" data-disable-progress="1">
+	<form method="post" action="{$self_url}" data-disable-progress="1" data-no-loading-state="1">
 	{if $query !== null}
 		<h2 class="ruler">Requête SQL</h2>
 

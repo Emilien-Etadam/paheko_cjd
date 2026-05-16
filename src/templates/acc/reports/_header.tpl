@@ -41,7 +41,7 @@
 	{if !empty($year)}
 	<div class="forms">
 		{if !empty($allow_compare) && !empty($other_years)}
-		<form method="get" action="" class="{if !$criterias.compare_year}hidden {/if}noprint" id="compareForm">
+		<form method="get" action="" class="{if !$criterias.compare_year}hidden {/if}noprint" id="compareForm" data-no-loading-state="1">
 			<input type="hidden" name="year" value="{$year.id}" />
 			{if isset($project)}
 				<input type="hidden" name="project" value="{$project.id}" />
@@ -57,7 +57,7 @@
 		{/if}
 
 		{if !empty($allow_filter)}
-		<form method="get" action="" class="{if !$criterias.before}hidden {/if}noprint" id="filterForm">
+		<form method="get" action="" class="{if !$criterias.before}hidden {/if}noprint" id="filterForm" data-no-loading-state="1">
 			<input type="hidden" name="year" value="{$year.id}" />
 			{if isset($project)}
 				<input type="hidden" name="project" value="{$project.id}" />

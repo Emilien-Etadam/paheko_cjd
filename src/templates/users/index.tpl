@@ -17,7 +17,7 @@
 {/if}
 
 <div class="cjd-toolbar">
-	<form method="get" action="search.php" class="shortFormLeft" data-focus="1">
+	<form method="get" action="search.php" class="shortFormLeft" data-focus="1" data-no-loading-state="1">
 		<fieldset>
 			<legend>Rechercher un membre</legend>
 			{input type="text" name="qt" placeholder="Nom, numéro, ou adresse e-mail"}
