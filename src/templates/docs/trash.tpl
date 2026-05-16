@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Fichiers supprimés" current="docs" hide_title=true}
 
+
+<div class="cjd-card cjd-docs">
 <nav class="tabs">
 	{include file="./_nav.tpl" context="trash"}
 	<h2>Fichiers supprimés</h2>
@@ -53,5 +55,7 @@
 
 {/if}
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

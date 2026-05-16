@@ -1,5 +1,7 @@
 <?php
 use Paheko\Entities\Accounting\Account;
+
+<div class="cjd-card">
 ?>
 {include file="_head.tpl" title="Comptes favoris" current="acc/accounts"}
 
@@ -94,5 +96,7 @@ use Paheko\Entities\Accounting\Account;
 	Pour voir le solde des comptes qui ne sont pas marqués comme favoris, se référer à la <a href="all.php">liste de tous les comptes de l'exercice</a>.<br />
 	Pour voir la liste complète des comptes, même ceux qui n'ont pas été utilisés, se référer au <a href="{$admin_url}acc/charts/accounts/?id={$current_year.id_chart}">plan comptable</a>.
 </p>
+
+</div>
 
 {include file="_foot.tpl"}

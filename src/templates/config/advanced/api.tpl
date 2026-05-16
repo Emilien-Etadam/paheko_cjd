@@ -2,6 +2,8 @@
 
 {include file="config/_menu.tpl" current="advanced" sub_current="api"}
 
+
+<div class="cjd-card cjd-config">
 {form_errors}
 
 {if count($list)}
@@ -63,5 +65,7 @@
 		</p>
 	</fieldset>
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

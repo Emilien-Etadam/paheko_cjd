@@ -2,6 +2,8 @@
 
 {include file="config/_menu.tpl" current="users" sub_current="categories"}
 
+
+<div class="cjd-card cjd-config">
 <table class="list">
 	<thead>
 		<th scope="col">Nom</th>
@@ -53,5 +55,7 @@
 
 </form>
 
+
+</div>
 
 {include file="_foot.tpl"}

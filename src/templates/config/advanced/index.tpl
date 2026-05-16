@@ -2,6 +2,8 @@
 
 {include file="config/_menu.tpl" current="advanced" sub_current=null}
 
+
+<div class="cjd-card cjd-config">
 {form_errors}
 
 {if $_GET.msg == 'RESET'}
@@ -71,5 +73,7 @@
 	{/if}
 </dl>
 
+
+</div>
 
 {include file="_foot.tpl"}

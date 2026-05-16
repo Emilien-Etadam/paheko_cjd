@@ -2,6 +2,8 @@
 
 {include file="config/_menu.tpl" current="advanced" sub_current="sql"}
 
+
+<div class="cjd-card cjd-config">
 {if !$diagram}
 <nav class="tabs">
 	{if isset($query) || isset($table) || isset($table_info)}
@@ -210,5 +212,7 @@
 	</table>
 
 {/if}
+
+</div>
 
 {include file="_foot.tpl"}

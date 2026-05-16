@@ -2,6 +2,8 @@
 
 {include file="config/_menu.tpl" current="advanced" sub_current="errors"}
 
+
+<div class="cjd-card cjd-config">
 {if isset($reports) && isset($id)}
 	<section class="error">
 		{foreach from=$main.errors item="error"}
@@ -82,5 +84,7 @@
 		</table>
 	{/if}
 {/if}
+
+</div>
 
 {include file="_foot.tpl"}

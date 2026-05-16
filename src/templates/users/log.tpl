@@ -1,5 +1,7 @@
 {if $params.history}
 	{include file="_head.tpl" title="Historique des modifications de la fiche membre"}
+
+<div class="cjd-card">
 {else}
 	{include file="_head.tpl" title="Journal d'audit du membre"}
 {/if}
@@ -27,5 +29,7 @@
 {/if}
 
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

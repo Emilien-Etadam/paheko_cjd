@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Fichiers partagés" current="docs" hide_title=true}
 
+
+<div class="cjd-card cjd-docs">
 <nav class="tabs">
 	{include file="./_nav.tpl" context="shares"}
 	<h2>Fichiers partagés</h2>
@@ -35,5 +37,7 @@
 		<p class="alert block">Il n'y a aucun fichier partagé.</p>
 	{/if}
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

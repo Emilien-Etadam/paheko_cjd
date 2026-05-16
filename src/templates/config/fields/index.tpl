@@ -2,6 +2,8 @@
 
 {include file="config/_menu.tpl" current="users" sub_current="fields"}
 
+
+<div class="cjd-card cjd-config">
 {if $_GET.msg == 'SAVED_ORDER'}
 	<p class="block confirm">
 		L'ordre a bien été enregistré.
@@ -85,5 +87,7 @@
 </form>
 
 <script type="text/javascript" src="{$admin_url}static/scripts/dragdrop-table.js"></script>
+
+</div>
 
 {include file="_foot.tpl"}

@@ -2,6 +2,8 @@
 
 {include file="config/_menu.tpl" current="users" sub_current=null}
 
+
+<div class="cjd-card">
 {if isset($_GET['ok']) && !$form->hasErrors()}
 	<p class="block confirm">
 		La configuration a bien été enregistrée.
@@ -72,5 +74,7 @@
 
 </form>
 
+
+</div>
 
 {include file="_foot.tpl"}

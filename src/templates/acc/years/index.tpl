@@ -1,6 +1,8 @@
 {use Paheko\Entities\Accounting\Year}
 {include file="_head.tpl" title="Exercices" current="acc/years"}
 
+
+<div class="cjd-card">
 <nav class="tabs">
 	<aside>
 		{linkbutton shape="search" href="!acc/search.php" label="Recherche"}
@@ -120,5 +122,7 @@
 	</article>
 {/foreach}
 </section>
+
+</div>
 
 {include file="_foot.tpl"}

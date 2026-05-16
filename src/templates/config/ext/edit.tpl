@@ -1,6 +1,8 @@
 {include file="_head.tpl" title="Code source — %s"|args:$module.label current="config"}
 
 {include file="config/_menu.tpl" current="ext"}
+
+<div class="cjd-card cjd-config">
 {include file="./_nav.tpl" current="edit" ext=$module}
 
 {form_errors}
@@ -69,5 +71,7 @@
 	{linkbutton label="Supprimer toutes les modifications" href="delete.php?name=%s&mode=reset"|args:$module.name shape="delete" target="_dialog"}
 </p>
 {/if}
+
+</div>
 
 {include file="_foot.tpl"}

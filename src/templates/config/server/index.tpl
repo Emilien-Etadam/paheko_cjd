@@ -2,6 +2,8 @@
 
 {include file="config/_menu.tpl" current=null}
 
+
+<div class="cjd-card cjd-config">
 {if $_GET.msg === 'OK'}
 <p class="confirm block">L'opération a été réalisée.</p>
 {/if}
@@ -77,5 +79,7 @@
 	</tr>
 	{/foreach}
 </table>
+
+</div>
 
 {include file="_foot.tpl"}

@@ -4,6 +4,8 @@
 
 {include file="config/backup/_menu.tpl" current="auto"}
 
+
+<div class="cjd-card cjd-config">
 {form_errors}
 
 {if $_GET.msg === 'CONFIG_SAVED'}
@@ -66,5 +68,7 @@ changeOption();
 $('input[name=backup]').forEach(e => e.onchange = changeOption);
 {/literal}
 </script>
+
+</div>
 
 {include file="_foot.tpl"}

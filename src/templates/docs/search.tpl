@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Rechercher dans les fichiers" current="docs"}
 
+
+<div class="cjd-card cjd-docs">
 <form method="post" action="{$self_url}" data-focus="1">
 	<fieldset>
 		<legend>Rechercher un fichier</legend>
@@ -25,5 +27,7 @@
 	{/foreach}
 	</section>
 {/if}
+
+</div>
 
 {include file="_foot.tpl"}

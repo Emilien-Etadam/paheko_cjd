@@ -2,6 +2,8 @@
 
 {include file="config/_menu.tpl" current="advanced"}
 
+
+<div class="cjd-card cjd-config">
 {form_errors}
 <form method="post" action="{$self_url_no_qs}">
 
@@ -32,5 +34,7 @@
 
 </form>
 
+
+</div>
 
 {include file="_foot.tpl"}

@@ -2,6 +2,8 @@
 
 {include file="config/_menu.tpl" current="users" sub_current="fields"}
 
+
+<div class="cjd-card cjd-config">
 {form_errors}
 
 <p class="help block">Avant de demander une information personnelle à vos membres… en avez-vous vraiment besoin&nbsp;?<br />
@@ -33,5 +35,7 @@
 </p>
 
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

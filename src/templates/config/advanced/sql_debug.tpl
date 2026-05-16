@@ -2,6 +2,8 @@
 
 {include file="config/_menu.tpl" current="advanced" sub_current="sql_debug"}
 
+
+<div class="cjd-card cjd-config">
 {if isset($debug)}
 	<table class="list multi">
 		<thead>
@@ -70,5 +72,7 @@
 		</table>
 	{/if}
 {/if}
+
+</div>
 
 {include file="_foot.tpl"}

@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Importer un module" current="config"}
 
+
+<div class="cjd-card cjd-config">
 {form_errors}
 
 {if !$_GET.ok}
@@ -30,5 +32,7 @@
 	</fieldset>
 	</form>
 {/if}
+
+</div>
 
 {include file="_foot.tpl"}

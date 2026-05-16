@@ -5,6 +5,8 @@ $title = $field->exists() ? 'Modifier un champ' : 'Ajouter un champ';
 
 {include file="config/_menu.tpl" current="fields"}
 
+
+<div class="cjd-card cjd-config">
 {form_errors}
 
 <form method="post" action="{$self_url}">
@@ -127,5 +129,7 @@ $title = $field->exists() ? 'Modifier un champ' : 'Ajouter un champ';
 </p>
 
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

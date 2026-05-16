@@ -1,6 +1,8 @@
 {include file="_head.tpl" title=$ext.label current="config"}
 
 {include file="config/_menu.tpl" current="ext"}
+
+<div class="cjd-card cjd-config">
 {include file="./_nav.tpl" current="details" ext=$ext}
 
 {if !$ext.enabled}
@@ -82,6 +84,8 @@
 		<p>{linkbutton shape="help" href=$url_help_plugins label="Documentation des plugins" target="_blank"}
 	{/if}
 {/if}
+</div>
+
 </div>
 
 {include file="_foot.tpl"}

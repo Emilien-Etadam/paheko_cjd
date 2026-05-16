@@ -2,10 +2,14 @@
 
 {include file="config/_menu.tpl" current="categories"}
 
+
+<div class="cjd-card cjd-config">
 {include file="common/delete_form.tpl"
 	legend="Supprimer cette catégorie de membres ?"
 	warning="Êtes-vous sûr de vouloir supprimer la catégorie « %s » ?"|args:$cat.name
 	alert="Attention, la catégorie ne doit plus contenir de membres pour pouvoir être supprimée."
 	info="Les écritures comptables liées à l'historique des membres inscrits à cette activité ne seront pas supprimées, et la comptabilité demeurera inchangée."}
+
+</div>
 
 {include file="_foot.tpl"}

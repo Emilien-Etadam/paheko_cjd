@@ -2,6 +2,8 @@
 
 {include file="acc/_year_select.tpl"}
 
+
+<div class="cjd-card">
 {if !empty($duplicate_from)}
 <p class="help block">
 	Cette saisie est dupliquée depuis l'écriture {link class="num" href="details.php?id=%d"|args:$duplicate_from label="#%d"|args:$duplicate_from}
@@ -13,5 +15,7 @@
 {/if}
 
 {include file="./_form.tpl"}
+
+</div>
 
 {include file="_foot.tpl"}

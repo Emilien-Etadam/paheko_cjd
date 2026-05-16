@@ -1,6 +1,8 @@
 {include file="_head.tpl" title="%s — Permissions"|args:$ext.label current="config"}
 
 {include file="config/_menu.tpl" current="ext"}
+
+<div class="cjd-card cjd-config">
 {include file="./_nav.tpl" current="permissions" ext=$ext}
 
 {if !$ext.ini.allow_user_restrict || !$ext.restrict_section || !$ext.restrict_level}
@@ -36,5 +38,7 @@
 		</p>
 	</form>
 {/if}
+
+</div>
 
 {include file="_foot.tpl"}

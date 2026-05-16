@@ -4,6 +4,8 @@
 
 {include file="config/backup/_menu.tpl" current="restore"}
 
+
+<div class="cjd-card cjd-config">
 {if $ok}
 <p class="confirm block">La restauration a été effectuée.</p>
 {/if}
@@ -39,5 +41,7 @@
 g.script('scripts/lib/unzipit.min.js');
 g.script('scripts/unzip_restore.js');
 </script>
+
+</div>
 
 {include file="_foot.tpl"}

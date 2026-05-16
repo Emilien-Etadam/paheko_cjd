@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Créer un nouveau module" current="config"}
 
+
+<div class="cjd-card cjd-config">
 <p class="help block">
 	Les modules permettent aux personnes ayant quelques compétences en programmation de rajouter des fonctionnalités.<br/>
 	{linkbutton shape="help" label="Comment modifier et développer des modules" href="!static/doc/modules.html" target="_dialog"}
@@ -43,5 +45,7 @@ $('#f_label').onkeyup = () => {
 };
 {/literal}
 </script>
+
+</div>
 
 {include file="_foot.tpl"}

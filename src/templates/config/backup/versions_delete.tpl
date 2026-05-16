@@ -2,6 +2,8 @@
 
 {include file="config/_menu.tpl"}
 
+
+<div class="cjd-card cjd-config">
 {assign var="size_bytes" value=$disk_use|size_in_bytes}
 
 {include file="common/delete_form.tpl"
@@ -9,5 +11,7 @@
 	warning="Libérer %s d'espace disque en supprimant toutes les anciennes versions ?"|args:$size_bytes
 	alert="Après cette action, seule la dernière version de chaque fichier sera conservée."
 	info="Même les versions nommées seront supprimées."}
+
+</div>
 
 {include file="_foot.tpl"}

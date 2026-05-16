@@ -4,6 +4,8 @@
 
 {include file="config/backup/_menu.tpl" current="versions"}
 
+
+<div class="cjd-card cjd-config">
 {form_errors}
 
 
@@ -95,5 +97,7 @@
 	</form>
 	{/if}
 {/if}
+
+</div>
 
 {include file="_foot.tpl"}

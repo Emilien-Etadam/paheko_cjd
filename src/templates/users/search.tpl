@@ -1,6 +1,9 @@
 {include file="_head.tpl" title=$title current="users"}
 
+
 {include file="users/_nav.tpl" current="search"}
+
+<div class="cjd-card">
 
 <form method="post" action="{$self_url}" id="queryBuilderForm" data-disable-progress="1">
 
@@ -123,5 +126,7 @@
 {/if}
 
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

@@ -1,5 +1,7 @@
 {include file="_head.tpl" title="Désinstaller une extension" current="config"}
 
+
+<div class="cjd-card cjd-config">
 {if $ext.type === 'plugin'}
 	{include file="common/delete_form.tpl"
 		legend="Supprimer une extension"
@@ -25,5 +27,7 @@
 		warning="Êtes-vous sûr de vouloir supprimer l'extension « %s » ?"|args:$ext.label
 		alert="Attention, cela supprimera toutes les données liées à l'extension, ainsi que l'extension elle-même."}
 {/if}
+
+</div>
 
 {include file="_foot.tpl"}

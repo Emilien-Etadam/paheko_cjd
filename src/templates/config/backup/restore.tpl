@@ -4,6 +4,8 @@
 
 {include file="config/backup/_menu.tpl" current="restore"}
 
+
+<div class="cjd-card cjd-config">
 {form_errors}
 
 {if $code == Backup::INTEGRITY_FAIL && ALLOW_MODIFIED_IMPORT}
@@ -122,5 +124,7 @@
 
 	</form>
 {/if}
+
+</div>
 
 {include file="_foot.tpl"}

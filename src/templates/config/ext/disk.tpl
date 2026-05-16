@@ -1,6 +1,8 @@
 {include file="_head.tpl" title="%s — Espace disque occupé"|args:$ext.label current="config"}
 
 {include file="config/_menu.tpl" current="ext"}
+
+<div class="cjd-card cjd-config">
 {include file="./_nav.tpl" current="disk" ext=$ext}
 
 <article class="ext-more">
@@ -57,5 +59,7 @@
 	</table>
 	<p class="help">Nombre de lignes de code : {$code_sloc}</p>
 </article>
+
+</div>
 
 {include file="_foot.tpl"}
