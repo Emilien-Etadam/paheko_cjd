@@ -10,7 +10,7 @@ $current ??= '';
 	<meta name="v" content="{$version_hash}" />
 	<title>{$title}</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" type="text/css" href="{$admin_uri}static/dist/admin.css?{$version_hash}" media="all" />
+	<link rel="stylesheet" type="text/css" href="{$admin_uri}static/admin.css?{$version_hash}" media="all" />
 	<script type="text/javascript" src="{$admin_uri}static/scripts/global.js?{$version_hash}"></script>
 	{if isset($custom_js)}
 		<?php $custom_js = (array)$custom_js; ?>
@@ -34,11 +34,11 @@ $current ??= '';
 			<script type="text/javascript" src="{plugin_url file=$js}?{$version_hash}"></script>
 		{/foreach}
 	{/if}
-	<link rel="stylesheet" type="text/css" href="{$admin_uri}static/print.css?{$version_hash}" media="print" />
+	<link rel="stylesheet" type="text/css" href="{$admin_uri}static/dist/print.css?{$version_hash}" media="print" />
 	{if isset($logged_user) && $logged_user.preferences.force_handheld}
-		<link rel="stylesheet" type="text/css" href="{$admin_uri}static/handheld.css?{$version_hash}" media="handheld,screen" />
+		<link rel="stylesheet" type="text/css" href="{$admin_uri}static/dist/handheld.css?{$version_hash}" media="handheld,screen" />
 	{else}
-		<link rel="stylesheet" type="text/css" href="{$admin_uri}static/handheld.css?{$version_hash}" media="handheld,screen and (max-width:981px)" />
+		<link rel="stylesheet" type="text/css" href="{$admin_uri}static/dist/handheld.css?{$version_hash}" media="handheld,screen and (max-width:981px)" />
 	{/if}
 	<link rel="manifest" href="{$admin_uri}manifest.php" />
 	{if isset($config)}

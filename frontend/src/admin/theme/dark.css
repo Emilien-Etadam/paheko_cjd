@@ -1,0 +1,28 @@
+/**
+ * Thème sombre — variables CSS natives (remplace le hack filter: invert).
+ * Les couleurs primaires (--gMainColor) restent injectées par {custom_colors}.
+ */
+html.dark {
+	color-scheme: dark;
+
+	--gBgColor: 24, 24, 27;
+	--gTextColor: 235, 235, 235;
+	--gBorderColor: #9ca3af;
+	--gLightBorderColor: #4b5563;
+	--gLightBackgroundColor: #374151;
+	--gLinkColor: #93c5fd;
+	--gHoverLinkColor: 251, 191, 36;
+}
+
+html.dark body {
+	background-color: rgb(var(--gBgColor));
+}
+
+html.dark #menu {
+	filter: none;
+}
+
+html.dark main img,
+html.dark main video {
+	filter: none;
+}

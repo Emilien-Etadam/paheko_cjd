@@ -1,4 +1,4 @@
-.PHONY: dev-server release deps publish check-dependencies test-syntax tests minify frontend frontend-install phpstan www htaccess modules installer plugins doc
+.PHONY: dev-server release deps publish check-dependencies test-syntax tests minify phpstan www htaccess modules installer plugins doc
 SHELL := /bin/bash
 KD2FW_BRANCH := trunk
 MODULES_BRANCH := trunk
@@ -100,7 +100,7 @@ release: test-syntax doc minify freeze
 		cd paheko/src/include/lib && \
 		rsync --files-from=dependencies.list -r /tmp/paheko-build/kd2/src/lib/ /tmp/paheko-build/paheko/src/include/lib/
 
-	# CSS admin (Vite → dist, copié dans mini.css par make minify)
+	# Bundle CSS admin (Vite → dist/, copié dans mini.css par make minify)
 	cp www/admin/static/mini.css /tmp/paheko-build/paheko/src/www/admin/static/dist/admin.css
 
 	# Generate .htaccess file
@@ -154,19 +154,10 @@ check-dependencies:
 installer:
 	cd ../tools && php make_installer.php > install.php
 
-frontend-install:
-	cd ../frontend && npm ci
-
-frontend: frontend-install
-	cd ../frontend && npm run build
-
-minify: frontend
-	@if [ -f www/admin/static/dist/admin.css ]; then \
-		cp www/admin/static/dist/admin.css www/admin/static/mini.css; \
-	else \
-		echo "WARN: dist/admin.css absent, fallback concat legacy"; \
-		cat `ls www/admin/static/styles/[0-9]*.css` | sed 's/\.\.\///' > www/admin/static/mini.css; \
-	fi
+minify:
+	cat `ls www/admin/static/styles/[0-9]*.css` | sed 's/\.\.\///' > www/admin/static/mini.css
+	@# Minify is only gaining 500 gzipped bytes (4kB uncompressed) but making things hard to read/hack
+	@#yui-compressor --nomunge www/admin/static/mini.css -o www/admin/static/mini.css
 
 stable:
 	@echo -n "Checking branch... "; \

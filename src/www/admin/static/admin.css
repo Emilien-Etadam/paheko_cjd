@@ -1,16 +1,5 @@
 /**
- * @deprecated Utiliser le build frontend : cd frontend && npm run build
- * Produit : static/dist/admin.css (référencé dans _head.tpl)
- *
- * Ce fichier est conservé pour la cible make minify (release) qui génère mini.css
- * à partir des sources legacy si le build npm n’a pas été exécuté.
+ * Fichier historique — le bundle admin est produit par le build frontend.
+ * @see ../../../../frontend/README.md
+ * Sortie : static/dist/admin.css
  */
-@import url("styles/00-reset.css");
-@import url("styles/01-layout.css");
-@import url("styles/02-common.css");
-@import url("styles/03-forms.css");
-@import url("styles/04-dialogs.css");
-@import url("styles/05-navigation.css");
-@import url("styles/06-tables-common.css");
-@import url("styles/07-tables.css");
-@import url("styles/10-accounting.css");

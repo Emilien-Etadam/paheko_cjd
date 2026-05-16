@@ -1,6 +1,6 @@
 # Frontend Paheko
 
-Stack de build pour l’interface d’administration : **Vite** + **Tailwind CSS v4**.
+Stack de build pour l’interface d’administration : **Vite 6** + **Tailwind CSS v4**.
 
 ## Prérequis
 
@@ -12,38 +12,57 @@ Stack de build pour l’interface d’administration : **Vite** + **Tailwind CSS
 ```bash
 cd frontend
 npm install
-npm run dev      # build en mode watch (développement)
-npm run build    # build de production (minifié)
+npm run dev      # rebuild en continu
+npm run build    # production (minifié)
 ```
 
-Les fichiers générés sont écrits dans `src/www/admin/static/dist/` (`admin.css` + manifest).
+Sortie : `src/www/admin/static/dist/`
+
+| Fichier | Usage |
+|---------|--------|
+| `admin.css` | Bundle principal (admin) |
+| `handheld.css` | Media queries mobile |
+| `print.css` | Impression |
+| `tables-export.css` | Exports CSV/HTML |
 
 ## Architecture
 
-| Fichier | Rôle |
-|---------|------|
-| `src/admin/main.css` | Point d’entrée : Tailwind + imports legacy |
-| `src/admin/tokens.css` | Design tokens (`@theme`) pour la charte graphique |
-| `vite.config.js` | Build vers `../src/www/admin/static/dist` |
+```
+frontend/src/admin/
+├── admin.css           # Point d’entrée principal
+├── tokens.css          # Design tokens + variables --g* (legacy)
+├── base/
+│   └── fonts.css       # Police d’icônes Paheko
+├── legacy/             # Styles métier historiques (à migrer)
+│   ├── _index.css
+│   └── 01-layout.css … 10-accounting.css
+├── theme/
+│   └── dark.css        # Thème sombre (variables, pas de filter:invert)
+├── media/
+│   ├── handheld.css
+│   └── print.css
+├── export/
+│   └── tables.css      # Bundle exports tableaux
+└── components/         # Nouveaux composants (charte CJD, etc.)
+```
 
-Les feuilles historiques restent dans `src/www/admin/static/styles/` le temps de la migration. Les CSS par page (`config.css`, `mailing.css`, etc.) et les media (`handheld.css`, `print.css`) ne sont pas encore dans le bundle.
+### Règles
 
-## Développement
+1. **Ne plus ajouter** de CSS dans `src/www/admin/static/styles/` sauf pages chargées à la demande (`config.css`, `mailing.css`, `web.css`).
+2. **Nouveau code** → `components/` avec classes sémantiques ou utilitaires Tailwind.
+3. **Migration** : déplacer fichier par fichier de `legacy/` vers `components/`, puis retirer l’import dans `legacy/_index.css`.
+4. Les couleurs d’instance restent injectées par PHP (`{custom_colors}` → `--gMainColor`, etc.).
 
-1. Lancer `npm run dev` dans `frontend/` (recompile à chaque modification).
-2. Recharger l’admin Paheko dans le navigateur.
+## Intégration PHP
+
+- `_head.tpl` → `static/dist/admin.css`, `handheld.css`, `print.css`
+- `Paheko\CSV::exportHTML` → `static/dist/tables-export.css`
+- CSS par page (config, mailing, web) : toujours `static/styles/*.css` via `$custom_css`
 
 ## Release
 
-Depuis `src/` :
-
 ```bash
-make frontend    # npm ci && npm run build
-make minify      # copie dist/admin.css vers mini.css pour l’archive
+cd src && make frontend   # ou make minify (inclut frontend)
 ```
 
-## Prochaines étapes (hors stack)
-
-- Migrer progressivement les fichiers `styles/*.css` vers composants / utilitaires Tailwind.
-- Intégrer `handheld.css` et `print.css` au bundle ou les découper en `@media`.
-- Bundler le JS admin (`global.js`, etc.) via un second point d’entrée si besoin.
+Le répertoire `dist/` doit être présent dans l’archive (build commité ou exécuté avant release).

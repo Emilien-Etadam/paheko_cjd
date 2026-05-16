@@ -10,13 +10,23 @@ export default defineConfig({
 	plugins: [tailwindcss()],
 	root: __dirname,
 	base: './',
+	resolve: {
+		alias: {
+			'@paheko-static': staticDir,
+		},
+	},
 	build: {
 		outDir: path.join(staticDir, 'dist'),
 		emptyOutDir: true,
 		manifest: false,
 		cssMinify: true,
 		rollupOptions: {
-			input: path.resolve(__dirname, 'src/admin/admin.css'),
+			input: {
+				admin: path.resolve(__dirname, 'src/admin/admin.css'),
+				handheld: path.resolve(__dirname, 'src/admin/media/handheld.css'),
+				print: path.resolve(__dirname, 'src/admin/media/print.css'),
+				'tables-export': path.resolve(__dirname, 'src/admin/export/tables.css'),
+			},
 			output: {
 				assetFileNames: '[name][extname]',
 				entryFileNames: '[name].js',
@@ -27,7 +37,7 @@ export default defineConfig({
 		port: 5173,
 		strictPort: true,
 		watch: {
-			ignored: ['**/node_modules/**', '**/dist/**'],
+			ignored: ['**/node_modules/**'],
 		},
 	},
 });

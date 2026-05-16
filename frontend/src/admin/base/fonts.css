@@ -1,0 +1,14 @@
+/* Police d’icônes Paheko — assets servis depuis www/admin/static/font/ */
+@font-face {
+	font-family: "paheko";
+	src: url("../../../../src/www/admin/static/font/paheko.eot");
+	src:
+		url("../../../../src/www/admin/static/font/paheko.eot#iefix") format("embedded-opentype"),
+		url("../../../../src/www/admin/static/font/paheko.woff2") format("woff2"),
+		url("../../../../src/www/admin/static/font/paheko.woff") format("woff"),
+		url("../../../../src/www/admin/static/font/paheko.ttf") format("truetype"),
+		url("../../../../src/www/admin/static/font/paheko.svg#paheko") format("svg");
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}

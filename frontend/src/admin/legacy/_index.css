@@ -1,0 +1,12 @@
+/**
+ * Styles métier Paheko (migration progressive vers components/).
+ * Ne pas ajouter de nouvelles règles ici — préférer frontend/src/admin/components/.
+ */
+@import "./01-layout.css";
+@import "./02-common.css";
+@import "./03-forms.css";
+@import "./04-dialogs.css";
+@import "./05-navigation.css";
+@import "./06-tables-common.css";
+@import "./07-tables.css";
+@import "./10-accounting.css";

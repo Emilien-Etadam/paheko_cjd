@@ -4,19 +4,6 @@
 */
 
 /* Light colors */
-:root {
-    --gBgColor: 255, 255, 255;
-    --gTextColor: 0, 0, 0;
-    --gBorderColor: #666;
-    --gLightBorderColor: #ccc;
-    --gLightBackgroundColor: #eee;
-    --gLinkColor: blue;
-    --gHoverLinkColor: 127, 0, 0;
-
-    --gMainColor: 32, 120, 122;
-    --gSecondColor: 133, 185, 186;
-    --gBgImage: url("../bg.png");
-}
 
 html {
     width: 100%;
@@ -278,24 +265,4 @@ body.sticky, body.sticky #menu {
 /* View transitions between page loads */
 @view-transition {
     navigation: auto;
-}
-
-@media screen {
-    /* Dark colors */
-    html.dark {
-        background-color: #ddd;
-        filter: invert(100%) hue-rotate(180deg);
-    }
-
-    html.dark body {
-        background-color: #ddd;
-    }
-
-    html.dark nav#menu {
-        filter: invert(100%) hue-rotate(180deg);
-    }
-
-    html.dark main img, html.dark main video {
-        filter: invert(100%) hue-rotate(180deg);
-    }
 }
