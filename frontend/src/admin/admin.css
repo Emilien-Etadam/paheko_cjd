@@ -2,17 +2,17 @@
  * Bundle principal — administration Paheko
  *
  * Couches (ordre) :
- * 1. Tailwind — thème + utilitaires
+ * 1. Tailwind — thème CJD (@theme) sans utilitaires
  * 2. Base — polices
  * 3. Composants métier
+ *
+ * Les utilitaires Tailwind ne sont pas importés : les classes Paheko
+ * (.hidden, .flex, .block, etc.) dans les .tpl provoquaient un scan
+ * parasite et des collisions avec components/utilities.css.
  */
 
 @import "tailwindcss/theme" layer(theme);
 @import "./tokens.css";
-@import "tailwindcss/utilities" layer(utilities);
-
-@source "../../../src/templates/**/*.tpl";
-@source "../../../src/www/admin/static/scripts/**/*.js";
 
 @import "./base/fonts.css";
 
