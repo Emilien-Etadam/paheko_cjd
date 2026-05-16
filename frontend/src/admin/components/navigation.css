@@ -12,7 +12,7 @@ nav.tabs li a {
 nav.tabs .current a {
 	background: var(--color-cjd);
 	border-bottom-color: var(--color-cjd);
-	color: #fff;
+	color: var(--color-surface);
 }
 
 nav.tabs li a:hover {
@@ -30,5 +30,5 @@ nav.home ul li a .icon {
 
 nav.home ul li a:hover::before {
 	background: var(--color-cjd);
-	color: #fff;
+	color: var(--color-surface);
 }

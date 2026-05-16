@@ -37,7 +37,7 @@ mark {
 }
 
 mark.variant-a {
-	background-color: rgb(0 213 86 / 0.2);
+	background-color: color-mix(in srgb, var(--color-cjd) 20%, transparent);
 }
 
 aside.describe {
@@ -46,7 +46,7 @@ aside.describe {
 	margin: 0.5rem;
 	background: var(--color-cjd-muted);
 	border-radius: var(--radius-md);
-	border: 1px solid rgb(0 213 86 / 0.35);
+	border: 1px solid color-mix(in srgb, var(--color-cjd) 35%, transparent);
 	padding: 0.75rem;
 	z-index: 200;
 }

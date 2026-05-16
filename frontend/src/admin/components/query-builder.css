@@ -11,7 +11,7 @@
 
 #queryBuilder td {
 	vertical-align: top;
-	padding: 0.1em 0.2em;
+	padding: 0.1rem 0.2rem;
 }
 
 #queryBuilder td.buttons {
@@ -20,15 +20,15 @@
 
 #queryBuilder input[type="button"],
 #queryBuilder .values input {
-	margin: 0.1em;
+	margin: 0.1rem;
 }
 
 #queryBuilderForm .actions label {
-	margin: 0 0.5em;
+	margin: 0 0.5rem;
 }
 
 #queryBuilder tbody .values label {
-	margin: 0 0.3em;
+	margin: 0 0.3rem;
 }
 
 #queryBuilderForm input[type="number"] {
@@ -39,7 +39,7 @@
 	#queryBuilder tbody tr {
 		display: flex;
 		flex-wrap: wrap;
-		padding: 0.5em 0;
+		padding: 0.5rem 0;
 		margin-left: 6rem;
 		border-top: 0.2rem solid var(--color-border);
 		clear: both;

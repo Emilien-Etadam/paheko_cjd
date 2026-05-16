@@ -79,7 +79,7 @@
 :is(main, #dialog, html.dialog main) textarea:focus,
 :is(main, #dialog, html.dialog main) select:focus {
 	border-color: var(--color-cjd);
-	box-shadow: 0 0 0 3px rgb(0 213 86 / 0.2);
+	box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-cjd) 20%, transparent);
 	outline: none;
 }
 
@@ -94,7 +94,7 @@
 :is(main, #dialog, html.dialog main) .icn-btn.main,
 :is(main, #dialog, html.dialog main) input[type="submit"].main {
 	background: var(--color-cjd);
-	color: #fff;
+	color: var(--color-surface);
 	border: 1px solid var(--color-cjd);
 	font-family: var(--font-display);
 	font-weight: 600;
