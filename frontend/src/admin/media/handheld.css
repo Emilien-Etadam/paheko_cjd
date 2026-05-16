@@ -81,7 +81,7 @@ nav.breadcrumbs ul {
 }
 
 #menu > ul {
-	background: rgb(var(--gMainColor));
+	background: var(--color-cjd);
 	flex-wrap: nowrap;
 	grid-template: none / repeat(auto-fit, minmax(20px, 1fr));
 	display: grid;
@@ -114,20 +114,20 @@ nav.breadcrumbs ul {
 	margin: 0;
 	padding: 10pt 0;
 	line-height: 10pt;
-	color: rgb(var(--gBgColor));
+	color: var(--color-surface);
 	font-size: 20pt;
 	top: 0;
 	text-shadow: none;
 }
 
 #menu li.current_parent h3 a, #menu li.current h3 a {
-	background: rgb(var(--gSecondColor));
+	background: var(--color-cjd-muted);
 }
 
 #menu li.current h3 span[data-icon]::before,
 #menu > ul > li.current_parent h3 span[data-icon]::before {
-	color: rgb(var(--gBgColor));
-	text-shadow: 0px 0px 5px rgb(var(--gTextColor)), 0px 0px 5px rgb(var(--gTextColor));
+	color: var(--color-surface);
+	text-shadow: 0px 0px 5px var(--color-text), 0px 0px 5px var(--color-text);
 }
 
 #menu > ul > li.current > ul, #menu > ul > li.current_parent > ul {
@@ -138,7 +138,7 @@ nav.breadcrumbs ul {
 	bottom: 30pt;
 	left: 0;
 	right: 0;
-	background: rgb(var(--gSecondColor));
+	background: var(--color-cjd-muted);
 }
 
 #menu > ul > li.current > ul li, #menu > ul > li.current_parent > ul li {
@@ -148,17 +148,17 @@ nav.breadcrumbs ul {
 }
 
 #menu > ul > li.current > ul a, #menu > ul > li.current_parent > ul a {
-	background: rgb(var(--gBgColor));
+	background: var(--color-surface);
 	border-radius: .5em;
-	color: rgb(var(--gMainColor));
+	color: var(--color-cjd);
 	padding: .3rem .6rem;
 	font-size: 1em;
 	font-weight: normal;
 }
 
 #menu > ul > li > ul li.current a {
-	background: rgb(var(--gMainColor));
-	color: rgb(var(--gBgColor));
+	background: var(--color-cjd);
+	color: var(--color-surface);
 }
 
 main {
@@ -169,8 +169,9 @@ main {
 nav.tabs ul {
 	border: none;
 	padding: 0;
-	margin: .3em 0;
+	margin: 0;
 	justify-content: flex-start;
+	min-width: max-content;
 }
 
 nav.tabs ul li a {
@@ -188,7 +189,7 @@ nav.tabs li:first-child::before, nav.tabs li:last-child::after {
 nav.tabs .sub {
 	margin: 1em 0;
 	border: none;
-	border-top: .2rem dashed rgba(var(--gMainColor), .5);
+	border-top: .2rem dashed rgb(from var(--color-cjd) r g b / 0.5);
 }
 
 nav.tabs h2 {
@@ -333,7 +334,7 @@ table.files.gallery tbody {
 		flex-direction: column;
 		border: none;
 		border-radius: 0;
-		background: rgba(var(--gMainColor), 0.2);
+		background: rgb(from var(--color-cjd) r g b / 0.2);
 		font-size: .8em;
 	}
 
@@ -355,7 +356,7 @@ table.files.gallery tbody {
 	}
 
 	#dialog > button.closeBtn {
-		color: var(--gLightBackgroundColor);
+		color: var(--color-surface-muted);
 		margin-bottom: .5em;
 	}
 

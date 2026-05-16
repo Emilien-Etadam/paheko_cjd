@@ -3,49 +3,39 @@ nav.tabs {
 	border-bottom: 2px solid var(--color-border);
 	margin-bottom: 1.5rem;
 	overflow-x: auto;
-	scrollbar-width: none; /* Firefox — cache la scrollbar moche */
-	-ms-overflow-style: none;
+	scrollbar-width: thin;
 	-webkit-overflow-scrolling: touch;
-}
-
-nav.tabs::-webkit-scrollbar {
-	display: none;
 }
 
 nav.tabs ul {
 	display: flex;
-	gap: 0;
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	min-width: max-content; /* empêche le wrap, force le scroll */
+	gap: 0;
+	min-width: max-content;
+}
+
+nav.tabs li {
+	flex-shrink: 0;
 }
 
 nav.tabs li a {
 	display: block;
 	padding: 0.65rem 1.1rem;
-	font-family: var(--font-display, var(--font-sans));
+	font-family: var(--font-display);
 	font-size: 0.875rem;
 	font-weight: 600;
 	text-transform: uppercase;
 	letter-spacing: 0.02em;
 	color: var(--color-text-muted);
 	border-bottom: 3px solid transparent;
-	margin-bottom: -2px; /* chevauche le border-bottom du nav.tabs */
+	margin-bottom: -2px;
 	white-space: nowrap;
 	transition: color 0.15s, border-color 0.15s;
 	text-decoration: none;
 	background: none;
 	border-radius: 0;
-	border-top: none;
-	border-left: none;
-	border-right: none;
-}
-
-nav.tabs li a:hover {
-	color: var(--color-text);
-	border-bottom-color: var(--color-border);
-	background: none;
 }
 
 nav.tabs .current a,
@@ -55,27 +45,10 @@ nav.tabs li a[aria-current="page"] {
 	background: none;
 }
 
-@media (max-width: 981px) {
-	nav.tabs {
-		-webkit-mask-image: linear-gradient(
-			to right,
-			transparent,
-			#000 1rem,
-			#000 calc(100% - 1rem),
-			transparent
-		);
-		mask-image: linear-gradient(
-			to right,
-			transparent,
-			#000 1rem,
-			#000 calc(100% - 1rem),
-			transparent
-		);
-	}
-
-	nav.tabs ul {
-		justify-content: flex-start;
-	}
+nav.tabs li a:hover {
+	color: var(--color-text);
+	border-bottom-color: var(--color-border);
+	background: none;
 }
 
 nav.home ul li a::before,

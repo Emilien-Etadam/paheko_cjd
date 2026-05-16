@@ -3,21 +3,22 @@
 	text-transform: uppercase;
 }
 
-main#content h1,
 main#content h2,
 main#content h3 {
-	text-transform: uppercase;
 	font-family: var(--font-display);
 	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.02em;
+	line-height: 1.1;
+	color: var(--color-text);
 }
 
 main#content h2 {
-	font-size: clamp(1.4rem, 3vw, 2rem);
-	color: var(--color-text);
+	font-size: clamp(1.25rem, 3vw, 1.75rem);
 	margin: 1.5rem 0 0.75rem;
 }
 
 main#content h3 {
-	font-size: clamp(1.1rem, 2vw, 1.4rem);
+	font-size: clamp(1rem, 2vw, 1.25rem);
 	margin: 1.25rem 0 0.5rem;
 }

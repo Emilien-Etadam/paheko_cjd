@@ -7,8 +7,8 @@
 
 dialog {
     display: none;
-    background: rgb(var(--gBgColor));
-    color: rgb(var(--gTextColor));
+    background: var(--color-surface);
+    color: var(--color-text);
 }
 
 dialog[open] {
@@ -50,7 +50,7 @@ dialog.datepicker {
     font-family: inherit;
     margin: .1rem;
     padding: .1rem;
-    border: 1px solid var(--gLightBorderColor);
+    border: 1px solid var(--color-border);
     text-align: center;
 }
 
@@ -61,19 +61,19 @@ dialog.datepicker {
 
 .datepicker thead td {
     font-size: 80%;
-    color: var(--gBorderColor);
+    color: var(--color-text-muted);
     text-align: center;
 }
 
 .datepicker tbody tr:nth-child(even) {
-    background-color: var(--gLightBackgroundColor);
+    background-color: var(--color-surface-muted);
 }
 
 .datepicker tbody td:nth-child(6) input {
-    color: var(--gBorderColor);
+    color: var(--color-text-muted);
 }
 .datepicker tbody td:nth-child(7) input {
-    color: var(--gBorderColor);
+    color: var(--color-text-muted);
 }
 
 .datepicker tbody td {

@@ -105,12 +105,12 @@
 :is(main, #dialog, html.dialog main) button.main:hover,
 :is(main, #dialog, html.dialog main) .icn-btn.main:hover,
 :is(main, #dialog, html.dialog main) input[type="submit"].main:hover {
-	background: #1f1f1f;
-	border-color: #1f1f1f;
+	background: #1a1a1a;
+	border-color: #1a1a1a;
 }
 
 :is(main, #dialog, html.dialog main) a.icn-btn:not(.main) {
-	background: var(--color-surface);
+	background: var(--color-surface-muted);
 	border: 1px solid var(--color-border);
 	color: var(--color-text);
 }
