@@ -1,29 +1,31 @@
 /**
- * Charte CJD.net — design tokens
- *
- * Variables --g* : format RGB "R, G, B" (injectables via {custom_colors}).
- * @see https://www.cjd.net
+ * Interface CJD — identité visuelle fixe (non personnalisable).
  */
 @theme {
 	--font-sans: "Open Sans", system-ui, sans-serif;
 	--font-display: "Saira Condensed", system-ui, sans-serif;
 
-	--color-brand: #00d556;
-	--color-brand-hover: #00b84a;
-	--color-brand-muted: #e8f8ee;
+	--color-cjd: #00d556;
+	--color-cjd-hover: #00b84a;
+	--color-cjd-muted: #e8f8ee;
+	--color-cjd-dark: #008f45;
 	--color-surface: #ffffff;
 	--color-surface-muted: #f4f4f5;
 	--color-text: #1a1a1a;
 	--color-text-muted: #6b7280;
 	--color-border: #e5e7eb;
+	--color-danger: #dc2626;
+	--color-warning: #f59e0b;
 
+	--header-height: 3.5rem;
 	--radius-sm: 0.25rem;
 	--radius-md: 0.5rem;
 	--radius-lg: 0.75rem;
 	--shadow-sm: 0 1px 3px rgb(0 0 0 / 0.08);
-	--shadow-md: 0 4px 12px rgb(0 0 0 / 0.1);
+	--shadow-md: 0 4px 16px rgb(0 0 0 / 0.1);
 }
 
+/* Compatibilité avec le CSS métier Paheko encore présent dans legacy/ */
 :root {
 	--gBgColor: 255, 255, 255;
 	--gTextColor: 26, 26, 26;

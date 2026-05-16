@@ -1,6 +1,4 @@
-/**
- * Composants CJD — surcharge la couche legacy (chargés après legacy/_index.css).
- */
+@import "./shell.css";
 @import "./typography.css";
 @import "./layout.css";
 @import "./navigation.css";

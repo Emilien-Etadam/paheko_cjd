@@ -23,7 +23,7 @@
 			{linkbutton href="!config/edit_file.php?k=%s"|args:'logo' label="Modifier" shape="edit" target="_dialog"}
 		</dd>
 		<dd class="help">
-			Ce logo sera affiché en haut du menu de l'administration, sur le site web et sur les documents imprimés.
+			Ce logo sera affiché dans l'en-tête de l'application, sur le site web et sur les documents imprimés.
 		</dd>
 		<dt>Petite icône</dt>
 		{if $url = $config->fileURL('favicon')}

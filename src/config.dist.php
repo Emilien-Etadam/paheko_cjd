@@ -908,11 +908,11 @@ namespace Paheko;
 
 /**
  * Couleur secondaire de l'interface admin
- * Défaut : #85b9ba
+ * Défaut : #e8f8ee (charte CJD)
  * @var string
  */
 
-//const ADMIN_COLOR2 = '#e8f8ee';
+//const ADMIN_COLOR2 = '#85b9ba';
 
 /**
  * Image de fond par défaut de l'interface admin

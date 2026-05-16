@@ -1,29 +1,34 @@
-/* Navigation — onglets et accueil */
+/* Onglets contextuels (sous-pages) */
+nav.tabs ul {
+	gap: 0.25rem;
+}
+
 nav.tabs li a {
 	border-radius: var(--radius-md) var(--radius-md) 0 0;
-	border-color: rgb(var(--gMainColor) / 0.2);
+	border-color: var(--color-border);
+	background: var(--color-surface-muted);
 }
 
 nav.tabs .current a {
-	background: rgb(var(--gMainColor));
-	border-bottom-color: rgb(var(--gMainColor));
-	color: rgb(var(--gBgColor));
+	background: var(--color-cjd);
+	border-bottom-color: var(--color-cjd);
+	color: #fff;
 }
 
 nav.tabs li a:hover {
-	background: rgb(var(--gSecondColor));
-	color: rgb(var(--gMainColor));
-	border-bottom-color: rgb(var(--gMainColor));
+	background: var(--color-cjd-muted);
+	color: var(--color-cjd-dark);
+	border-bottom-color: var(--color-cjd);
 }
 
 nav.home ul li a::before,
 nav.home ul li a .icon {
-	background: rgb(var(--gSecondColor));
-	color: rgb(var(--gMainColor));
+	background: var(--color-cjd-muted);
+	color: var(--color-cjd-dark);
 	border-radius: var(--radius-md);
 }
 
 nav.home ul li a:hover::before {
-	background: rgb(var(--gMainColor));
-	color: rgb(var(--gBgColor));
+	background: var(--color-cjd);
+	color: #fff;
 }

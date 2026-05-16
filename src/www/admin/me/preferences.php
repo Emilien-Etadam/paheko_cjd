@@ -32,11 +32,6 @@ $page_size_options = [
 	500 => 500,
 ];
 
-$themes_options = [
-	false => 'Thème clair',
-	true => 'Thème sombre',
-];
-
 $handheld_options = [
 	false => 'S\'adapter automatiquement à la taille de l\'écran',
 	true => 'Toujours utiliser la disposition pour petit écran',

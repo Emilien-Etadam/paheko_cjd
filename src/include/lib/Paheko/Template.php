@@ -307,37 +307,8 @@ class Template extends Smartyer
 
 	protected function customColors()
 	{
-		$config = defined('Paheko\SKIP_STARTUP_CHECK') ? null : Config::getInstance();
-
-		$c1 = ADMIN_COLOR1;
-		$c2 = ADMIN_COLOR2;
-		$bg = ADMIN_BACKGROUND_IMAGE;
-
-		if (!FORCE_CUSTOM_COLORS && $config) {
-			$c1 = $config->get('color1') ?: $c1;
-			$c2 = $config->get('color2') ?: $c2;
-
-			if ($url = $config->fileURL('admin_background')) {
-				$bg = $url;
-			}
-		}
-
-		$bg_css = $bg ? sprintf('url("%s")', $bg) : 'none';
-
-		$out = '
-		<style type="text/css">
-		:root {
-			--gMainColor: %s;
-			--gSecondColor: %s;
-			--gBgImage: %s;
-		}
-		</style>';
-
-		if ($config && $url = $config->fileURL('admin_css')) {
-			$out .= "\n" . sprintf('<link rel="stylesheet" type="text/css" href="%s" />', $url);
-		}
-
-		return sprintf($out, CommonModifiers::css_hex_to_rgb($c1), CommonModifiers::css_hex_to_rgb($c2), $bg_css);
+		/* Interface CJD fixe : pas de thème ni couleurs personnalisables. */
+		return '';
 	}
 
 	protected function diff(array $params)

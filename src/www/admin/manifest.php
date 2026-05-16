@@ -7,8 +7,8 @@ require_once __DIR__ . '/_inc.php';
 $config = Config::getInstance();
 
 $manifest = [
-	'background_color' => $config->color2 ?? ADMIN_COLOR2,
-	'theme_color'      => $config->color1 ?? ADMIN_COLOR1,
+	'background_color' => '#e8f8ee',
+	'theme_color'      => '#00d556',
 	'description'      => 'Gestion de l\'association',
 	'display'          => 'standalone',
 	'name'             => $config->org_name,

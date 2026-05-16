@@ -1,6 +1,5 @@
-/* Formulaires et boutons CJD */
 fieldset {
-	border-color: var(--gLightBorderColor);
+	border-color: var(--color-border);
 	border-radius: var(--radius-md);
 	box-shadow: var(--shadow-sm);
 }
@@ -26,24 +25,24 @@ textarea,
 select,
 .input-list,
 .file-selector {
-	border-color: var(--gLightBorderColor);
+	border-color: var(--color-border);
 	border-radius: var(--radius-sm);
 }
 
 input:focus,
 textarea:focus,
 select:focus {
-	border-color: rgb(var(--gMainColor));
-	box-shadow: 0 0 0 3px rgb(var(--gMainColor) / 0.2);
+	border-color: var(--color-cjd);
+	box-shadow: 0 0 0 3px rgb(0 213 86 / 0.2);
 	outline: none;
 }
 
 button.main,
 .icn-btn.main,
 input[type="submit"].main {
-	background: rgb(var(--gMainColor));
-	color: rgb(var(--gBgColor));
-	border: 1px solid rgb(var(--gMainColor));
+	background: var(--color-cjd);
+	color: #fff;
+	border: 1px solid var(--color-cjd);
 	border-radius: var(--radius-sm);
 	font-family: var(--font-display);
 	font-weight: 600;
@@ -54,6 +53,6 @@ input[type="submit"].main {
 button.main:hover,
 .icn-btn.main:hover,
 input[type="submit"].main:hover {
-	background: var(--color-brand-hover);
-	border-color: var(--color-brand-hover);
+	background: var(--color-cjd-hover);
+	border-color: var(--color-cjd-hover);
 }
