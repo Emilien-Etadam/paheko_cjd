@@ -13,14 +13,14 @@
 	--color-cjd-soft: #d4f0de;
 	--color-cjd-tag: #b8e8c8;
 	--color-cjd-emphasis: #00a84a;
-	--color-cjd-dark: #008f45;
+	--color-cjd-dark: #00d556;
 	--color-cjd-panel: #3d6b52;
 	--color-cjd-panel-light: #eef8f2;
 	--color-cjd-dark-bg: #0d2818;
 
 	--color-surface: #ffffff;
-	--color-surface-muted: #f4f4f5;
-	--color-text: #1a1a1a;
+	--color-surface-muted: #f7f7f7;
+	--color-text: #000000;
 	--color-text-muted: #6b7280;
 	--color-border: #e5e7eb;
 	--color-danger: #dc2626;
@@ -32,4 +32,6 @@
 	--radius-lg: 0.75rem;
 	--shadow-sm: 0 1px 3px rgb(0 0 0 / 0.08);
 	--shadow-md: 0 4px 16px rgb(0 0 0 / 0.1);
+
+	--max-width: 1140px;
 }
