@@ -1,4 +1,17 @@
 /* Tableaux et listes — page principale et dialogues */
+
+/* Conteneur scrollable (mobile) — préférer .table-wrapper dans les templates */
+main#content .table-wrapper,
+main#content :has(> table.list) {
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+main#content .table-wrapper table.list {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
 :is(main, #dialog, html.dialog main) table.list {
 	width: 100%;
 	margin: 1rem 0 1.5rem;
@@ -6,9 +19,25 @@
 	border-spacing: 0;
 	border: 1px solid var(--color-border);
 	border-radius: var(--radius-md);
-	overflow: hidden;
 	box-shadow: var(--shadow-sm);
 	background: var(--color-surface);
+}
+
+/* border-radius sur <table> : coins via cellules (border-collapse: separate) */
+:is(main, #dialog, html.dialog main) table.list thead tr:first-child > :first-child {
+	border-top-left-radius: var(--radius-md);
+}
+
+:is(main, #dialog, html.dialog main) table.list thead tr:first-child > :last-child {
+	border-top-right-radius: var(--radius-md);
+}
+
+:is(main, #dialog, html.dialog main) table.list tbody tr:last-child > :first-child {
+	border-bottom-left-radius: var(--radius-md);
+}
+
+:is(main, #dialog, html.dialog main) table.list tbody tr:last-child > :last-child {
+	border-bottom-right-radius: var(--radius-md);
 }
 
 :is(main, #dialog, html.dialog main) table.list thead th,
@@ -23,7 +52,7 @@
 	padding: 0.65rem 0.75rem;
 	border-bottom: 2px solid var(--color-cjd);
 	position: sticky;
-	top: 0;
+	top: var(--header-height);
 	z-index: 2;
 }
 
@@ -44,7 +73,7 @@
 }
 
 :is(main, #dialog, html.dialog main) table.list tbody tr:hover {
-	background: rgb(0 213 86 / 0.08);
+	background: color-mix(in srgb, var(--color-cjd) 8%, transparent);
 }
 
 :is(main, #dialog, html.dialog main) table.list tbody tr.clickable:hover,
@@ -53,22 +82,31 @@
 }
 
 :is(main, #dialog, html.dialog main) table.list tbody tr.checked {
-	background: rgb(0 213 86 / 0.15);
+	background: color-mix(in srgb, var(--color-cjd) 15%, transparent);
 }
 
 :is(main, #dialog, html.dialog main) table.list tbody tr.focused {
-	background: rgb(0 213 86 / 0.2);
+	background: color-mix(in srgb, var(--color-cjd) 20%, transparent);
 	outline: 2px solid var(--color-cjd);
 	outline-offset: -2px;
 }
 
-:is(main, #dialog, html.dialog main) table.list td.actions {
+:is(main, #dialog, html.dialog main) table.list td:last-child {
 	white-space: nowrap;
+	width: 1%;
+}
+
+:is(main, #dialog, html.dialog main) table.list td.actions {
 	text-align: right;
 }
 
 :is(main, #dialog, html.dialog main) table.list td.actions .icn-btn {
 	margin-left: 0.25rem;
+}
+
+:is(main, #dialog, html.dialog main) table.list .icn-btn {
+	padding: 0.3rem 0.5rem;
+	font-size: 0.85rem;
 }
 
 main nav.pagination,

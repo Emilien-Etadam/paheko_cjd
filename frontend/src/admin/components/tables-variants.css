@@ -38,21 +38,21 @@ table.multi tr {
 }
 
 table.list tbody tr.highlight {
-	box-shadow: 0 0 5px 5px rgb(0 213 86 / 0.35);
+	box-shadow: 0 0 5px 5px color-mix(in srgb, var(--color-cjd) 35%, transparent);
 }
 
 table.list .error {
-	color: #dc2626;
+	color: var(--color-danger);
 	font-weight: bold;
 }
 
 table.list .alert {
-	color: #b45309;
+	color: var(--color-warning);
 	font-weight: bold;
 }
 
 table.list .confirm {
-	color: #15803d;
+	color: var(--color-cjd-dark);
 }
 
 table.list .num,
@@ -88,7 +88,7 @@ table.list tr:nth-child(even).disabled {
 }
 
 .userOrder .cur {
-	background: rgb(0 213 86 / 0.25);
+	background: color-mix(in srgb, var(--color-cjd) 25%, transparent);
 }
 
 .userOrder {
@@ -184,11 +184,11 @@ table.reconcile .icon span {
 }
 
 table.reconcile .icon span.ok {
-	color: #15803d;
+	color: var(--color-cjd-dark);
 }
 
 table.reconcile .icon span.missing {
-	color: #dc2626;
+	color: var(--color-danger);
 }
 
 table.reconcile thead tr:nth-child(1) th,
@@ -376,12 +376,12 @@ table .draggable button::after {
 }
 
 table.dragging tr.placeholder {
-	box-shadow: 0 10px 0 rgb(0 213 86 / 0.4);
+	box-shadow: 0 10px 0 color-mix(in srgb, var(--color-cjd) 40%, transparent);
 }
 
 table tr.dragging {
-	background: rgb(0 213 86 / 0.1);
-	box-shadow: 0 0 5px 5px rgb(0 213 86 / 0.25) !important;
+	background: color-mix(in srgb, var(--color-cjd) 10%, transparent);
+	box-shadow: 0 0 5px 5px color-mix(in srgb, var(--color-cjd) 25%, transparent) !important;
 }
 
 table.dragging tr td * {
@@ -402,4 +402,12 @@ table.list th a {
 
 table.list tr.no-border {
 	border: none;
+}
+
+/* Variante compacte */
+:is(main, #dialog, html.dialog main) table.list.condensed thead th,
+:is(main, #dialog, html.dialog main) table.list.condensed thead td,
+:is(main, #dialog, html.dialog main) table.list.condensed tbody td,
+:is(main, #dialog, html.dialog main) table.list.condensed tbody th {
+	padding: 0.35rem 0.5rem;
 }
