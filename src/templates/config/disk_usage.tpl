@@ -2,6 +2,8 @@
 
 {include file="config/_menu.tpl"}
 
+<div class="cjd-card cjd-config">
+
 <h2 class="ruler">Base de données</h2>
 
 <div class="center-block">
@@ -61,5 +63,7 @@
 	</tr>
 	{/foreach}
 </table>
+
+</div>
 
 {include file="_foot.tpl"}

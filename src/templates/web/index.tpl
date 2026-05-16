@@ -1,5 +1,7 @@
 {include file="_head.tpl" title=$title current="web" hide_title=true}
 
+
+<div class="cjd-web">
 <nav class="tabs">
 	<aside>
 		<form method="post" action="search.php" target="_dialog" data-disable-progress="1">
@@ -149,5 +151,7 @@
 	{/if}
 {/if}
 
+
+</div>
 
 {include file="_foot.tpl"}

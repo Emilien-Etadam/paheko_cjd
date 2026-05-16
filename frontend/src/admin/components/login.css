@@ -1,11 +1,24 @@
 body.login form fieldset {
 	margin-top: 1rem;
+	padding: 1.25rem 1.5rem;
+	background: var(--color-surface);
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-lg);
+	box-shadow: var(--shadow-sm);
+}
+
+body.login form fieldset legend {
+	font-family: var(--font-display);
+	color: var(--color-cjd-dark);
 }
 
 body.login p.submit {
 	text-align: center;
+	margin-top: 1.25rem;
 }
 
 body.login p.submit .icn-btn.main {
 	min-width: 12rem;
+	background: var(--color-cjd);
+	border-color: var(--color-cjd);
 }

@@ -1,6 +1,9 @@
 {include file="_head.tpl" title="%s — Liste des membres inscrits"|args:$service.label current="users/services"}
 
+
 {include file="services/_nav.tpl" current="index" current_service=$service service_page=$type}
+
+<div class="cjd-card cjd-services">
 
 <?php
 $can_action = $session->canAccess($session::SECTION_USERS, $session::ACCESS_ADMIN);
@@ -76,5 +79,7 @@ $can_action = $session->canAccess($session::SECTION_USERS, $session::ACCESS_ADMI
 {if $can_action}
 </form>
 {/if}
+
+</div>
 
 {include file="_foot.tpl"}

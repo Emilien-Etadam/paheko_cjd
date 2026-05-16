@@ -1,0 +1,26 @@
+/* Site web (admin) */
+.cjd-web nav.web.breadcrumbs ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.35rem;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	align-items: center;
+}
+
+.cjd-web nav.web.breadcrumbs li a {
+	padding: 0.2rem 0.5rem;
+	border-radius: var(--radius-sm);
+	text-decoration: none;
+	color: var(--color-cjd-dark);
+	font-weight: 500;
+}
+
+.cjd-web nav.web.breadcrumbs li a:hover {
+	background: var(--color-cjd-muted);
+}
+
+.cjd-web nav.web.config {
+	margin-bottom: 1rem;
+}

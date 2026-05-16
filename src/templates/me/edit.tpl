@@ -2,6 +2,8 @@
 
 {include file="./_nav.tpl" current="me"}
 
+<div class="cjd-card cjd-member-edit">
+
 {form_errors}
 
 <form method="post" action="{$self_url}">
@@ -26,5 +28,7 @@
 	</p>
 
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

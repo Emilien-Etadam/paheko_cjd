@@ -1,6 +1,8 @@
 {include file="_head.tpl" title="Extensions" current="config"}
 
 {include file="config/_menu.tpl" current="ext"}
+
+<div class="cjd-card cjd-config">
 <?php $current = $installable ? 'disabled' : 'enabled'; ?>
 {include file="./_nav.tpl" current=$current ext=null}
 
@@ -24,5 +26,7 @@
 	{linkbutton shape="import" label="Importer un module" href="import.php" target="_dialog"}
 </p>
 
+
+</div>
 
 {include file="_foot.tpl"}

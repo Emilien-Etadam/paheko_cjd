@@ -2,6 +2,8 @@
 
 {include file="config/_menu.tpl" current="index"}
 
+<div class="cjd-card cjd-config">
+
 {form_errors}
 
 <form method="post" action="{$self_url}">
@@ -85,5 +87,7 @@
 {/if}
 
 </form>
+
+</div>
 
 {include file="_foot.tpl"}

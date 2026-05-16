@@ -4,6 +4,8 @@
 
 {include file="config/backup/_menu.tpl" current="index"}
 
+<div class="cjd-card cjd-config">
+
 {if $_GET.msg == 'BACKUP_CREATED'}
 	<p class="block confirm">
 		Une nouvelle sauvegarde a été créée.
@@ -73,5 +75,7 @@
 	</article>
 </section>
 
+
+</div>
 
 {include file="_foot.tpl"}

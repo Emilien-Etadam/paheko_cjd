@@ -2,6 +2,8 @@
 
 {include file="config/_menu.tpl" current="desktop" sub_current=null}
 
+<div class="cjd-card cjd-config">
+
 {if isset($_GET['ok']) && !$form->hasErrors()}
 	<p class="block confirm">
 		La configuration a bien été enregistrée.
@@ -92,5 +94,7 @@ e.onchange = changeEmailOption;
 changeEmailOption();
 {/literal}
 </script>
+
+</div>
 
 {include file="_foot.tpl"}

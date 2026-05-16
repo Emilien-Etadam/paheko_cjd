@@ -1,0 +1,13 @@
+/* Activités et cotisations */
+.cjd-services dl.cotisation {
+	margin: 0 0 1.25rem;
+	padding: 1rem 1.25rem;
+	background: var(--color-cjd-muted);
+	border-radius: var(--radius-md);
+	border: 1px solid rgb(0 213 86 / 0.35);
+}
+
+.cjd-services dl.cotisation dt {
+	font-weight: 600;
+	color: var(--color-cjd-dark);
+}
