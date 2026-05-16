@@ -44,7 +44,7 @@
 }
 
 :is(main, #dialog, html.dialog main) table.list tbody tr:hover {
-	background: rgb(0 213 86 / 0.08);
+	background: color-mix(in srgb, var(--color-cjd) 8%, transparent);
 }
 
 :is(main, #dialog, html.dialog main) table.list tbody tr.clickable:hover,
@@ -53,11 +53,11 @@
 }
 
 :is(main, #dialog, html.dialog main) table.list tbody tr.checked {
-	background: rgb(0 213 86 / 0.15);
+	background: color-mix(in srgb, var(--color-cjd) 15%, transparent);
 }
 
 :is(main, #dialog, html.dialog main) table.list tbody tr.focused {
-	background: rgb(0 213 86 / 0.2);
+	background: color-mix(in srgb, var(--color-cjd) 20%, transparent);
 	outline: 2px solid var(--color-cjd);
 	outline-offset: -2px;
 }

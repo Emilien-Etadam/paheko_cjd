@@ -17,6 +17,7 @@ body {
 
 /* Ancienne sidebar Paheko (retirée du template) */
 #menu {
+	/* intentionnel: masque l’ancienne sidebar Paheko retirée du template */
 	display: none !important;
 }
 
@@ -30,7 +31,7 @@ body {
 	min-height: var(--header-height);
 	padding: 0 1.25rem;
 	background: var(--color-cjd);
-	color: #fff;
+	color: var(--color-surface);
 	box-shadow: var(--shadow-md);
 }
 
@@ -60,7 +61,7 @@ body {
 	display: none;
 	margin-left: auto;
 	padding: 0.4rem 0.75rem;
-	border: 1px solid rgb(255 255 255 / 0.5);
+	border: 1px solid color-mix(in srgb, var(--color-surface) 50%, transparent);
 	border-radius: var(--radius-sm);
 	background: transparent;
 	color: inherit;
@@ -105,7 +106,7 @@ body {
 .cjd-shell__link:hover,
 .cjd-shell__item.is-active > .cjd-shell__link,
 .cjd-shell__item.is-parent > .cjd-shell__link {
-	background: rgb(0 0 0 / 0.15);
+	background: color-mix(in srgb, var(--color-text) 15%, transparent);
 }
 
 .cjd-shell__link [data-icon]::before {
@@ -122,7 +123,7 @@ body {
 	margin: 0;
 	padding: 0.35rem 0;
 	list-style: none;
-	background: #fff;
+	background: var(--color-surface);
 	border-radius: var(--radius-md);
 	box-shadow: var(--shadow-md);
 	z-index: 1100;
@@ -207,7 +208,7 @@ header.public h1 a {
 }
 
 #skip a {
-	background: #fff;
+	background: var(--color-surface);
 	color: var(--color-cjd-dark);
 }
 

@@ -28,7 +28,7 @@ main form.shortForm fieldset {
 /* Bandeau exercice */
 nav.acc-year {
 	background: var(--color-cjd-muted);
-	border: 1px solid rgb(0 213 86 / 0.35);
+	border: 1px solid color-mix(in srgb, var(--color-cjd) 35%, transparent);
 	border-radius: var(--radius-md);
 	padding: 0.65rem 1rem;
 	margin-bottom: 1.25rem;
@@ -217,6 +217,7 @@ tr.account-level-1 th {
 }
 
 tr.account-level-2 th {
+	/* intentionnel: retrait hiérarchique proportionnel à la taille du titre */
 	padding-left: 1em;
 	font-size: 1.15rem;
 }
@@ -258,12 +259,12 @@ tr.account td.bookmark span[data-icon] {
 
 table.projects tr.title p.help {
 	font-weight: normal;
-	margin: 0.5em 0;
+	margin: 0.5rem 0;
 }
 
 table.projects tr.title p.actions {
 	text-align: center;
-	margin: 0 0 0.8em;
+	margin: 0 0 0.8rem;
 }
 
 table.projects tr.total {
@@ -302,31 +303,31 @@ section.years article header h2 .tag {
 	font-size: 0.85rem;
 	vertical-align: middle;
 	font-weight: normal;
-	margin-left: 0.5em;
+	margin-left: 0.5rem;
 }
 
 section.years article .links a {
 	background: var(--color-cjd-muted);
-	padding: 0.2em 0.5em;
+	padding: 0.2rem 0.5rem;
 	border-radius: var(--radius-sm);
 	display: inline-block;
 	color: var(--color-cjd-dark);
 }
 
 section.years article .actions {
-	margin-top: 0.5em;
+	margin-top: 0.5rem;
 }
 
 h2.step {
-	border: 2px solid rgb(0 213 86 / 0.5);
+	border: 2px solid color-mix(in srgb, var(--color-cjd) 50%, transparent);
 	border-radius: var(--radius-md);
 	overflow: hidden;
-	margin: 1em 0;
+	margin: 1rem 0;
 }
 
 h2.step strong {
 	background: var(--color-cjd-muted);
-	padding: 0.5em;
+	padding: 0.5rem;
 	display: inline-block;
 	min-width: 1.5em;
 	text-align: center;
@@ -357,7 +358,7 @@ a.num,
 a.num:hover,
 .num a:hover {
 	background: var(--color-cjd);
-	color: #fff;
+	color: var(--color-surface);
 }
 
 /* Tableaux de rapport (balance, bilan…) */
@@ -406,11 +407,13 @@ table.statement td.spacer,
 table.statement tr td.colspan,
 table.statement tr td.spacer {
 	border: none;
+	/* intentionnel: cellules vides sans fond alterné */
 	background: transparent !important;
 }
 
 table.statement tr.spacer td {
 	height: 0.75rem;
+	/* intentionnel: annule les bordures des lignes de données */
 	border: none !important;
 }
 
@@ -448,6 +451,7 @@ table.statement tfoot th {
 }
 
 .transaction-lines input.money {
+	/* intentionnel: largeur minimale des champs montant en saisie comptable */
 	min-width: 3.5rem !important;
 	width: auto;
 }
@@ -483,7 +487,7 @@ input[name="code_base"] {
 
 .transaction-details .account {
 	background: var(--color-cjd-muted);
-	border: 1px solid rgb(0 213 86 / 0.35);
+	border: 1px solid color-mix(in srgb, var(--color-cjd) 35%, transparent);
 	border-radius: var(--radius-md);
 	padding: 1rem;
 	text-align: center;

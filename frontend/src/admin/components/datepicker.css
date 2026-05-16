@@ -22,8 +22,8 @@ dialog.datepicker {
     margin: 0;
     padding: .3rem;
     border: none;
-    box-shadow: 0 0 5px #000;
-    border-radius: .5rem;
+    box-shadow: var(--shadow-sm);
+    border-radius: var(--radius-md);
     z-index: 1000;
 }
 
@@ -87,18 +87,18 @@ dialog.datepicker {
     border: none;
     background: none;
     box-shadow: none;
-    border-radius: .2rem;
+    border-radius: var(--radius-sm);
     margin: 0;
 }
 
 .datepicker tbody td.focus input {
-    background: #339;
-    color: #fff;
+    background: var(--color-cjd-dark);
+    color: var(--color-surface);
 }
 
 .datepicker tbody input:hover {
-    background: #ccf;
-    color: darkred;
+    background: var(--color-cjd-muted);
+    color: var(--color-danger);
 }
 
 input[disabled] + .datepicker-parent {

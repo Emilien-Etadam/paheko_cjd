@@ -1,5 +1,6 @@
 /* Utilitaires transverses */
 .hidden {
+	/* intentionnel: utilitaire d’affichage prioritaire sur les styles métier Paheko */
 	display: none !important;
 }
 
@@ -158,15 +159,15 @@ nav.breadcrumbs aside {
 }
 
 ins {
-	background: #dcfce7;
-	color: #14532d;
+	background: var(--color-cjd-muted);
+	color: var(--color-cjd-dark);
 	text-decoration: none;
 	font-weight: 600;
 }
 
 del {
-	background: #fee2e2;
-	color: #7f1d1d;
+	background: color-mix(in srgb, var(--color-danger) 12%, var(--color-surface));
+	color: color-mix(in srgb, var(--color-danger) 70%, var(--color-text));
 	text-decoration-line: line-through;
 }
 

@@ -1,17 +1,17 @@
 /* Messages — palette CJD */
 span.error,
 b.error {
-	color: #b91c1c;
+	color: var(--color-danger);
 }
 
 span.confirm,
 b.confirm {
-	color: #15803d;
+	color: var(--color-cjd-dark);
 }
 
 span.alert,
 b.alert {
-	color: #b45309;
+	color: color-mix(in srgb, var(--color-warning) 75%, var(--color-text));
 }
 
 .block p,
@@ -49,13 +49,13 @@ b.alert {
 }
 
 .alert.block {
-	border-color: #f59e0b;
-	background-color: #fffbeb;
+	border-color: var(--color-warning);
+	background-color: color-mix(in srgb, var(--color-warning) 12%, var(--color-surface));
 }
 
 .error.block {
-	border-color: #dc2626;
-	background-color: #fef2f2;
+	border-color: var(--color-danger);
+	background-color: color-mix(in srgb, var(--color-danger) 10%, var(--color-surface));
 }
 
 .confirm.block {
@@ -100,12 +100,12 @@ b.alert {
 
 .alert.block::before {
 	content: "⚠";
-	color: #d97706;
+	color: var(--color-warning);
 }
 
 .error.block::before {
 	content: "⚠";
-	color: #dc2626;
+	color: var(--color-danger);
 }
 
 .help.block::before {
@@ -130,6 +130,6 @@ p.help:not(.block) {
 .error ul,
 .alert ul,
 .confirm ul {
-	margin-left: 1.5em;
+	margin-left: 1.5rem;
 	list-style: disc;
 }

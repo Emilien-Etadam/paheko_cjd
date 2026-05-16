@@ -29,19 +29,19 @@
 		position: static;
 		display: block;
 		box-shadow: none;
-		background: rgb(0 0 0 / 0.08);
+		background: color-mix(in srgb, var(--color-text) 8%, transparent);
 		margin: 0.25rem 0 0 0.5rem;
 		padding: 0.25rem 0;
 		border-radius: var(--radius-sm);
 	}
 
 	.cjd-shell__sub a {
-		color: #fff;
+		color: var(--color-surface);
 	}
 
 	.cjd-shell__sub a:hover {
-		background: rgb(0 0 0 / 0.12);
-		color: #fff;
+		background: color-mix(in srgb, var(--color-text) 12%, transparent);
+		color: var(--color-surface);
 	}
 
 	main#content {

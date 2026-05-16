@@ -6,7 +6,7 @@ table.list.auto {
 }
 
 table.list.center {
-	margin: 1em auto;
+	margin: 1rem auto;
 }
 
 table.list caption {
@@ -34,25 +34,26 @@ table.list tfoot tr {
 }
 
 table.multi tr {
+	/* intentionnel: annule le zébrage des listes sur tableaux imbriqués */
 	background: inherit !important;
 }
 
 table.list tbody tr.highlight {
-	box-shadow: 0 0 5px 5px rgb(0 213 86 / 0.35);
+	box-shadow: 0 0 5px 5px color-mix(in srgb, var(--color-cjd) 35%, transparent);
 }
 
 table.list .error {
-	color: #dc2626;
+	color: var(--color-danger);
 	font-weight: bold;
 }
 
 table.list .alert {
-	color: #b45309;
+	color: color-mix(in srgb, var(--color-warning) 75%, var(--color-text));
 	font-weight: bold;
 }
 
 table.list .confirm {
-	color: #15803d;
+	color: var(--color-cjd-dark);
 }
 
 table.list .num,
@@ -88,7 +89,7 @@ table.list tr:nth-child(even).disabled {
 }
 
 .userOrder .cur {
-	background: rgb(0 213 86 / 0.25);
+	background: color-mix(in srgb, var(--color-cjd) 25%, transparent);
 }
 
 .userOrder {
@@ -119,7 +120,7 @@ table.list thead.userOrder th {
 	color: inherit;
 	padding: 0.3rem;
 	text-align: left;
-	border-radius: var(--radius-md, 0.5em);
+	border-radius: var(--radius-md);
 	border: none;
 	background: transparent;
 }
@@ -147,13 +148,14 @@ table.list .userOrder th {
 }
 
 table.list .userOrder .check {
-	padding-left: 0.5em;
+	padding-left: 0.5rem;
 }
 
 .userOrder [data-icon]::before {
 	display: inline-block;
 	color: var(--color-cjd);
 	font-size: 1.5em;
+	/* intentionnel: neutralise l’ombre des icônes Paheko héritée */
 	text-shadow: none !important;
 	line-height: 0.2em;
 	width: 1em;
@@ -184,11 +186,11 @@ table.reconcile .icon span {
 }
 
 table.reconcile .icon span.ok {
-	color: #15803d;
+	color: var(--color-cjd-dark);
 }
 
 table.reconcile .icon span.missing {
-	color: #dc2626;
+	color: var(--color-danger);
 }
 
 table.reconcile thead tr:nth-child(1) th,
@@ -263,12 +265,12 @@ table.files.gallery thead {
 
 table.files.gallery tfoot {
 	display: block;
-	margin: 1em 0;
+	margin: 1rem 0;
 }
 
 table.files.gallery tbody {
 	display: grid;
-	margin: 0.5em 0;
+	margin: 0.5rem 0;
 	grid-template-columns: repeat(auto-fit, minmax(15em, 0.3fr));
 	grid-gap: 0.5em;
 	justify-content: start;
@@ -279,12 +281,12 @@ table.files.gallery tbody tr {
 	grid-gap: 0.2em;
 	grid-template-columns: 0.3fr 0.7fr;
 	text-align: center;
-	padding: 0.3em 0;
+	padding: 0.3rem 0;
 	min-width: 15em;
 }
 
 table.files.gallery tbody tr td {
-	padding: 0 0.3em;
+	padding: 0 0.3rem;
 	height: auto;
 }
 
@@ -340,7 +342,7 @@ table.files.gallery tbody .actions {
 }
 
 table.files.gallery tbody .actions a {
-	margin: 0.1em;
+	margin: 0.1rem;
 }
 
 table.files.gallery tbody .actions > a::before {
@@ -376,12 +378,13 @@ table .draggable button::after {
 }
 
 table.dragging tr.placeholder {
-	box-shadow: 0 10px 0 rgb(0 213 86 / 0.4);
+	box-shadow: 0 10px 0 color-mix(in srgb, var(--color-cjd) 40%, transparent);
 }
 
 table tr.dragging {
-	background: rgb(0 213 86 / 0.1);
-	box-shadow: 0 0 5px 5px rgb(0 213 86 / 0.25) !important;
+	background: color-mix(in srgb, var(--color-cjd) 10%, transparent);
+	/* intentionnel: surbrillance drag au-dessus du zébrage tableau */
+	box-shadow: 0 0 5px 5px color-mix(in srgb, var(--color-cjd) 25%, transparent) !important;
 }
 
 table.dragging tr td * {
