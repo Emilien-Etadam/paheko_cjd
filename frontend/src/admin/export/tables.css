@@ -1,3 +1,3 @@
 /* CSS embarqué dans les exports CSV/HTML (voir Paheko\CSV) */
-@import "../legacy/06-tables-common.css";
+@import "./statement.css";
 @import "../../../../src/www/admin/static/styles/tables_export.css";

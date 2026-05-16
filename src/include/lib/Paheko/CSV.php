@@ -160,13 +160,11 @@ class CSV
 
 	static public function exportHTML(string $format, string $html, string $name = 'Export'): void
 	{
-		$tables_css = ROOT . '/www/admin/static/dist/tables-export.css';
-		if (file_exists($tables_css)) {
-			$css = file_get_contents($tables_css);
-		} else {
-			$css = file_get_contents(ROOT . '/www/admin/static/styles/tables_export.css');
-			$css .= file_get_contents(dirname(ROOT) . '/frontend/src/admin/legacy/06-tables-common.css');
+		$css_path = ROOT . '/www/admin/static/dist/tables-export.css';
+		if (!is_readable($css_path)) {
+			$css_path = ROOT . '/www/admin/static/styles/tables_export.css';
 		}
+		$css = file_get_contents($css_path);
 		TableExport::download($format, $name, $html, $css);
 		exit;
 	}

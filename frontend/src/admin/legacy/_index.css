@@ -1,8 +1,7 @@
 /**
- * Styles métier Paheko (formulaires, tableaux, compta).
- * Présentation : components/
+ * Styles métier Paheko (tableaux, compta, dialogues).
+ * Formulaires : components/forms*.css
  */
-@import "./03-forms.css";
 @import "./04-dialogs.css";
 @import "./07-tables.css";
 @import "./10-accounting.css";

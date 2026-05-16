@@ -1,0 +1,109 @@
+/* Métier Paheko — présentation : forms.css */
+
+/** Datepicker widget */
+.datepicker-parent {
+    position: relative;
+}
+
+dialog {
+    display: none;
+    background: rgb(var(--gBgColor));
+    color: rgb(var(--gTextColor));
+}
+
+dialog[open] {
+    display: block;
+}
+
+dialog.datepicker {
+    user-select: none;
+    position: absolute;
+    left: 0;
+    margin: 0;
+    padding: .3rem;
+    border: none;
+    box-shadow: 0 0 5px #000;
+    border-radius: .5rem;
+    z-index: 1000;
+}
+
+.datepicker nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+
+.datepicker nav input[type=button] {
+    font-family: "paheko";
+    height: 2em;
+    width: 2em;
+}
+
+.datepicker span {
+    white-space: nowrap;
+}
+
+.datepicker span * {
+    font-size: 1rem;
+    font-family: inherit;
+    margin: .1rem;
+    padding: .1rem;
+    border: 1px solid var(--gLightBorderColor);
+    text-align: center;
+}
+
+.datepicker tbody {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.datepicker thead td {
+    font-size: 80%;
+    color: var(--gBorderColor);
+    text-align: center;
+}
+
+.datepicker tbody tr:nth-child(even) {
+    background-color: var(--gLightBackgroundColor);
+}
+
+.datepicker tbody td:nth-child(6) input {
+    color: var(--gBorderColor);
+}
+.datepicker tbody td:nth-child(7) input {
+    color: var(--gBorderColor);
+}
+
+.datepicker tbody td {
+    text-align: center;
+    width: 14.3%;
+    padding: 0;
+}
+
+.datepicker tbody td input {
+    padding: .4rem .7rem;
+    border: none;
+    background: none;
+    box-shadow: none;
+    border-radius: .2rem;
+    margin: 0;
+}
+
+.datepicker tbody td.focus input {
+    background: #339;
+    color: #fff;
+}
+
+.datepicker tbody input:hover {
+    background: #ccf;
+    color: darkred;
+}
+
+input[disabled] + .datepicker-parent {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+

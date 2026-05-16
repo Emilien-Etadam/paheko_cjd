@@ -1,0 +1,56 @@
+/* Tableaux de rapport — exports CSV/HTML */
+table.statement {
+	width: 100%;
+}
+
+table.statement td,
+table.statement th {
+	padding: 4pt;
+	vertical-align: top;
+}
+
+table.statement thead tr {
+	font-weight: bold;
+}
+
+table.statement .money {
+	border-left: none;
+}
+
+table.statement .num {
+	border-right: none;
+}
+
+table.statement tbody th {
+	border-left: none;
+	border-right: none;
+}
+
+table.statement tfoot th,
+table.statement tfoot td {
+	padding: 6pt;
+}
+
+table.statement > thead th {
+	text-align: center;
+	font-size: 14pt;
+	font-weight: bold;
+	border: none;
+}
+
+table.statement td.spacer,
+table.statement tr td.colspan,
+table.statement tr td.spacer {
+	border: none;
+	background: transparent !important;
+}
+
+td.money,
+th.money {
+	text-align: right;
+	min-width: 2em;
+}
+
+table caption {
+	display: none;
+}
