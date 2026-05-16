@@ -1193,4 +1193,17 @@
 			detail: {direction, distance_x, distance_y}
 		}));
 	});
+
+	g.onload(() => {
+		document.addEventListener('submit', function (e) {
+			const form = e.target;
+			if (form.dataset.noLoadingState) return;
+			const btn = form.querySelector('button[type="submit"].main, input[type="submit"].main');
+			if (!btn) return;
+			btn.disabled = true;
+			btn.dataset.originalText = btn.textContent;
+			btn.textContent = 'Chargement…';
+			btn.classList.add('is-loading');
+		}, true);
+	});
 })();

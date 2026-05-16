@@ -2,7 +2,7 @@
 
 
 <div class="cjd-web">
-<form method="post" action="{$self_url}">
+<form method="post" action="{$self_url}" data-no-loading-state="1">
 	<fieldset>
 		<legend>Rechercher une page ou catégorie</legend>
 		<p class="submit">

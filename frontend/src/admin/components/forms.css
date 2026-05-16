@@ -128,3 +128,27 @@
 	align-items: center;
 	margin: 1rem 0;
 }
+
+.icn-btn.main.is-loading,
+button.main.is-loading {
+	opacity: 0.7;
+	cursor: not-allowed;
+	position: relative;
+}
+
+.icn-btn.main.is-loading::after {
+	content: '';
+	display: inline-block;
+	width: 0.9em;
+	height: 0.9em;
+	border: 2px solid rgba(255, 255, 255, 0.4);
+	border-top-color: #fff;
+	border-radius: 50%;
+	animation: btn-spin 0.6s linear infinite;
+	margin-left: 0.5em;
+	vertical-align: middle;
+}
+
+@keyframes btn-spin {
+	to { transform: rotate(360deg); }
+}

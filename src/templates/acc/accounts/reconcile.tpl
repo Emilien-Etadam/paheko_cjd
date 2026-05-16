@@ -23,7 +23,7 @@
 
 <h2 class="ruler print-only">{"Rapprochement : %s — %s"|args:$account.code:$account.label}</h2>
 
-<form method="get" action="{$self_url_no_qs}" class="noprint">
+<form method="get" action="{$self_url_no_qs}" class="noprint" data-no-loading-state="1">
 	{if $prev || $next}
 	<fieldset class="shortFormRight">
 		<legend>Rapprochement par mois</legend>
@@ -50,7 +50,7 @@
 		</p>
 	</fieldset>
 </form>
-<form method="get" action="{$self_url_no_qs}" class="noprint">
+<form method="get" action="{$self_url_no_qs}" class="noprint" data-no-loading-state="1">
 	<fieldset class="shortFormLeft advanced-filters {if !$has_advanced_options}hidden{/if}">
 		<legend>Configuration du rapprochement</legend>
 		<dl>

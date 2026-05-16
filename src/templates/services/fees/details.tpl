@@ -8,7 +8,7 @@
 $can_action = $session->canAccess($session::SECTION_USERS, $session::ACCESS_ADMIN);
 ?>
 
-<form method="get" action="">
+<form method="get" action="" data-no-loading-state="1">
 	<input type="hidden" name="id" value="{$fee.id}" />
 	<input type="hidden" name="type" value="{$type}" />
 

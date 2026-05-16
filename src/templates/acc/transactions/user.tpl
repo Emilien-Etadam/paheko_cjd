@@ -18,7 +18,7 @@
 
 <h2 class="ruler">Solde des comptes</h2>
 
-<form method="get" action="{$self_url_no_qs}">
+<form method="get" action="{$self_url_no_qs}" data-no-loading-state="1">
 	<fieldset>
 		<legend>Exercice</legend>
 		<dl>

@@ -2,7 +2,7 @@
 
 
 <div class="cjd-card cjd-docs">
-<form method="post" action="{$self_url}" data-focus="1">
+<form method="post" action="{$self_url}" data-focus="1" data-no-loading-state="1">
 	<fieldset>
 		<legend>Rechercher un fichier</legend>
 		<p class="submit">

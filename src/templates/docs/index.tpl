@@ -29,7 +29,7 @@ $upload_here = $context_specific_root ? null : $dir->path;
 
 <nav class="tabs">
 	<aside>
-		<form method="post" action="search.php" target="_dialog" data-disable-progress="1">
+		<form method="post" action="search.php" target="_dialog" data-disable-progress="1" data-no-loading-state="1">
 			{input type="text" name="q" size=25 placeholder="Rechercher un document" title="Rechercher dans les documents" aria-label="Rechercher dans les documents"}
 			{button shape="search" type="submit" title="Rechercher"}
 		</form>

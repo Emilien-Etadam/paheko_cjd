@@ -2,7 +2,7 @@
 
 {if !empty($all_years)}
 <div class="cjd-toolbar">
-<form method="get" action="{$admin_url}acc/search.php" class="shortForm">
+<form method="get" action="{$admin_url}acc/search.php" class="shortForm" data-no-loading-state="1">
 	<fieldset>
 		<legend>Recherche rapide</legend>
 		<p>
