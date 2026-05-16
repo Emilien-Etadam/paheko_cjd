@@ -26,17 +26,3 @@
 	--shadow-sm: 0 1px 3px rgb(0 0 0 / 0.08);
 	--shadow-md: 0 4px 16px rgb(0 0 0 / 0.1);
 }
-
-/* Compatibilité CSS métier Paheko */
-:root {
-	--gBgColor: 255, 255, 255;
-	--gTextColor: 0, 0, 0;
-	--gBorderColor: #9ca3af;
-	--gLightBorderColor: #e5e7eb;
-	--gLightBackgroundColor: 247, 247, 247;
-	--gLinkColor: #00d556;
-	--gHoverLinkColor: 0, 184, 74;
-	--gMainColor: 0, 213, 86;
-	--gSecondColor: 232, 248, 238;
-	--gBgImage: none;
-}
