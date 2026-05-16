@@ -322,12 +322,14 @@ class Template extends Smartyer
 			}
 		}
 
+		$bg_css = $bg ? sprintf('url("%s")', $bg) : 'none';
+
 		$out = '
 		<style type="text/css">
 		:root {
 			--gMainColor: %s;
 			--gSecondColor: %s;
-			--gBgImage: url("%s");
+			--gBgImage: %s;
 		}
 		</style>';
 
@@ -335,7 +337,7 @@ class Template extends Smartyer
 			$out .= "\n" . sprintf('<link rel="stylesheet" type="text/css" href="%s" />', $url);
 		}
 
-		return sprintf($out, CommonModifiers::css_hex_to_rgb($c1), CommonModifiers::css_hex_to_rgb($c2), $bg);
+		return sprintf($out, CommonModifiers::css_hex_to_rgb($c1), CommonModifiers::css_hex_to_rgb($c2), $bg_css);
 	}
 
 	protected function diff(array $params)

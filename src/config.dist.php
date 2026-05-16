@@ -912,7 +912,7 @@ namespace Paheko;
  * @var string
  */
 
-//const ADMIN_COLOR2 = '#85b9ba';
+//const ADMIN_COLOR2 = '#e8f8ee';
 
 /**
  * Image de fond par défaut de l'interface admin

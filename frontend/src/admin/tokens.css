@@ -1,33 +1,38 @@
 /**
- * Design tokens — charte graphique et thème.
+ * Charte CJD.net — design tokens
  *
- * Variables runtime (--gMainColor, --gSecondColor, --gBgImage) injectées
- * par Paheko via {custom_colors} (format RGB sans rgb(), ex. "32, 120, 122").
+ * Variables --g* : format RGB "R, G, B" (injectables via {custom_colors}).
+ * @see https://www.cjd.net
  */
 @theme {
 	--font-sans: "Open Sans", system-ui, sans-serif;
 	--font-display: "Saira Condensed", system-ui, sans-serif;
 
-	/* Alias sémantiques (Tailwind) — valeurs par défaut Paheko */
-	--color-brand: rgb(32 120 122);
-	--color-brand-muted: rgb(133 185 186);
-	--color-surface: rgb(255 255 255);
-	--color-text: rgb(0 0 0);
+	--color-brand: #00d556;
+	--color-brand-hover: #00b84a;
+	--color-brand-muted: #e8f8ee;
+	--color-surface: #ffffff;
+	--color-surface-muted: #f4f4f5;
+	--color-text: #1a1a1a;
+	--color-text-muted: #6b7280;
+	--color-border: #e5e7eb;
+
+	--radius-sm: 0.25rem;
+	--radius-md: 0.5rem;
+	--radius-lg: 0.75rem;
+	--shadow-sm: 0 1px 3px rgb(0 0 0 / 0.08);
+	--shadow-md: 0 4px 12px rgb(0 0 0 / 0.1);
 }
 
-/**
- * Pont avec les variables historiques Paheko (legacy CSS).
- * @see src/include/init.php ADMIN_COLOR1 / ADMIN_COLOR2
- */
 :root {
 	--gBgColor: 255, 255, 255;
-	--gTextColor: 0, 0, 0;
-	--gBorderColor: #666;
-	--gLightBorderColor: #ccc;
-	--gLightBackgroundColor: #eee;
-	--gLinkColor: blue;
-	--gHoverLinkColor: 127, 0, 0;
-	--gMainColor: 32, 120, 122;
-	--gSecondColor: 133, 185, 186;
-	--gBgImage: url("@paheko-static/bg.png");
+	--gTextColor: 26, 26, 26;
+	--gBorderColor: #9ca3af;
+	--gLightBorderColor: #e5e7eb;
+	--gLightBackgroundColor: 244, 244, 245;
+	--gLinkColor: #008f45;
+	--gHoverLinkColor: 0, 184, 74;
+	--gMainColor: 0, 213, 86;
+	--gSecondColor: 232, 248, 238;
+	--gBgImage: none;
 }

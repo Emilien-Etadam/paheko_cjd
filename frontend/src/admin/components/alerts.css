@@ -1,0 +1,20 @@
+/* Messages — palette alignée CJD */
+.alert.block {
+	background-color: #fffbeb;
+	border-color: #f59e0b;
+}
+
+.confirm.block {
+	background-color: rgb(var(--gSecondColor));
+	border-color: rgb(var(--gMainColor));
+}
+
+.error.block {
+	background-color: #fef2f2;
+	border-color: #dc2626;
+}
+
+.help.block {
+	background-color: var(--color-surface-muted);
+	border-color: var(--gLightBorderColor);
+}

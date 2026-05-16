@@ -1,0 +1,59 @@
+/* Formulaires et boutons CJD */
+fieldset {
+	border-color: var(--gLightBorderColor);
+	border-radius: var(--radius-md);
+	box-shadow: var(--shadow-sm);
+}
+
+input[type="text"],
+input[type="number"],
+input[type="color"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="datetime"],
+input[type="time"],
+input[type="week"],
+input[type="year"],
+input[type="email"],
+input[type="file"],
+input[type="url"],
+input[type="month"],
+input[type="password"],
+input[type="range"],
+input[type="search"],
+input[type="tel"],
+textarea,
+select,
+.input-list,
+.file-selector {
+	border-color: var(--gLightBorderColor);
+	border-radius: var(--radius-sm);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+	border-color: rgb(var(--gMainColor));
+	box-shadow: 0 0 0 3px rgb(var(--gMainColor) / 0.2);
+	outline: none;
+}
+
+button.main,
+.icn-btn.main,
+input[type="submit"].main {
+	background: rgb(var(--gMainColor));
+	color: rgb(var(--gBgColor));
+	border: 1px solid rgb(var(--gMainColor));
+	border-radius: var(--radius-sm);
+	font-family: var(--font-display);
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+}
+
+button.main:hover,
+.icn-btn.main:hover,
+input[type="submit"].main:hover {
+	background: var(--color-brand-hover);
+	border-color: var(--color-brand-hover);
+}

@@ -10,6 +10,9 @@ $current ??= '';
 	<meta name="v" content="{$version_hash}" />
 	<title>{$title}</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&amp;family=Saira+Condensed:wght@600;700&amp;display=swap" />
 	<link rel="stylesheet" type="text/css" href="{$admin_uri}static/dist/admin.css?{$version_hash}" media="all" />
 	<script type="text/javascript" src="{$admin_uri}static/scripts/global.js?{$version_hash}"></script>
 	{if isset($custom_js)}
