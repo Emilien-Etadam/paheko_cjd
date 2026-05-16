@@ -25,17 +25,17 @@
 		{/if}
 		<ul class="sub">
 			<li class="title"><strong>{$ext.label}</strong></li>
-			<li{if $current === 'details'} class="current"{/if}><a href="details.php?name={$ext.name}" {if $current === 'details'}aria-current="page"{/if}>Détails</a></li>
-			<li{if $current === 'permissions'} class="current"{/if}><a href="permissions.php?name={$ext.name}" {if $current === 'permissions'}aria-current="page"{/if}>Permissions</a></li>
+			<li{if $current === 'details'} class="current"{/if}><a href="details.php?name={$ext.name}"{if $current === 'details'} aria-current="page"{/if}>Détails</a></li>
+			<li{if $current === 'permissions'} class="current"{/if}><a href="permissions.php?name={$ext.name}"{if $current === 'permissions'} aria-current="page"{/if}>Permissions</a></li>
 			{if $ext.type === 'module'}
-				<li{if $current === 'disk'} class="current"{/if}><a href="disk.php?name={$ext.name}" {if $current === 'disk'}aria-current="page"{/if}>Espace disque</a></li>
-				<li{if $current === 'edit'} class="current"{/if}><a href="edit.php?module={$ext.name}" {if $current === 'edit'}aria-current="page"{/if}>Code source</a></li>
+				<li{if $current === 'disk'} class="current"{/if}><a href="disk.php?name={$ext.name}"{if $current === 'disk'} aria-current="page"{/if}>Espace disque</a></li>
+				<li{if $current === 'edit'} class="current"{/if}><a href="edit.php?module={$ext.name}"{if $current === 'edit'} aria-current="page"{/if}>Code source</a></li>
 			{/if}
 		</ul>
 	{else}
 		<ul class="sub">
-			<li{if $current === 'enabled'} class="current"{/if}><a href="./" {if $current === 'enabled'}aria-current="page"{/if}>Activées</a></li>
-			<li{if $current === 'disabled'} class="current"{/if}><a href="./?install=1" {if $current === 'disabled'}aria-current="page"{/if}>Inactives</a></li>
+			<li{if $current === 'enabled'} class="current"{/if}><a href="./"{if $current === 'enabled'} aria-current="page"{/if}>Activées</a></li>
+			<li{if $current === 'disabled'} class="current"{/if}><a href="./?install=1"{if $current === 'disabled'} aria-current="page"{/if}>Inactives</a></li>
 		</ul>
 	{/if}
 </nav>

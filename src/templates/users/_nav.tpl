@@ -6,7 +6,7 @@
 	{/if}
 
 	<ul>
-		<li{if $current == 'index'} class="current"{/if}><a href="./" {if $current == 'index'}aria-current="page"{/if}>Liste des membres</a></li>
+		<li{if $current == 'index'} class="current"{/if}><a href="./"{if $current == 'index'} aria-current="page"{/if}>Liste des membres</a></li>
 		<li{if $current == 'search'} class="current"{/if}><a href="search.php"{if $current == 'search'} aria-current="page"{/if}>Recherche avancée</a></li>
 		<li{if $current == 'saved_searches'} class="current"{/if}><a href="saved_searches.php"{if $current == 'saved_searches'} aria-current="page"{/if}>Recherches enregistrées</a></li>
 		{if $session->canAccess($session::SECTION_USERS, $session::ACCESS_ADMIN)}
