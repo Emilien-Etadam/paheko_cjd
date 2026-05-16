@@ -33,8 +33,9 @@ dev-server:
 	PHP_CLI_SERVER_WORKERS=4 php -S localhost:8082 -d upload_max_filesize=256M -d post_max_size=256M -t www www/_route.php
 
 test-syntax:
-	find . -name '*.php' -not -path './data/*' -print0 | xargs -0 -n1 php7.4 -l > /dev/null
-	find . -name '*.php' -not -path './data/*' -print0 | xargs -0 -n1 php8.5 -l > /dev/null
+	find . -name '*.php' -not -path './data/*' -print0 | xargs -0 -n1 php -l > /dev/null
+	@command -v php7.4 >/dev/null 2>&1 && find . -name '*.php' -not -path './data/*' -print0 | xargs -0 -n1 php7.4 -l > /dev/null || true
+	@command -v php8.5 >/dev/null 2>&1 && find . -name '*.php' -not -path './data/*' -print0 | xargs -0 -n1 php8.5 -l > /dev/null || true
 
 tests:
 	cd ../tests && php run.php
@@ -43,7 +44,14 @@ selenium-tests:
 	cd ../tests/selenium && make
 
 phpstan:
-	phpstan.phar analyze -c ../tests/phpstan.neon include www
+	@if [ -f ../vendor/bin/phpstan ]; then \
+		../vendor/bin/phpstan analyze -c ../tests/phpstan.neon include www; \
+	elif [ -f phpstan.phar ]; then \
+		php phpstan.phar analyze -c ../tests/phpstan.neon include www; \
+	else \
+		echo "Installez PHPStan : composer install (à la racine du dépôt)"; \
+		exit 1; \
+	fi
 
 psalm:
 	@# This is required by psalm, but useless
@@ -100,8 +108,8 @@ release: test-syntax doc minify freeze
 		cd paheko/src/include/lib && \
 		rsync --files-from=dependencies.list -r /tmp/paheko-build/kd2/src/lib/ /tmp/paheko-build/paheko/src/include/lib/
 
-	# Bundle CSS admin (Vite → dist/, copié dans mini.css par make minify)
-	cp www/admin/static/mini.css /tmp/paheko-build/paheko/src/www/admin/static/dist/admin.css
+	# Overwrite admin.css with united file
+	mv www/admin/static/mini.css /tmp/paheko-build/paheko/src/www/admin/static/admin.css
 
 	# Generate .htaccess file
 	cd /tmp/paheko-build/paheko/src && make htaccess

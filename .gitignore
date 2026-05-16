@@ -5,3 +5,4 @@ src/data/*
 src/include/lib/KD2/
 src/debug_sql.sqlite
 src/modules/
+/vendor/
